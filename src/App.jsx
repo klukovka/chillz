@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import RootLayout from "./pages/RootLayout";
+import AboutPage from "./pages/about/AboutPage";
+import ArticlesPage from "./pages/articles/ArticlesPage";
+import ContactUsPage from "./pages/contact-us/ContactUsPage";
+import FaqPage from "./pages/faq/FaqPage";
+import PortfolioPage from "./pages/portfolio/PortfolioPage";
+import ServicesPage from "./pages/services/ServicesPage";
+const router = createBrowserRouter([
+  {
+    path: "",
+    element: <RootLayout />,
+    children: [
+      {
+        index: true,
+        element: <AboutPage />,
+      },
+      {
+        path: "services",
+        element: <ServicesPage />,
+      },
+      {
+        path: "portfolio",
+        element: <PortfolioPage />,
+      },
+      {
+        path: "articles",
+        element: <ArticlesPage />,
+      },
+      {
+        path: "faq",
+        element: <FaqPage />,
+      },
+      {
+        path: "contact-us",
+        element: <ContactUsPage />,
+      },
+    ],
+  },
+]);
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+export default function App() {
+  return <RouterProvider router={router} />;
 }
-
-export default App
