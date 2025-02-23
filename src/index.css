@@ -44,3 +44,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+main {
+  margin: auto;
+  margin-top: calc(100px + 3rem);
+  max-width: 1064px;
+}
