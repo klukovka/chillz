@@ -1,3 +1,4 @@
+import PinAnimation from "../../components/PinAnimation";
 import WidthDimensionsContainer from "../../components/WidthDimensionsContainer";
 import AboutMissionSection from "./components/AboutMissionSection";
 import AboutPageDivider from "./components/AboutPageDivider";
@@ -9,7 +10,9 @@ export default function AboutPage() {
   return (
     <>
       <WidthDimensionsContainer>
-        <ImageWave src="https://www.wearegecko.co.uk/media/50316/mountain-3.jpg" />
+        <PinAnimation>
+          <ImageWave src="https://www.wearegecko.co.uk/media/50316/mountain-3.jpg" />
+        </PinAnimation>
         <AboutUsSection />
       </WidthDimensionsContainer>
       <AboutPageDivider backgroundColor="#EF4B8D">

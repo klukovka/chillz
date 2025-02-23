@@ -1,4 +1,5 @@
 import logo from "../../../assets/claw_with_tablet.svg";
+import PinAnimation from "../../../components/PinAnimation";
 import WidthDimensionsContainer from "../../../components/WidthDimensionsContainer";
 import AboutFlexContainer from "./AboutFlexContainer";
 import classes from "./AboutMissionSection.module.css";
@@ -24,7 +25,9 @@ export default function AboutMissionSection() {
           </h3>
         </AboutFlexContainer>
       </WidthDimensionsContainer>
-      <img src={logo} alt="Chillz Logo" />
+      <PinAnimation>
+        <img src={logo} alt="Chillz Logo" />
+      </PinAnimation>
     </div>
   );
 }
