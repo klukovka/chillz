@@ -32,6 +32,10 @@
   font-style: normal;
 }
 
+body {
+  margin: 0;
+
+}
 
 
 :root {
@@ -49,4 +53,6 @@ main {
   margin: auto;
   margin-top: calc(100px + 3rem);
   max-width: 1064px;
+  height: 1000px;
+  background-color: aqua;
 }

@@ -1,5 +1,6 @@
 .main-header {
-    background: white;
+    /* background: white; */
+    background: green;
     padding: 1.5rem 0rem;
     width: 100%;
     position: fixed;

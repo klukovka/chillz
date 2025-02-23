@@ -12,17 +12,16 @@ export default function MainNavigationBar() {
       />
       <nav>
         <ul className={classes["main-nav__items"]}>
-          <MainNavigationBarItem to="/" end>
+          <MainNavigationBarItem to="" end>
             about
           </MainNavigationBarItem>
-          <MainNavigationBarItem to="/services">services</MainNavigationBarItem>
-          <MainNavigationBarItem to="/portfolio">
+          <MainNavigationBarItem to="services">services</MainNavigationBarItem>
+          <MainNavigationBarItem to="portfolio">
             portfolio
           </MainNavigationBarItem>
-          <MainNavigationBarItem to="/articles">articles</MainNavigationBarItem>
-          <MainNavigationBarItem to="/faq">FAQ</MainNavigationBarItem>
-          <MainNavigationBarItem to="/contact-us">
-            {" "}
+          <MainNavigationBarItem to="articles">articles</MainNavigationBarItem>
+          <MainNavigationBarItem to="faq">FAQ</MainNavigationBarItem>
+          <MainNavigationBarItem to="contact-us">
             <button>contact us</button>
           </MainNavigationBarItem>
         </ul>
