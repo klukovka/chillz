@@ -12,7 +12,7 @@ export default function ImageWave({ src, alt }) {
       <div className={classes["animated-wave-container"]}>
         <svg
           width="100%"
-          viewBox="0 0 1317 567"
+          viewBox="80 0 1200 470"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -22,9 +22,17 @@ export default function ImageWave({ src, alt }) {
             stroke="#7DC8F7"
             strokeWidth="100"
           />
+
           <text fill="white" fontSize="32" fontWeight="bold">
             <textPath href="#wavePath" startOffset="0%">
               <tspan dy="6">{waveText}</tspan>
+              <animate
+                attributeName="startOffset"
+                from="100%"
+                to="-100%"
+                dur="20s"
+                repeatCount="indefinite"
+              />
             </textPath>
           </text>
         </svg>
