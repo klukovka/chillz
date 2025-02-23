@@ -1,0 +1,28 @@
+.about-fex-container {
+    margin: 0;
+    padding: 0;
+    margin-top: 2rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.about-fex-container h3 {
+	font-size: 70px;
+	font-weight: 500;
+    margin: 0;
+    width: 49%;
+    line-height: 1;
+  }
+
+.about-fex-container p {
+    margin: 0;
+    color: black;
+    line-height: calc(30 / 19);
+    letter-spacing: -1%;
+    font-size: 19px;
+    font-weight: 500;
+    width: 51%;
+  }
+
+ 
