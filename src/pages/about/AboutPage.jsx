@@ -5,6 +5,7 @@ import AboutPageDivider from "./components/AboutPageDivider";
 import AboutUsSection from "./components/AboutUsSection";
 import ImageWave from "./components/ImageWave";
 import SushiCraby from "./components/SushiCraby";
+import WhatDoWeDo from "./components/WhatDoWeDo";
 
 export default function AboutPage() {
   return (
@@ -26,6 +27,7 @@ export default function AboutPage() {
       </AboutPageDivider>
       <WidthDimensionsContainer>
         <SushiCraby />
+        <WhatDoWeDo />
       </WidthDimensionsContainer>
     </>
   );
