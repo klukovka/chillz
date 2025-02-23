@@ -86,7 +86,7 @@ const PhysicsContainer = ({ elements = [], height = 400, className }) => {
           render: {
             fillStyle: "#ffffff", // White background
             strokeStyle: "#9B4DFF", // Purple border
-            lineWidth: 1,
+            lineWidth: 2,
           },
           label: element.text, // Store text inside label
         }
