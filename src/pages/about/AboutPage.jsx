@@ -3,6 +3,7 @@ import AboutMissionSection from "./components/AboutMissionSection";
 import AboutPageDivider from "./components/AboutPageDivider";
 import AboutUsSection from "./components/AboutUsSection";
 import ImageWave from "./components/ImageWave";
+import SushiCraby from "./components/SushiCraby";
 
 export default function AboutPage() {
   return (
@@ -20,6 +21,9 @@ export default function AboutPage() {
         Oh, and you’ll never feel outta place here. If we can vibe with a
         business-savvy crab, we can def get you too
       </AboutPageDivider>
+      <WidthDimensionsContainer>
+        <SushiCraby />
+      </WidthDimensionsContainer>
     </>
   );
 }

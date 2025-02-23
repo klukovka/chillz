@@ -1,0 +1,20 @@
+.sushi-craby-section {
+    justify-content:flex-start;
+}
+
+img.rotated-craby {
+    height: 384px;
+    transform: rotate(-40deg);
+}
+
+.craby-section {
+    margin-right: 8rem;
+}
+
+.craby-section h2 {
+    font-size: 100px;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    line-height: calc(104 / 100);
+}
