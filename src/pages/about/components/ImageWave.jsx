@@ -7,7 +7,7 @@ export default function ImageWave({ src, alt }) {
 
   for (let i = 0; i < 5; i++) {
     animatedElements.push(
-      <textPath href="#wavePath" startOffset="0%" key={`${i} wave text`}>
+      <textPath href="#wavePath" key={`${i}-wave-text`} startOffset="100%">
         <tspan dy="6">{waveText}</tspan>
         <animate
           attributeName="startOffset"
