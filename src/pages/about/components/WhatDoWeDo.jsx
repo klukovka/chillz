@@ -1,4 +1,5 @@
 import PinAnimation from "../../../components/PinAnimation";
+import CheckServicesButton from "./CheckServicesButton";
 import PhysicsContainer from "./PhysicsContainer";
 import classes from "./WhatDoWeDo.module.css";
 
@@ -9,18 +10,10 @@ export default function WhatDoWeDo() {
         <h1>what do we do?</h1>
       </PinAnimation>
       <PinAnimation>
-        <div className={classes["physics-container"]}>
-          <p>
-            We craft strategies that click, stick, and actually make an impact.
-            Whether you’re buildin’ a brand, growin’ an audience, or just tryna
-            get your message out there—we got you.
-          </p>
-          <p>
-            From brand identity to content optimization, engagement, and
-            beyond—you name it, we handle it, so you can focus on what you love.
-          </p>
-          <p>Ready to turn up the volume on your brand?</p>
+        <div className={classes["what-do-we-do"]}>
           <PhysicsContainer
+            className={classes["physics-container"]}
+            height={classes["what-do-we-do"].height}
             elements={[
               {
                 width: 260,
@@ -47,15 +40,15 @@ export default function WhatDoWeDo() {
                 width: 218,
                 height: 64,
                 text: "smm\nstrategy",
-                offset: 100,
+                offset: 120,
                 fallHeight: 50,
               },
               {
                 width: 182,
                 height: 64,
                 text: "influ\nmarketing",
-                offset: 250,
-                fallHeight: 150,
+                offset: 285,
+                fallHeight: 80,
               },
               {
                 width: 132,
@@ -69,7 +62,7 @@ export default function WhatDoWeDo() {
                 height: 64,
                 text: "social media\noptimization",
                 offset: 500,
-                fallHeight: 50,
+                fallHeight: 80,
               },
               {
                 width: 190,
@@ -82,11 +75,26 @@ export default function WhatDoWeDo() {
                 width: 280,
                 height: 64,
                 text: "creative strategy",
-                offset: 600,
+                offset: 660,
                 fallHeight: 50,
               },
             ]}
           />
+
+          <div>
+            <p>
+              We craft strategies that click, stick, and actually make an
+              impact. Whether you’re buildin’ a brand, growin’ an audience, or
+              just tryna get your message out there—we got you.
+            </p>
+            <p>
+              From brand identity to content optimization, engagement, and
+              beyond—you name it, we handle it, so you can focus on what you
+              love.
+            </p>
+            <p>Ready to turn up the volume on your brand?</p>
+            <CheckServicesButton>Check our services</CheckServicesButton>
+          </div>
         </div>
       </PinAnimation>
     </div>

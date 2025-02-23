@@ -9,21 +9,19 @@ import { useCallback, useEffect, useRef, useState } from "react";
 //   fallHeight: 300,
 // };
 
-const PhysicsContainer = ({ elements = [] }) => {
+const PhysicsContainer = ({ elements = [], height = 400, className }) => {
   const sceneRef = useRef(null);
   const engineRef = useRef(null);
   const renderRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const [dimensions, setDimensions] = useState({
     width: Math.min(window.innerWidth, 800),
-    height: 400,
   });
 
   // Function to update dimensions on resize
   const updateDimensions = useCallback(() => {
     setDimensions({
       width: Math.min(window.innerWidth, 800),
-      height: 400,
     });
   }, []);
 
@@ -46,7 +44,7 @@ const PhysicsContainer = ({ elements = [] }) => {
   useEffect(() => {
     if (!isVisible || !elements || elements.length === 0) return;
 
-    const { width, height } = dimensions;
+    const { width } = dimensions;
 
     // Clean up old simulation if it exists
     if (engineRef.current) {
@@ -79,11 +77,11 @@ const PhysicsContainer = ({ elements = [] }) => {
     const elementBodies = elements.map((element) => {
       return Matter.Bodies.rectangle(
         element.offset, // Spread items across columns
-        element.fallHeight, // Staggered heights
+        element.fallHeight - height, // Staggered heights
         element.width, // Width
         element.height, // Height
         {
-          restitution: 0.3,
+          restitution: 0.2,
           chamfer: { radius: 30 }, // Rounded corners
           render: {
             fillStyle: "#ffffff", // White background
@@ -109,10 +107,6 @@ const PhysicsContainer = ({ elements = [] }) => {
         isStatic: true,
         render: { fillStyle: "transparent", lineWidth: 0 },
       }), // Right wall
-      Matter.Bodies.rectangle(width / 2, 0, width, 1, {
-        isStatic: true,
-        render: { fillStyle: "transparent", lineWidth: 0 },
-      }), // Ceiling
     ];
 
     Matter.Composite.add(world, [...walls, ...elementBodies]);
@@ -151,7 +145,7 @@ const PhysicsContainer = ({ elements = [] }) => {
       render.canvas.remove();
       render.textures = {};
     };
-  }, [isVisible, dimensions, elements]);
+  }, [isVisible, dimensions, elements, height]);
 
   useEffect(() => {
     window.addEventListener("resize", updateDimensions);
@@ -159,7 +153,11 @@ const PhysicsContainer = ({ elements = [] }) => {
   }, [updateDimensions]);
 
   return (
-    <div ref={sceneRef} style={{ display: "flex", justifyContent: "end" }} />
+    <div
+      ref={sceneRef}
+      style={{ display: "flex", justifyContent: "end" }}
+      className={className}
+    />
   );
 };
 

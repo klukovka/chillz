@@ -1,0 +1,28 @@
+.button {
+    background-color: white;
+    color: black;
+    font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: calc(20 / 16);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.button:hover,
+.button:active {
+    background-color: #81CAF7;
+}
+
+.button div {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.button svg {
+    width: 26px;
+    margin-left: 1rem;
+}
