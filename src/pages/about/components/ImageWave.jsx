@@ -1,10 +1,25 @@
 import classes from "./ImageWave.module.css";
 
 export default function ImageWave({ src, alt }) {
-  const waveText = Array.from(
-    { length: 4 },
-    () => "smart moves bold ideas & chi_illz"
-  ).join("\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0");
+  const waveText = "smart moves bold ideas & chi_illz";
+
+  const animatedElements = [];
+
+  for (let i = 0; i < 5; i++) {
+    animatedElements.push(
+      <textPath href="#wavePath" startOffset="0%" key={`${i} wave text`}>
+        <tspan dy="6">{waveText}</tspan>
+        <animate
+          attributeName="startOffset"
+          from="100%"
+          to="-100%"
+          dur="20s"
+          begin={`${i * 4}s`}
+          repeatCount="indefinite"
+        />
+      </textPath>
+    );
+  }
 
   return (
     <div className={classes["wave-container"]}>
@@ -24,16 +39,7 @@ export default function ImageWave({ src, alt }) {
           />
 
           <text fill="white" fontSize="32" fontWeight="bold">
-            <textPath href="#wavePath" startOffset="0%">
-              <tspan dy="6">{waveText}</tspan>
-              <animate
-                attributeName="startOffset"
-                from="100%"
-                to="-100%"
-                dur="20s"
-                repeatCount="indefinite"
-              />
-            </textPath>
+            {animatedElements}
           </text>
         </svg>
       </div>
