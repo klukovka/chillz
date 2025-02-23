@@ -53,6 +53,7 @@ main {
   margin: auto;
   margin-top: calc(100px + 3rem);
   margin-bottom: 1.5rem;
+  width: 100%;
 }
 
 h1 {

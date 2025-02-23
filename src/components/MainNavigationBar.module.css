@@ -1,7 +1,7 @@
 .main-header {
     background: white;
-    padding: 1.5rem 0rem;
-    width: 100%;
+    padding: 1.5rem 1rem;
+    width: calc(100% - 2rem);
     position: fixed;
     left: 0;
     top: 0;
@@ -14,7 +14,6 @@
 .main-header__brand  {
     height: 56px;
     vertical-align: middle;
-    padding-left: 1rem;
 }
 
 .main-nav__items{
@@ -52,7 +51,6 @@ TODO: Update styling
     padding: 0.375rem 1.25rem;
     border: 1px solid #EF4B8D;
     color: black;
-    margin-right: 1rem;
     cursor:pointer;
 }
 
