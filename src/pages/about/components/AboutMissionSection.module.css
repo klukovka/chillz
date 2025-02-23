@@ -1,0 +1,13 @@
+.about-mission {
+    position: relative;
+    display: inline-block;
+    margin: auto;
+    width: 100%;
+}
+
+.about-mission img {
+    height: 264px;
+    position: absolute;
+    left: 0;
+    top: 72px;
+}

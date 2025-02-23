@@ -1,12 +1,14 @@
+import logo from "../../../assets/claw_with_tablet.svg";
 import WidthDimensionsContainer from "../../../components/WidthDimensionsContainer";
 import AboutFlexContainer from "./AboutFlexContainer";
+import classes from "./AboutMissionSection.module.css";
 
 export default function AboutMissionSection() {
   return (
-    <>
+    <div className={classes["about-mission"]}>
       <WidthDimensionsContainer>
         <AboutFlexContainer>
-          <h3>Our mission ?</h3>
+          <h3>Our mission?</h3>
           <p>
             No boring corporate talk. No overpromises. Just smart marketing that
             works.
@@ -22,6 +24,7 @@ export default function AboutMissionSection() {
           </h3>
         </AboutFlexContainer>
       </WidthDimensionsContainer>
-    </>
+      <img src={logo} alt="Chillz Logo" />
+    </div>
   );
 }
