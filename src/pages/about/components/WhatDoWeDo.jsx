@@ -13,7 +13,7 @@ export default function WhatDoWeDo() {
         <div className={classes["what-do-we-do"]}>
           <PhysicsContainer
             className={classes["physics-container"]}
-            // TODO: Update height
+            // TODO: Update height and fix when animation is started
             height={458}
             elements={[
               {
