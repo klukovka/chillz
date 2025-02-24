@@ -1,0 +1,18 @@
+.arrow-with-text-container {
+    position: relative;
+    display: inline-block;
+}
+
+.arrow-with-text-container span {
+    font-family: 'Playpen Sans', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+    transform: rotate(-8deg);
+    top: 26px;
+    left: 100px;
+    letter-spacing: -5%;
+}

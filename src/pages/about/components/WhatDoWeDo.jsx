@@ -1,3 +1,4 @@
+import ArrowWithText from "../../../components/ArrowWithText";
 import PinAnimation from "../../../components/PinAnimation";
 import CheckServicesButton from "./CheckServicesButton";
 import PhysicsContainer from "./PhysicsContainer";
@@ -93,8 +94,15 @@ export default function WhatDoWeDo() {
               beyond—you name it, we handle it, so you can focus on what you
               love.
             </p>
-            <p>Ready to turn up the volume on your brand?</p>
-            <CheckServicesButton>Check our services</CheckServicesButton>
+            <div className={classes["arrow-container"]}>
+              <div>
+                <p>Ready to turn up the volume on your brand?</p>
+                <CheckServicesButton>Check our services</CheckServicesButton>
+              </div>
+              <div className={classes["arrow"]}>
+                <ArrowWithText text="THEN" />
+              </div>
+            </div>
           </div>
         </div>
       </PinAnimation>

@@ -17,10 +17,22 @@
     font-size: 20px;
     line-height: calc(21 / 20);
     font-weight: 500;
+    padding: 0;
 }
 
 .physics-container {
     position: absolute;
     bottom: 0.5rem;   
     right: 0.75rem;
+}
+
+.arrow-container {
+    position: relative;
+    display: inline-block;
+}
+
+.arrow {
+    position: absolute;
+    top: -0.5rem;
+    right: 2.5rem;
 }
