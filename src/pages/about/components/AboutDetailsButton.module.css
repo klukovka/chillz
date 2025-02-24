@@ -1,0 +1,112 @@
+button.about-details {
+    border-radius: 56px;
+    border: 3px solid;
+    cursor:pointer;
+    font-family: "ClashDisplay";
+    font-weight: 600;
+    text-align: start;
+    position: relative;
+    display: inline-block;
+}
+
+button.about-details span {
+    color: #EF4B8D;
+}
+
+button.about-details svg {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+}
+
+button.primary {
+    border-color: black;
+    color: black;
+    background-color: white;
+    font-size: 70px;
+    color: black;
+    line-height: 1;
+    letter-spacing: -3.5px;
+}
+
+
+button.primary .content {
+    padding: 26px 0px 16px 52px;
+}
+
+
+svg.primary rect {
+    fill: #EF4B8D
+}
+
+svg.primary path {
+    fill: white;   
+}
+
+button.primary:hover,
+button.primary:active {
+    background-color: #EF4B8D;
+    border-color: #EF4B8D;
+    color: white;
+}
+
+button.primary:hover span,
+button.primary:active span {
+    color: black;
+}
+
+button.primary:hover svg.primary rect ,
+button.primary:active svg.primary rect {
+    fill: white;
+}
+
+button.primary:hover svg.primary path ,
+button.primary:active svg.primary path {
+    fill: #EF4B8D;
+}
+
+
+button.secondary {
+    border-color: #81CAF7;
+    background-color: #81CAF7;
+    font-size: 60px;
+    color: white;
+    line-height: 1.25;
+    letter-spacing: -3px;
+}
+
+button.secondary .content {
+    padding: 6px 0px 26px 20px;
+}
+
+svg.secondary rect {
+    fill: #9B4DFF
+}
+
+svg.secondary path {
+    fill: white;   
+}
+
+button.secondary:hover,
+button.secondary:active {
+    background-color: #9B4DFF;
+    border-color: #9B4DFF;
+    color: white;
+}
+
+button.secondary:hover span,
+button.secondary:active span {
+    color: #81CAF7;
+}
+
+button.secondary:hover svg.secondary rect ,
+button.secondary:active svg.secondary rect {
+    fill: white;
+}
+
+button.secondary:hover svg.secondary path ,
+button.secondary:active svg.secondary path {
+    fill: #9B4DFF;
+}

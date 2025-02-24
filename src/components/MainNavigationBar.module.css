@@ -58,7 +58,7 @@ TODO: Update styling
 TODO: Update styling
 */
 .main-nav__items button:hover,
-.main-nav__items .active button {
+.main-nav__items button.active {
     background-color: #EF4B8D;
     color: white;
 }

@@ -1,5 +1,6 @@
 import PinAnimation from "../../components/PinAnimation";
 import WidthDimensionsContainer from "../../components/WidthDimensionsContainer";
+import AboutDetailsButtonsSection from "./components/AboutDetailsButtonsSection";
 import AboutMissionSection from "./components/AboutMissionSection";
 import AboutPageDivider from "./components/AboutPageDivider";
 import AboutUsSection from "./components/AboutUsSection";
@@ -28,6 +29,7 @@ export default function AboutPage() {
       <WidthDimensionsContainer>
         <SushiCraby />
         <WhatDoWeDo />
+        <AboutDetailsButtonsSection />
       </WidthDimensionsContainer>
     </>
   );
