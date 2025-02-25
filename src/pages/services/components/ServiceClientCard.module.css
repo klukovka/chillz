@@ -1,0 +1,54 @@
+.service-client-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    gap: 16px;
+    justify-content: end;
+    padding: 1.25rem 2.5rem;
+}
+
+.service-client-card-title {
+    color: black;
+    font-size: 70px;
+    margin: 0;
+    padding: 0;
+    line-height: calc(52 / 70);
+}
+
+.service-client-card-description {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-weight: 400;
+    font-size: 15;
+    font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: calc(20 / 15);
+    text-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
+    line-height: calc(20 / 15);
+}
+
+.service-client-card-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 2.5rem;
+    color: black;
+    font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.service-client-card-button:hover,
+.service-client-card-button:active {
+    background-color: #EF4B8D;
+}
+
+@media (min-width: 850px) {
+    .service-client-card {
+        min-height: 600px;
+    }
+}

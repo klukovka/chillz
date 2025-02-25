@@ -1,0 +1,26 @@
+.service-clients-section {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.service-clients-section > * {
+    flex: 1; 
+}
+
+.influ-background {
+    background: linear-gradient(to top, rgb(0, 0, 0), transparent ),
+    url("https://static1.cbrimages.com/wordpress/wp-content/uploads/2020/10/cleaning.jpg") center/cover no-repeat border-box;
+}
+
+.brands-background {
+    background: linear-gradient(to top, rgb(0, 0, 0), transparent ),
+    url("https://i.ytimg.com/vi/Vc1rNI7nLTQ/maxresdefault.jpg") center/cover no-repeat border-box;
+}
+
+@media (min-width: 850px) {
+    .service-clients-section {
+        flex-direction: row;
+    }
+}
