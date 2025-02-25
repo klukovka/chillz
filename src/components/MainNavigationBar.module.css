@@ -60,7 +60,7 @@ TODO: Update styling
     color: white;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 850px) {
     .main-nav__items{
         padding: 0;
         list-style: none;

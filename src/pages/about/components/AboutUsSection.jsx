@@ -10,14 +10,14 @@ export default function AboutUsSection() {
           complicated stuff simple and simple stuff unforgettable
         </p>
       </AboutFlexContainer>
-      <AboutFlexContainer>
+      <AboutFlexContainer end>
+        <h3>
+          in <span style={{ color: "#9B4DFF" }}>simplicity</span> we believe
+        </h3>
         <p>
           Growth should be a thrill, not a grind. We turn strategy into a clear
           roadmap, marketing into impact, and stress into chill
         </p>
-        <h3 style={{ textAlign: "end" }}>
-          in <span style={{ color: "#9B4DFF" }}>simplicity</span> we believe
-        </h3>
       </AboutFlexContainer>
       <AboutFlexContainer>
         <h3>there’s always a way</h3>

@@ -1,4 +1,4 @@
-import craby from "../../../assets/craby_sushi.svg";
+// import craby from "../../../assets/craby_sushi.svg";
 import AboutFlexContainer from "./AboutFlexContainer";
 import classes from "./SushiCraby.module.css";
 
@@ -16,7 +16,7 @@ export default function SushiCraby() {
           <span style={{ color: "#EF4B8D" }}>zero</span> stress
         </h2>
       </section>
-      <img src={craby} alt="Chillz Logo" className={classes["rotated-craby"]} />
+      {/* <img src={craby} alt="Chillz Logo" className={classes["rotated-craby"]} /> */}
     </AboutFlexContainer>
   );
 }
