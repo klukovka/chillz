@@ -1,13 +1,31 @@
 .about-mission {
-    position: relative;
-    display: inline-block;
+    display: flex;
     margin: auto;
     width: 100%;
 }
 
 .about-mission img {
-    height: 264px;
-    position: absolute;
-    left: 0;
-    top: 72px;
+    height: 300px;
+}
+
+@media (min-width: 850px) {
+    .about-mission img {
+        height: 264px;
+        position: absolute;
+        left: 0;
+        top: 150px;
+    }
+
+    .about-mission {
+        position: relative;
+        display: inline-block;
+        margin: auto;
+        width: 100%;
+    }
+}
+
+@media (min-width: 941px) {
+    .about-mission img {
+        top: 72px;
+    }
 }

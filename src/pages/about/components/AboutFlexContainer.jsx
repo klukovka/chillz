@@ -16,8 +16,6 @@ export default function AboutFlexContainer({ children, end }) {
     );
   }
 
-  console.log(children);
-
   return (
     <div className={containerClass}>
       {React.Children.toArray(children).map((child, index) => (
