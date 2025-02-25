@@ -1,6 +1,8 @@
+import { useMediaQuery } from "@mui/material";
 import classes from "./ImageWave.module.css";
 
 export default function ImageWave({ src, alt }) {
+  const matches = useMediaQuery("(min-width:850px)");
   const waveText = "smart moves bold ideas & chi_illz";
 
   const animatedElements = [];
@@ -27,7 +29,7 @@ export default function ImageWave({ src, alt }) {
       <div className={classes["animated-wave-container"]}>
         <svg
           width="100%"
-          viewBox="80 0 1200 470"
+          viewBox={matches ? "80 0 1200 470" : "300 -30 1000 500"}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
