@@ -3,3 +3,24 @@
     flex-direction: column;
     gap: 32px;
 }
+
+svg.arrow rect {
+    fill: #9B4DFF
+}
+
+svg.arrow path {
+    fill: white;   
+}
+
+.footer {
+    color: black;
+    font-size: 70px;
+    font-weight: 600;
+    letter-spacing: -3px;
+    padding: 0 2rem;
+    margin: 0;
+}
+
+.footer span {
+    color: #9B4DFF;
+}

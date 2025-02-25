@@ -1,4 +1,5 @@
 import PinAnimation from "../../components/PinAnimation";
+import RoundedArrow from "../../components/RoundedArrow";
 import WidthDimensionsContainer from "../../components/WidthDimensionsContainer";
 import ServiceClientsSection from "./components/ServiceClientsSection";
 import WorkflowSection from "./components/WorkflowSection";
@@ -15,6 +16,13 @@ export default function ServicesPage() {
         </PinAnimation>
         <ServiceClientsSection />
         <WorkflowSection />
+        <PinAnimation>
+          <h3 className={classes["footer"]}>
+            Still deciding? <span>Take a peek at our work</span> and see the
+            results for yourself!<span> </span>
+            <RoundedArrow className={classes["arrow"]} />
+          </h3>
+        </PinAnimation>
       </div>
     </WidthDimensionsContainer>
   );
