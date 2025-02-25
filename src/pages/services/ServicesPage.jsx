@@ -1,6 +1,7 @@
 import PinAnimation from "../../components/PinAnimation";
 import WidthDimensionsContainer from "../../components/WidthDimensionsContainer";
 import ServiceClientsSection from "./components/ServiceClientsSection";
+import WorkflowSection from "./components/WorkflowSection";
 import classes from "./ServicesPage.module.css";
 
 export default function ServicesPage() {
@@ -13,6 +14,7 @@ export default function ServicesPage() {
           </h1>
         </PinAnimation>
         <ServiceClientsSection />
+        <WorkflowSection />
       </div>
     </WidthDimensionsContainer>
   );
