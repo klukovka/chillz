@@ -17,10 +17,7 @@
 }
 
 .main-nav__items{
-    padding: 0;
-    list-style: none;
-    display: flex;
-    align-items: center;
+    display: none;
 }
 
 .main-nav__item{
@@ -61,4 +58,13 @@ TODO: Update styling
 .main-nav__items button.active {
     background-color: #EF4B8D;
     color: white;
+}
+
+@media (min-width: 700px) {
+    .main-nav__items{
+        padding: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
 }
