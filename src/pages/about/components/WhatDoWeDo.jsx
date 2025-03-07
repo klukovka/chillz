@@ -4,6 +4,72 @@ import CheckServicesButton from "./CheckServicesButton";
 import PhysicsContainer from "./PhysicsContainer";
 import classes from "./WhatDoWeDo.module.css";
 
+const services = [
+  {
+    width: 260,
+    height: 64,
+    text: "brand identity",
+    offset: 650,
+    fallHeight: 400,
+  },
+  {
+    width: 232,
+    height: 64,
+    text: "graphic design",
+    offset: 500,
+    fallHeight: 350,
+  },
+  {
+    width: 186,
+    height: 64,
+    text: "visual\ncontent",
+    offset: 350,
+    fallHeight: 380,
+  },
+  {
+    width: 218,
+    height: 64,
+    text: "smm\nstrategy",
+    offset: 150,
+    fallHeight: 150,
+  },
+  {
+    width: 182,
+    height: 64,
+    text: "influ\nmarketing",
+    offset: 285,
+    fallHeight: 280,
+  },
+  {
+    width: 132,
+    height: 64,
+    text: "SEO/SEM",
+    offset: 350,
+    fallHeight: 250,
+  },
+  {
+    width: 220,
+    height: 64,
+    text: "social media\noptimization",
+    offset: 500,
+    fallHeight: 180,
+  },
+  {
+    width: 190,
+    height: 64,
+    text: "targeting",
+    offset: 600,
+    fallHeight: 200,
+  },
+  {
+    width: 280,
+    height: 64,
+    text: "creative strategy",
+    offset: 600,
+    fallHeight: 150,
+  },
+];
+
 export default function WhatDoWeDo() {
   return (
     <div style={{ marginTop: "4rem" }}>
@@ -16,71 +82,7 @@ export default function WhatDoWeDo() {
             className={classes["physics-container"]}
             // TODO: Update height and fix when animation is started
             height={458}
-            elements={[
-              {
-                width: 260,
-                height: 64,
-                text: "brand identity",
-                offset: 650,
-                fallHeight: 400,
-              },
-              {
-                width: 232,
-                height: 64,
-                text: "graphic design",
-                offset: 500,
-                fallHeight: 350,
-              },
-              {
-                width: 186,
-                height: 64,
-                text: "visual\ncontent",
-                offset: 350,
-                fallHeight: 380,
-              },
-              {
-                width: 218,
-                height: 64,
-                text: "smm\nstrategy",
-                offset: 150,
-                fallHeight: 150,
-              },
-              {
-                width: 182,
-                height: 64,
-                text: "influ\nmarketing",
-                offset: 285,
-                fallHeight: 280,
-              },
-              {
-                width: 132,
-                height: 64,
-                text: "SEO/SEM",
-                offset: 350,
-                fallHeight: 250,
-              },
-              {
-                width: 220,
-                height: 64,
-                text: "social media\noptimization",
-                offset: 500,
-                fallHeight: 180,
-              },
-              {
-                width: 190,
-                height: 64,
-                text: "targeting",
-                offset: 600,
-                fallHeight: 200,
-              },
-              {
-                width: 280,
-                height: 64,
-                text: "creative strategy",
-                offset: 600,
-                fallHeight: 150,
-              },
-            ]}
+            elements={services}
           />
 
           <div>

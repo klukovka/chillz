@@ -1,0 +1,15 @@
+.sms-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.sms-container img:first-child {
+    max-width: min(532px, calc(100vw - 32px));
+    align-self: flex-start;
+}
+
+.sms-container img:last-child {
+    max-width: min(461px, calc(100vw - 72px));
+    align-self: flex-end;
+}

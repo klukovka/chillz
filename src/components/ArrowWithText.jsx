@@ -1,6 +1,6 @@
 import classes from "./ArrowWithText.module.css";
 
-export default function ArrowWithText({ width = 230, height = 86, text = "" }) {
+export default function ArrowWithText({ width = 230, height = 86, text }) {
   return (
     <div className={classes["arrow-with-text-container"]}>
       <svg
@@ -15,7 +15,7 @@ export default function ArrowWithText({ width = 230, height = 86, text = "" }) {
           fill="white"
         />
       </svg>
-      <span>{text}</span>
+      {text && <span>{text}</span>}
     </div>
   );
 }
