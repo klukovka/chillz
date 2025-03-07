@@ -1,5 +1,6 @@
 import PinAnimation from "../../../components/PinAnimation";
 import WidthDimensionsContainer from "../../../components/WidthDimensionsContainer";
+import InfluencersServicesSection from "./components/brands/InfluencersServicesSection";
 import classes from "./NestedServicesPage.module.css";
 
 export default function InfluencersServicesPage() {
@@ -9,6 +10,7 @@ export default function InfluencersServicesPage() {
         <PinAnimation>
           <h1 style={{ textAlign: "center" }}>for influencers</h1>
         </PinAnimation>
+        <InfluencersServicesSection />
       </div>
     </WidthDimensionsContainer>
   );
