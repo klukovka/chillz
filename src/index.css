@@ -57,10 +57,16 @@ main {
 }
 
 h1 {
-  font-size: 96px;
+  font-size: 70px;
   font-weight: 600;
   line-height: 1;
   margin: 0;
   padding: 0;
   color: black;
+}
+
+@media (min-width: 850px) {
+  h1 {
+      font-size: 96px;
+  }
 }
