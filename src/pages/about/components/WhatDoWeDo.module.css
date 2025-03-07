@@ -36,3 +36,7 @@
     top: -0.5rem;
     right: 2.5rem;
 }
+
+.arrow path {
+    fill: white;
+}

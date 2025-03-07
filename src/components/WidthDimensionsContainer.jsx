@@ -1,9 +1,12 @@
-export default function WidthDimensionsContainer({ children }) {
+export default function WidthDimensionsContainer({
+  children,
+  maxWidth = 1064,
+}) {
   return (
     <div
       style={{
         margin: "auto",
-        maxWidth: "calc(1064px + 1rem)",
+        maxWidth: `calc(${maxWidth}px + 1rem)`,
         padding: "0 1rem",
       }}
     >
