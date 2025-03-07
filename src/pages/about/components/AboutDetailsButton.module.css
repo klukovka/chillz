@@ -25,15 +25,14 @@ button.primary {
     border-color: black;
     color: black;
     background-color: white;
-    font-size: 70px;
+    font-size: 50px;
     color: black;
     line-height: 1;
-    letter-spacing: -3.5px;
 }
 
 
 button.primary .content {
-    padding: 26px 0px 16px 52px;
+    padding: 32px 56px 32px 32px;
 }
 
 
@@ -71,14 +70,13 @@ button.primary:active svg.primary path {
 button.secondary {
     border-color: #81CAF7;
     background-color: #81CAF7;
-    font-size: 60px;
+    font-size: 40px;
     color: white;
     line-height: 1.25;
-    letter-spacing: -3px;
 }
 
 button.secondary .content {
-    padding: 6px 0px 26px 20px;
+    padding: 32px 56px 32px 32px;
 }
 
 svg.secondary rect {
@@ -109,4 +107,35 @@ button.secondary:active svg.secondary rect {
 button.secondary:hover svg.secondary path ,
 button.secondary:active svg.secondary path {
     fill: #9B4DFF;
+}
+
+
+@media (min-width: 940px) {
+    button.primary {
+        font-size: 64px;
+        letter-spacing: -3.5px;
+    }
+
+    button.secondary {
+        font-size: 54px;
+        letter-spacing: -3px;
+    }
+
+    button.primary .content {
+        padding: 26px 0px 16px 52px;
+    }
+
+    button.secondary .content {
+        padding: 6px 0px 26px 20px;
+    }
+}
+
+@media (min-width: 1040px) {
+    button.primary {
+        font-size: 70px;
+    }
+
+    button.secondary {
+        font-size: 60px;
+    }
 }

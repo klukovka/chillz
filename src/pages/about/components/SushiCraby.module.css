@@ -1,20 +1,49 @@
 .sushi-craby-section {
-    justify-content:flex-start;
+    justify-content: center;
 }
 
 img.rotated-craby {
-    height: 384px;
-    transform: rotate(-40deg);
+    height: 300px;
+    background-color: plum;
 }
 
 .craby-section {
-    margin-right: 8rem;
+    margin-right: 2rem;
+    background-color: blue;
+    flex: 1;
 }
 
 .craby-section h2 {
-    font-size: 100px;
+    font-size: 90px;
     margin: 0;
     padding: 0;
     font-weight: 600;
     line-height: calc(104 / 100);
 }
+
+@media (min-width: 1280px) {
+    .sushi-craby-section {
+        justify-content: space-between;
+    }
+    
+    img.rotated-craby {
+        height: 384px;
+        transform: rotate(-40deg);
+        background-color: plum;
+    }
+    
+    .craby-section {
+        margin-right: 8rem;
+        background-color: blue;
+    }
+    
+    .craby-section h2 {
+        font-size: 100px;
+        margin: 0;
+        padding: 0;
+        font-weight: 600;
+        line-height: calc(104 / 100);
+    }  
+}
+  
+  
