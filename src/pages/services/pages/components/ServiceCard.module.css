@@ -1,0 +1,35 @@
+.service-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    gap: 16px;
+    justify-content: end;
+    padding: 1.25rem 2.5rem;
+    min-height: 300px;
+}
+
+.service-card-title {
+    color: black;
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    line-height: calc(24 / 25);
+}
+
+.service-card-description {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-weight: 400;
+    font-size: 15;
+    font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: calc(20 / 15);
+    text-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
+    line-height: calc(20 / 15);
+}
+ 
+@media (min-width: 850px) {
+    .service-card {
+        min-height: 224px;
+    }
+}
