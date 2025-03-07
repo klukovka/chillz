@@ -1,4 +1,5 @@
 import PinAnimation from "../../../components/PinAnimation";
+import classes from "./AboutPageDivider.module.css";
 
 export default function AboutPageDivider({ children, backgroundColor }) {
   return (
@@ -10,17 +11,7 @@ export default function AboutPageDivider({ children, backgroundColor }) {
           marginTop: "2rem",
         }}
       >
-        <p
-          style={{
-            textAlign: "center",
-            fontWeight: "600",
-            fontSize: 20,
-            letterSpacing: "2%",
-            lineHeight: 30 / 20,
-          }}
-        >
-          {children}
-        </p>
+        <p className={classes["about-divider-text"]}>{children}</p>
       </div>
     </PinAnimation>
   );
