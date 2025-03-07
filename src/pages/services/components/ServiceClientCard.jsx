@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import Arrow from "../../../components/Arrow";
 import classes from "./ServiceClientCard.module.css";
 
@@ -8,13 +9,10 @@ export default function ServiceClientCard({ client, className }) {
       <p className={classes["service-client-card-description"]}>
         {client.description}
       </p>
-      <button
-        onClick={client.onClick}
-        className={classes["service-client-card-button"]}
-      >
+      <NavLink to={client.to} className={classes["service-client-card-button"]}>
         Dive into
         <Arrow fill="black" />
-      </button>
+      </NavLink>
     </div>
   );
 }

@@ -13,7 +13,7 @@ export default function ServiceClientsSection() {
         title: "influ",
         description:
           "Your socials should be a space where you create, not stress. We help you grow your platforms without the overwhelm, so you can focus on becoming the next big thing",
-        onClick: () => {},
+        to: "influencers",
       }}
     />
   );
@@ -24,7 +24,7 @@ export default function ServiceClientsSection() {
         title: "brands",
         description:
           "Your business needs a digital presence that converts, not just exists. We help brands build, optimize, and scale their social media channels to drive real business results",
-        onClick: () => {},
+        to: "brands",
       }}
     />
   );

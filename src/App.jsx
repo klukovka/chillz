@@ -6,6 +6,9 @@ import ContactUsPage from "./pages/contact-us/ContactUsPage";
 import FaqPage from "./pages/faq/FaqPage";
 import PortfolioPage from "./pages/portfolio/PortfolioPage";
 import ServicesPage from "./pages/services/ServicesPage";
+import ServicesPageRootLayout from "./pages/services/ServicesPageRootLayout";
+import BrandsServicesPage from "./pages/services/pages/BrandsServicesPage";
+import InfluencersServicesPage from "./pages/services/pages/InfluencersServicesPage";
 const router = createBrowserRouter([
   {
     path: "",
@@ -17,7 +20,21 @@ const router = createBrowserRouter([
       },
       {
         path: "services",
-        element: <ServicesPage />,
+        element: <ServicesPageRootLayout />,
+        children: [
+          {
+            index: true,
+            element: <ServicesPage />,
+          },
+          {
+            path: "brands",
+            element: <BrandsServicesPage />,
+          },
+          {
+            path: "influencers",
+            element: <InfluencersServicesPage />,
+          },
+        ],
       },
       {
         path: "portfolio",

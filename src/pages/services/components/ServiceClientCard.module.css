@@ -42,6 +42,7 @@
     cursor: pointer;
     background-color: white;
     border: none;
+    text-decoration: none;
 }
 
 .service-client-card-button:hover,
