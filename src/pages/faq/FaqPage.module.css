@@ -1,0 +1,35 @@
+.faq-page {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+svg.arrow rect {
+    fill: #EF4B8D
+}
+
+svg.arrow path {
+    fill: white;   
+}
+
+.footer {
+    color: black;
+    font-size: 52px;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    padding: 0 2rem;
+    margin: 0;
+    line-height: 0.9;
+}
+
+.footer span {
+    color: #EF4B8D;
+}
+
+
+@media (min-width: 850px) {
+    .footer {
+        font-size: 70px;
+        letter-spacing: -3px;
+    }
+}
