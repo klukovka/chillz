@@ -1,6 +1,7 @@
 import { useState } from "react";
 import FAQ from "../../../data/faq.js";
 import classes from "./FaqContent.module.css";
+import FaqExpandableItem from "./FaqExpandableItem";
 import FaqTableOfContent from "./FaqTableOfContent";
 
 export default function FaqContent() {
@@ -18,7 +19,15 @@ export default function FaqContent() {
           />
         ))}
       </div>
-      <div className={classes["faq"]}></div>
+      <div className={classes["faq"]}>
+        {selectedFAQ.content.map((item, index) => (
+          <FaqExpandableItem
+            question={item.question}
+            content={item.answer}
+            key={`${index}_${item.question}`}
+          />
+        ))}
+      </div>
     </div>
   );
 }
