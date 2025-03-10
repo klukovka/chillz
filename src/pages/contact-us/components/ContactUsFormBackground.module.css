@@ -8,7 +8,7 @@
     border-top-left-radius: 56px;
     border-bottom-left-radius: 56px;
     margin: 0;
-    padding: 40px 40px 52px 52px;
+    padding: 40px 72px 52px 52px;
 }
 
 .personal-data {
@@ -27,4 +27,16 @@
     writing-mode: vertical-rl; /* Rotates text vertically */
     text-orientation: mixed; /* Ensures upright text */
     white-space: nowrap; /* Prevents text wrapping */
+}
+
+.stack {
+    position: relative;
+    display: inline-block;
+}
+
+.code {
+    position: absolute;
+    top: 50%;         /* Align top edge at the center */
+    right: 95px;      /* Keep your original right spacing */
+    transform: translateY(-50%); /* Perfect vertical centering */
 }
