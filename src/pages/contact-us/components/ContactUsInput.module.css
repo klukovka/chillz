@@ -58,10 +58,14 @@
     border-bottom: solid 2px #F94C29;
 }
 
+.control input::placeholder{
+    color: #d1b055;
+}
+
 .control textarea {
     border: none;
     background-color: #FFD766;
-    font-size: 1.7rem;
+    font-size: 1rem;
     font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;
     font-weight: 600;
     margin-left: 8px;
@@ -87,4 +91,8 @@
 .control.error textarea:active,
 .control.error textarea:focus {
     border-bottom: solid 2px #F94C29;
+}
+
+.control textarea::placeholder{
+    color: #d1b055;
 }

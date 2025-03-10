@@ -58,6 +58,7 @@ export default function InfluContactUsPage() {
             value={nameField.value}
             error={nameField.errorText}
             onChange={nameField.handleChange}
+            placeholder="Crayby The Red Crab"
           />
           <ContactUsInput
             label="email"
@@ -67,6 +68,7 @@ export default function InfluContactUsPage() {
             value={emailField.value}
             error={emailField.errorText}
             onChange={emailField.handleChange}
+            placeholder="crayby@mail.com"
           />
         </ContactUsDivider>
         <ContactUsDivider>
@@ -77,6 +79,7 @@ export default function InfluContactUsPage() {
             value={instalinkField.value}
             error={instalinkField.errorText}
             onChange={instalinkField.handleChange}
+            placeholder="instagram.com/chi_illz"
           />
         </ContactUsDivider>
         <ContactUsDivider>
@@ -87,6 +90,7 @@ export default function InfluContactUsPage() {
             value={projectBudgetField.value}
             error={projectBudgetField.errorText}
             onChange={projectBudgetField.handleChange}
+            placeholder="1000$"
           />
         </ContactUsDivider>
         <ContactUsDivider>
@@ -131,6 +135,7 @@ export default function InfluContactUsPage() {
             value={commentField.value}
             error={commentField.errorText}
             onChange={commentField.handleChange}
+            placeholder="please contact as soon as possible!"
           />
         </ContactUsDivider>
         <button type="submit" className="button">
