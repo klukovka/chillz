@@ -1,9 +1,24 @@
 import classes from "./ContactUseCheckboxSet.module.css";
 
-export default function ContactUsCheckboxSet({ name, label, values, error }) {
+export default function ContactUsCheckboxSet({
+  name,
+  label,
+  items,
+  error,
+  value,
+  onChange,
+}) {
   return (
     <fieldset
       className={classes["control"] + " " + `${error ? classes.error : ""}`}
+      onChange={(event) => {
+        const changedValue = event.target.value;
+        let newValue = value.filter((item) => item !== changedValue);
+        if (newValue.length === value.length) {
+          newValue.push(changedValue);
+        }
+        onChange(newValue);
+      }}
     >
       <legend>{label}</legend>
       <div
@@ -11,7 +26,7 @@ export default function ContactUsCheckboxSet({ name, label, values, error }) {
           classes["control-items"] + " " + `${error ? classes.error : ""}`
         }
       >
-        {values.map((value) => (
+        {items.map((value) => (
           <div className={classes["control-item"]} key={`${name}_${value.id}`}>
             <input
               type="checkbox"

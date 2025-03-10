@@ -1,0 +1,19 @@
+.divider {
+    padding: 0 0 28px 16px;
+    border-top: solid black;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.divider > * {
+    flex: 1; 
+    text-align: start; 
+    display: flex; 
+    align-items: start; 
+    justify-content: start; 
+}
+
+.divider.bold {
+    border-top: solid 4px black;
+}
