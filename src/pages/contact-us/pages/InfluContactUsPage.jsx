@@ -13,6 +13,7 @@ export default function InfluContactUsPage() {
   );
   const instalinkField = useInput("", isNotEmpty);
   const servicesField = useInput([], isNotEmptyList);
+  const projectBudgetField = useInput("", isNotEmpty);
   const commentField = useInput("");
 
   function handleSubmit(event) {
@@ -28,6 +29,7 @@ export default function InfluContactUsPage() {
     emailField.onSubmit();
     instalinkField.onSubmit();
     servicesField.onSubmit();
+    projectBudgetField.onSubmit();
     commentField.onSubmit();
 
     console.log(data);
@@ -75,6 +77,16 @@ export default function InfluContactUsPage() {
             value={instalinkField.value}
             error={instalinkField.errorText}
             onChange={instalinkField.handleChange}
+          />
+        </ContactUsDivider>
+        <ContactUsDivider>
+          <ContactUsInput
+            label="project budget"
+            id="project_budget"
+            name="project_budget"
+            value={projectBudgetField.value}
+            error={projectBudgetField.errorText}
+            onChange={projectBudgetField.handleChange}
           />
         </ContactUsDivider>
         <ContactUsDivider>
