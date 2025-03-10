@@ -1,3 +1,5 @@
+import ContactUsFormBackground from "../components/ContactUsFormBackground";
+
 export default function BrandsContactUsPage() {
-  return <h1>brands</h1>;
+  return <ContactUsFormBackground>Brands</ContactUsFormBackground>;
 }

@@ -1,0 +1,28 @@
+.form-background {
+    display: flex;
+}
+
+.background {
+    background-color: #FFD766;
+    flex: 1;
+    border-top-left-radius: 56px;
+    border-bottom-left-radius: 56px;
+    margin: 0;
+    padding: 40px 28px 52px 32px;
+}
+
+.personal-data {
+    background-color: #242424;
+    width: 100px;
+    padding: 32px 0px 32px 40px;
+}
+
+.personal-data p {
+    font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    transform: rotate(180deg); /* Rotates text upside down */
+    writing-mode: vertical-rl; /* Rotates text vertically */
+    text-orientation: mixed; /* Ensures upright text */
+    white-space: nowrap; /* Prevents text wrapping */
+}

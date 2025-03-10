@@ -1,3 +1,5 @@
+import ContactUsFormBackground from "../components/ContactUsFormBackground";
+
 export default function InfluContactUsPage() {
-  return <h1>Influ</h1>;
+  return <ContactUsFormBackground>Influ</ContactUsFormBackground>;
 }
