@@ -1,0 +1,73 @@
+.control {
+    border: none;
+    margin: 0;
+    padding: 0;
+    gap: 4px;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: black;
+    line-height: 1;
+    flex-direction: column;
+}
+
+.control.error {
+    margin: 0;
+    color: #F94C29;
+}
+
+.control-error {
+    margin: 0;
+    padding: 0;
+    color: #F94C29;
+    margin-left: 8px;
+}
+
+.control legend {
+    border-left: solid black;
+    padding: 2px 8px;
+}
+
+.control.error legend {
+    color: #F94C29;
+}
+
+.control-items {
+    color: black;
+    margin: 10px 8px 1.25rem 8px;
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.control-items.error {
+    color: #F94C29;
+    margin: 10px 8px 0rem 8px;
+}
+
+.control-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+.control-item input[type='checkbox'] {
+    appearance: none; /* Removes default styling */
+    accent-color: #7DC8F7;
+    width: 20px;
+    height: 20px;
+    background-color: #000000; /* Blue background */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer;
+    position: relative; /* For additional styling if needed */
+}
+
+.control-item input[type='checkbox']:checked {
+    background-color: #7DC8F7;
+  }
+
