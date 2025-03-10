@@ -1,6 +1,7 @@
 import PinAnimation from "../../components/PinAnimation";
 import RoundedArrow from "../../components/RoundedArrow";
 import WidthDimensionsContainer from "../../components/WidthDimensionsContainer";
+import FaqContent from "./componens/FaqContent";
 import classes from "./FaqPage.module.css";
 
 export default function FaqPage() {
@@ -12,6 +13,9 @@ export default function FaqPage() {
           <h1 style={{ textAlign: "center" }}>
             <span style={{ color: "#9B4DFF" }}>we can help you!</span>
           </h1>
+        </PinAnimation>
+        <PinAnimation>
+          <FaqContent />
         </PinAnimation>
         <PinAnimation>
           <h3 className={classes["footer"]}>

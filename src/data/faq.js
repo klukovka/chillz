@@ -1,5 +1,3 @@
-const FAQ = [GENERAL_FAQ, SERVICES_FAQ, BILLING_FAQ];
-
 const GENERAL_FAQ = {
   name: "general",
   content: [
@@ -77,5 +75,7 @@ const BILLING_FAQ = {
     },
   ],
 };
+
+const FAQ = [GENERAL_FAQ, SERVICES_FAQ, BILLING_FAQ];
 
 export default FAQ;

@@ -1,0 +1,25 @@
+.content {
+    display: flex;
+    flex-direction: row;
+    gap: 64px;
+    padding: 0;
+    margin: 0;
+}
+
+.table-of-content {
+    flex: 1;
+}
+
+.faq {
+    flex: 3;
+}
+
+.table-of-content h3 {
+    font-weight: 600;
+    color: black;
+    font-size: 32px;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1rem;
+}

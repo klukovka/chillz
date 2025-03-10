@@ -1,0 +1,27 @@
+.table-of-content {
+    color: black;
+    font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    line-height: calc(36 / 20);
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.line {
+    height: 2px;
+    flex: 1;
+    background-color: black;
+}
+
+.active {
+    color: #9B4DFF;
+}
+
+.active .line {
+    background-color: #9B4DFF;
+}
+
