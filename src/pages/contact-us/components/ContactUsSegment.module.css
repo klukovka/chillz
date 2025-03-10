@@ -1,0 +1,16 @@
+.segment-button {
+    background: none;
+    border: none;
+    font-size: 4.375rem;
+    font-weight: 600;
+    cursor:pointer;
+    font-family: "ClashDisplay";
+    text-decoration: none;
+    color: black;
+}
+
+.segment-button:hover,
+.segment-button:active,
+.active {
+    color: #9B4DFF;
+}

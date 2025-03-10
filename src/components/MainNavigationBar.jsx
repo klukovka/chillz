@@ -21,7 +21,7 @@ export default function MainNavigationBar() {
           </MainNavigationBarItem>
           <MainNavigationBarItem to="articles">articles</MainNavigationBarItem>
           <MainNavigationBarItem to="faq">FAQ</MainNavigationBarItem>
-          <MainNavigationBarItem to="contact-us">
+          <MainNavigationBarItem to="contact-us/brands">
             <button>contact us</button>
           </MainNavigationBarItem>
         </ul>

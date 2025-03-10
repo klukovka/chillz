@@ -3,6 +3,8 @@ import RootLayout from "./pages/RootLayout";
 import AboutPage from "./pages/about/AboutPage";
 import ArticlesPage from "./pages/articles/ArticlesPage";
 import ContactUsPage from "./pages/contact-us/ContactUsPage";
+import BrandsContactUsPage from "./pages/contact-us/pages/BrandsContactUsPage";
+import InfluContactUsPage from "./pages/contact-us/pages/InfluContactUsPage";
 import FaqPage from "./pages/faq/FaqPage";
 import PortfolioPage from "./pages/portfolio/PortfolioPage";
 import ServicesPage from "./pages/services/ServicesPage";
@@ -51,6 +53,17 @@ const router = createBrowserRouter([
       {
         path: "contact-us",
         element: <ContactUsPage />,
+        children: [
+          {
+            index: true,
+            path: "brands",
+            element: <BrandsContactUsPage />,
+          },
+          {
+            path: "influencers",
+            element: <InfluContactUsPage />,
+          },
+        ],
       },
     ],
   },

@@ -1,0 +1,8 @@
+.tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 72px;
+    padding: 0;
+    margin: 32px 16px 0px 0px;
+}
