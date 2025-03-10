@@ -25,7 +25,7 @@ button.primary {
     border-color: black;
     color: black;
     background-color: white;
-    font-size: 50px;
+    font-size: 3.125rem;
     color: black;
     line-height: 1;
 }
@@ -70,7 +70,7 @@ button.primary:active svg.primary path {
 button.secondary {
     border-color: #81CAF7;
     background-color: #81CAF7;
-    font-size: 40px;
+    font-size: 2.5rem;
     color: white;
     line-height: 1.25;
 }
@@ -112,12 +112,12 @@ button.secondary:active svg.secondary path {
 
 @media (min-width: 940px) {
     button.primary {
-        font-size: 64px;
+        font-size: 4rem;
         letter-spacing: -3.5px;
     }
 
     button.secondary {
-        font-size: 54px;
+        font-size: 3.375rem;
         letter-spacing: -3px;
     }
 
@@ -132,10 +132,10 @@ button.secondary:active svg.secondary path {
 
 @media (min-width: 1040px) {
     button.primary {
-        font-size: 70px;
+        font-size: 4.375rem;
     }
 
     button.secondary {
-        font-size: 60px;
+        font-size: 3.375rem;
     }
 }

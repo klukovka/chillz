@@ -14,7 +14,7 @@
 }
 
 .about-flex-container h3 {
-	font-size: 50px;
+	font-size: 1.325rem;
 	font-weight: 500;
   margin: 0;
   line-height: 1;
@@ -33,7 +33,7 @@
     color: black;
     line-height: calc(30 / 19);
     letter-spacing: -1%;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
   }
 
@@ -50,12 +50,12 @@
 
   .about-flex-container h3 {
     width: 49%;
-    font-size: 70px;
+    font-size: 4.375rem;
   }
   
   .about-flex-container p {
       width: 51%;
-      font-size: 19px;
+      font-size: 1.25rem;
     }
 
   .end p {

@@ -16,7 +16,7 @@
 .workflow-item h2 {
     margin: 0;
     padding: 0;
-    font-size: 36px;
+    font-size: 2rem;
     font-weight: 700;
     text-shadow: rgba(0, 0, 0, 0.2) 1px 1px 2.5px;
 }
@@ -28,7 +28,7 @@
 
 .workflow-item h3{
     font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;
-    font-size: 22px;
+    font-size: 1.3rem;
     font-weight: 500;
     margin: 0;
     padding: 0;
@@ -44,7 +44,7 @@
 
 .workflow-item p {
     font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     letter-spacing: -1px;
     font-weight: 500;
 }
@@ -59,12 +59,12 @@
 
 @media (min-width: 850px) {
     .workflow-item h2 {
-        font-size: 40px;
+        font-size: 2.5rem;
     }
     .workflow-item h3{
-        font-size: 27px;
+        font-size: 1.7rem;
     }
     .workflow-item p {
-        font-size: 20px;
+        font-size: 1.25rem;
     }
 }

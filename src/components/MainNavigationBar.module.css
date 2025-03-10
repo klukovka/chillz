@@ -25,7 +25,7 @@
 }
 
 .main-nav__item a {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 500;
     text-decoration: none;
     color: black;
@@ -40,7 +40,7 @@ TODO: Update styling
 }
 
 .main-nav__item button {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 500;
     font-family: "ClashDisplay";
     background-color: white;

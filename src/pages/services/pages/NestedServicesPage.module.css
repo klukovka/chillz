@@ -17,7 +17,7 @@
     padding: 0;
     color: black;
     font-weight: 500;
-    font-size: 20;
+    font-size: 1.25rem;
     font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1;
     text-align: center;
@@ -32,7 +32,7 @@
 
 .footer {
     color: black;
-    font-size: 52px;
+    font-size: 3.25rem;
     font-weight: 600;
     letter-spacing: -1.5px;
     padding: 0 2rem;
@@ -96,7 +96,7 @@ svg.arrow-influencers path {
 
 @media (min-width: 850px) {
     .footer {
-        font-size: 70px;
+        font-size: 4.375rem;
         letter-spacing: -3px;
     }
 }

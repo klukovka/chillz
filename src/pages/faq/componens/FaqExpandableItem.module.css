@@ -47,7 +47,7 @@
 
 .question {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1;
 }
 
@@ -65,7 +65,7 @@
 .content {
     font-style: italic;
     margin: 10px 0px 0px 24px;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
