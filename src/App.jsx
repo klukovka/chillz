@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./pages/RootLayout";
 import AboutPage from "./pages/about/AboutPage";
 import ArticlesPage from "./pages/articles/ArticlesPage";
+import ArticlesPageRootLayout from "./pages/articles/ArticlesPageRootLayout";
 import ContactUsPage from "./pages/contact-us/ContactUsPage";
 import BrandsContactUsPage from "./pages/contact-us/pages/BrandsContactUsPage";
 import InfluContactUsPage from "./pages/contact-us/pages/InfluContactUsPage";
@@ -44,7 +45,13 @@ const router = createBrowserRouter([
       },
       {
         path: "articles",
-        element: <ArticlesPage />,
+        element: <ArticlesPageRootLayout />,
+        children: [
+          {
+            index: true,
+            element: <ArticlesPage />,
+          },
+        ],
       },
       {
         path: "faq",
