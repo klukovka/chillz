@@ -26,6 +26,30 @@ svg.arrow path {
     color: #9B4DFF;
 }
 
+.dive-into-button {
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    color: white;
+    font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #EF4B8D;
+    border: none;
+    text-decoration: none;
+    gap: 1.5rem;
+}
+
+.dive-into-button:hover,
+.dive-into-button:active {
+    background-color: #9B4DFF;
+}
+
 
 @media (min-width: 850px) {
     .footer {

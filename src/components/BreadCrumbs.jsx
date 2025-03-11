@@ -1,4 +1,13 @@
 import { Link, useLocation } from "react-router-dom";
+import {
+  ARTICLE_CATEGORIES,
+  ARTICLE_CATEGORY_ANALYTICS,
+  ARTICLE_CATEGORY_AUDIENCE_GROWTH,
+  ARTICLE_CATEGORY_CONTENT_CREATION,
+  ARTICLE_CATEGORY_MONETIZATION,
+  ARTICLE_CATEGORY_SEO,
+  ARTICLE_CATEGORY_SOCIAL_MEDIA,
+} from "../data/articles";
 import classes from "./BreadCrumbs.module.css";
 import PinAnimation from "./PinAnimation";
 import WidthDimensionsContainer from "./WidthDimensionsContainer";
@@ -18,6 +27,31 @@ export default function BreadCrumbs() {
     if (pathCrumbs[0] === "services") {
       if (crumb === "influencers") displayText = "for influ";
       if (crumb === "brands") displayText = "for brands";
+    } else if (
+      pathCrumbs[0] == "articles" &&
+      ARTICLE_CATEGORIES.includes(crumb)
+    ) {
+      displayText = "all";
+      switch (crumb) {
+        case ARTICLE_CATEGORY_AUDIENCE_GROWTH:
+          displayText = "audience growth";
+          break;
+        case ARTICLE_CATEGORY_CONTENT_CREATION:
+          displayText = "content creation";
+          break;
+        case ARTICLE_CATEGORY_SOCIAL_MEDIA:
+          displayText = "social media";
+          break;
+        case ARTICLE_CATEGORY_SEO:
+          displayText = "seo";
+          break;
+        case ARTICLE_CATEGORY_ANALYTICS:
+          displayText = "analytics";
+          break;
+        case ARTICLE_CATEGORY_MONETIZATION:
+          displayText = "monetization";
+          break;
+      }
     }
 
     backAmount -= 1;

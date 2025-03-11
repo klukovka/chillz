@@ -1,10 +1,14 @@
+import { NavLink } from "react-router-dom";
 import { formattedDateDayShortMonthFullYear } from "../../../util/formatting";
 import ArticleCategory from "./ArticleCategory";
 import classes from "./ArticleGridCard.module.css";
 
 export default function ArticleGridCard({ article, dark }) {
   return (
-    <div className={classes.article + " " + `${dark ? classes.dark : ""}`}>
+    <NavLink
+      className={classes.article + " " + `${dark ? classes.dark : ""}`}
+      to={article.id}
+    >
       <div className={classes.header}>
         {formattedDateDayShortMonthFullYear(article.date)}
         <ArticleCategory category={article.category} dark={dark} />
@@ -22,6 +26,6 @@ export default function ArticleGridCard({ article, dark }) {
           {article.author}
         </p>
       </div>
-    </div>
+    </NavLink>
   );
 }
