@@ -1,0 +1,93 @@
+/* Base styles for all screens */
+.grid {
+    display: grid;
+    margin: 0;
+  }
+  
+  .card {
+    background-color: #f5f5f5;
+    padding: 32px;
+    position: relative;
+  }
+  
+  /* Desktop styles (applied by default) */
+  @media (min-width: 850px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+      }
+    
+    /* Single element case */
+    .grid > .card:first-child:last-child {
+      border-radius: 60px;
+      border-left: 1px solid black;
+      border-top: 1px solid black;
+    }
+    
+    /* First element of first row */
+    .grid > .card:first-child:not(:last-child) {
+      border-top-left-radius: 60px;
+      border-top: 1px solid black;
+    }
+    
+    /* Last element of first row */
+    .grid > .card:nth-child(2) {
+      border-top-right-radius: 60px;
+      border-top: 1px solid black;
+    }
+    
+    /* First element of last row */
+    .grid > .card:nth-child(2n+1):nth-last-child(2),
+    .grid > .card:nth-child(2n+1):nth-last-child(1):not(:first-child) {
+      border-bottom-left-radius: 60px;
+    }
+    
+    /* Last element of any row */
+    .grid > .card:nth-child(2n):nth-last-child(1),
+    .grid > .card:nth-child(2n):nth-last-child(2) {
+      border-bottom-right-radius: 60px;
+    }
+
+    /* First element of each row */
+    .grid > .card:nth-child(2n+1) {
+        border-left: 1px solid black;
+    }
+    
+    /* Odd number of elements - last element */
+    .grid > .card:last-child:nth-child(odd):not(:first-child) {
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+    }
+  }
+  
+  /* Mobile styles */
+  @media (max-width: 849px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+
+    .card {
+        border-right: 1px solid black;
+        border-left: 1px solid black;
+        border-top: 1px solid black;
+      }
+    
+    .grid > .card {
+      border-radius: 0;
+    }
+    
+    .grid > .card:first-child {
+      border-top-left-radius: 60px;
+      border-top-right-radius: 60px;
+    }
+    
+    .grid > .card:last-child {
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+      border-bottom: 1px solid black;
+    }
+  }
