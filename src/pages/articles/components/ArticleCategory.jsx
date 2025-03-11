@@ -5,7 +5,6 @@ import {
   ARTICLE_CATEGORY_MONETIZATION,
   ARTICLE_CATEGORY_SEO,
   ARTICLE_CATEGORY_SOCIAL_MEDIA,
-  ARTICLE_CATEGORY_TOOLS,
 } from "../../../data/articles";
 import classes from "./ArticleCategory.module.css";
 
@@ -29,9 +28,6 @@ export default function ArticleCategory({ category, onClick, isActive, dark }) {
       break;
     case ARTICLE_CATEGORY_MONETIZATION:
       displayText = "Monetization";
-      break;
-    case ARTICLE_CATEGORY_TOOLS:
-      displayText = "Tools";
       break;
   }
   return (

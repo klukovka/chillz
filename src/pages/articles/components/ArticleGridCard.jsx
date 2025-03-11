@@ -19,7 +19,7 @@ export default function ArticleGridCard({ article, dark }) {
         </p>
         <p>
           <span>Author: </span>
-          {article.author} min.
+          {article.author}
         </p>
       </div>
     </div>

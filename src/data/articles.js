@@ -4,7 +4,6 @@ export const ARTICLE_CATEGORY_SOCIAL_MEDIA = "social-media";
 export const ARTICLE_CATEGORY_SEO = "seo";
 export const ARTICLE_CATEGORY_ANALYTICS = "analytics";
 export const ARTICLE_CATEGORY_MONETIZATION = "monetization";
-export const ARTICLE_CATEGORY_TOOLS = "tools";
 
 export const CATEGORIES = [
   null,
@@ -14,7 +13,6 @@ export const CATEGORIES = [
   ARTICLE_CATEGORY_SEO,
   ARTICLE_CATEGORY_ANALYTICS,
   ARTICLE_CATEGORY_MONETIZATION,
-  ARTICLE_CATEGORY_TOOLS,
 ];
 
 export const ARTICLES = [
