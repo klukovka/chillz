@@ -9,8 +9,17 @@
     background-color: white;
   }
 
+.card:hover {
+    background-color: rgb(233, 233, 233);
+    cursor: pointer;
+  }
+
 .card.dark {
   background-color: #242424;
+}
+
+.card.dark:hover {
+  background-color: #242424e6;
 }
   
   /* Desktop styles (applied by default) */
