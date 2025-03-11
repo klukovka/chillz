@@ -1,0 +1,34 @@
+.breadcrumbs {
+    margin: 12px 0;
+    display: flex;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.25rem;
+    font-weight: 500;
+    font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.breadcrumbs > * {
+    margin-right: 4px;
+}
+
+.breadcrumbs .crumb:after {
+    content: '/';
+    margin-left: 4px;
+}
+
+.breadcrumbs .crumb:last-child:after {
+    display: none;
+}
+
+.breadcrumbs .crumb a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumbs .crumb:last-child a {
+    font-weight: 700;
+}
+
+.breadcrumbs .crumb a:hover {
+    text-decoration: underline;
+}
