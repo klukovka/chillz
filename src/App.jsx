@@ -3,7 +3,6 @@ import RootLayout from "./pages/RootLayout";
 import AboutPage from "./pages/about/AboutPage";
 import ArticlesPage from "./pages/articles/ArticlesPage";
 import ArticlesPageRootLayout from "./pages/articles/ArticlesPageRootLayout";
-import CategoryArticlesPage from "./pages/articles/pages/CategoryArticlesPage";
 import ContactUsPage from "./pages/contact-us/ContactUsPage";
 import BrandsContactUsPage from "./pages/contact-us/pages/BrandsContactUsPage";
 import InfluContactUsPage from "./pages/contact-us/pages/InfluContactUsPage";
@@ -54,7 +53,7 @@ const router = createBrowserRouter([
           },
           {
             path: ":category",
-            element: <CategoryArticlesPage />,
+            element: <ArticlesPage />,
           },
         ],
       },

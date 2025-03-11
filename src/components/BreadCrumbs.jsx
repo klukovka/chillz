@@ -1,6 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
 import {
-  ARTICLE_CATEGORIES,
   ARTICLE_CATEGORY_ANALYTICS,
   ARTICLE_CATEGORY_AUDIENCE_GROWTH,
   ARTICLE_CATEGORY_CONTENT_CREATION,
@@ -20,6 +19,7 @@ export default function BreadCrumbs() {
     .filter((crumb) => crumb !== "");
 
   let backAmount = pathCrumbs.length;
+  let showBreadCrumbs = true;
 
   const crumbs = pathCrumbs.map((crumb, index) => {
     let displayText = crumb;
@@ -27,11 +27,8 @@ export default function BreadCrumbs() {
     if (pathCrumbs[0] === "services") {
       if (crumb === "influencers") displayText = "for influ";
       if (crumb === "brands") displayText = "for brands";
-    } else if (
-      pathCrumbs[0] == "articles" &&
-      ARTICLE_CATEGORIES.includes(crumb)
-    ) {
-      displayText = "all";
+    } else if (pathCrumbs[0] == "articles") {
+      displayText = "articles";
       switch (crumb) {
         case ARTICLE_CATEGORY_AUDIENCE_GROWTH:
           displayText = "audience growth";
@@ -51,6 +48,9 @@ export default function BreadCrumbs() {
         case ARTICLE_CATEGORY_MONETIZATION:
           displayText = "monetization";
           break;
+        case "all":
+          displayText = "all";
+          break;
       }
     }
 
@@ -63,7 +63,7 @@ export default function BreadCrumbs() {
     );
   });
 
-  if (crumbs.length <= 1) return <></>;
+  if (crumbs.length <= 1 || !showBreadCrumbs) return <></>;
 
   return (
     <WidthDimensionsContainer>

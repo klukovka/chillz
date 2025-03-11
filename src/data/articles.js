@@ -1,4 +1,3 @@
-export const ARTICLE_ALL = "all";
 export const ARTICLE_CATEGORY_AUDIENCE_GROWTH = "audience-growth";
 export const ARTICLE_CATEGORY_CONTENT_CREATION = "content-creation";
 export const ARTICLE_CATEGORY_SOCIAL_MEDIA = "social-media";
@@ -7,7 +6,7 @@ export const ARTICLE_CATEGORY_ANALYTICS = "analytics";
 export const ARTICLE_CATEGORY_MONETIZATION = "monetization";
 
 export const ARTICLE_CATEGORIES = [
-  ARTICLE_ALL,
+  null,
   ARTICLE_CATEGORY_AUDIENCE_GROWTH,
   ARTICLE_CATEGORY_CONTENT_CREATION,
   ARTICLE_CATEGORY_SOCIAL_MEDIA,

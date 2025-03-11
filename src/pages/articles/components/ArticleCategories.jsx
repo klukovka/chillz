@@ -1,20 +1,24 @@
-import PinAnimation from "../../../components/PinAnimation";
 import { ARTICLE_CATEGORIES } from "../../../data/articles";
 import classes from "./ArticleCategories.module.css";
 import ArticleCategory from "./ArticleCategory";
 
-export default function ArticleCategories({ selectedCategory, onSelect }) {
+export default function ArticleCategories({ selectedCategory }) {
   return (
     <div className={classes.categories}>
-      {ARTICLE_CATEGORIES.map((category) => (
-        <PinAnimation key={category}>
+      {ARTICLE_CATEGORIES.map((category) => {
+        return (
           <ArticleCategory
+            key={category}
             category={category}
-            isActive={selectedCategory === category}
-            onClick={() => onSelect(category)}
+            isActive={
+              selectedCategory === undefined
+                ? category === null
+                : selectedCategory === category
+            }
+            isLink
           />
-        </PinAnimation>
-      ))}
+        );
+      })}
     </div>
   );
 }

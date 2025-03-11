@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   ARTICLE_CATEGORY_ANALYTICS,
   ARTICLE_CATEGORY_AUDIENCE_GROWTH,
@@ -8,7 +9,7 @@ import {
 } from "../../../data/articles";
 import classes from "./ArticleCategory.module.css";
 
-export default function ArticleCategory({ category, onClick, isActive, dark }) {
+export default function ArticleCategory({ category, isLink, isActive, dark }) {
   let displayText = "View All";
   switch (category) {
     case ARTICLE_CATEGORY_AUDIENCE_GROWTH:
@@ -30,18 +31,24 @@ export default function ArticleCategory({ category, onClick, isActive, dark }) {
       displayText = "Monetization";
       break;
   }
-  return (
-    <button
-      onClick={onClick}
-      className={
-        classes.button +
-        " " +
-        `${isActive ? classes.active : dark ? classes.dark : ""}` +
-        " " +
-        `${onClick == null ? classes.disabled : ""}`
-      }
-    >
-      {displayText}
-    </button>
-  );
+
+  const className =
+    classes.button +
+    " " +
+    `${isActive ? classes.active : dark ? classes.dark : ""}` +
+    " " +
+    `${isLink ? "" : classes.disabled}`;
+
+  if (isLink) {
+    return (
+      <Link
+        to={`/articles${category != null ? "/" + category : ""}`}
+        className={className}
+      >
+        {displayText}
+      </Link>
+    );
+  }
+
+  return <button className={className}>{displayText}</button>;
 }
