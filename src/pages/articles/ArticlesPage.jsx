@@ -1,9 +1,12 @@
+import { useState } from "react";
 import PinAnimation from "../../components/PinAnimation";
 import RoundedArrow from "../../components/RoundedArrow";
 import WidthDimensionsContainer from "../../components/WidthDimensionsContainer";
 import classes from "./ArticlesPage.module.css";
+import ArticleCategories from "./components/ArticleCategories";
 
 export default function ArticlesPage() {
+  const [category, setCaterory] = useState(null);
   return (
     <WidthDimensionsContainer>
       <div className={classes["articles-page"]}>
@@ -12,6 +15,12 @@ export default function ArticlesPage() {
             <span style={{ color: "#7DC8F7" }}>stay ahead </span>of the social
             tide
           </h1>
+        </PinAnimation>
+        <PinAnimation>
+          <ArticleCategories
+            selectedCategory={category}
+            onSelect={setCaterory}
+          />
         </PinAnimation>
 
         <PinAnimation>

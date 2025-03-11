@@ -1,0 +1,22 @@
+.button {
+    background-color: white;
+    border: solid black 1px;
+    border-radius: 20px;
+    padding: 10px 24px;
+    font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: calc(20 / 16);
+    letter-spacing: -0.05em;
+    font-weight: 500;
+    cursor: pointer;
+    color: black;
+}
+
+.button:hover,
+.button:active,
+.button:focus,
+.button.active {
+    background-color: #EF4B8D;
+    border-color: #EF4B8D;
+    color: white;
+}
