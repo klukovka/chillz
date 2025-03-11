@@ -9,7 +9,7 @@ import {
 } from "../../../data/articles";
 import classes from "./ArticleCategory.module.css";
 
-export default function ArticleCategory({ category, onClick, isActive }) {
+export default function ArticleCategory({ category, onClick, isActive, dark }) {
   let displayText = "View All";
   switch (category) {
     case ARTICLE_CATEGORY_AUDIENCE_GROWTH:
@@ -37,7 +37,13 @@ export default function ArticleCategory({ category, onClick, isActive }) {
   return (
     <button
       onClick={onClick}
-      className={classes.button + " " + `${isActive ? classes.active : ""}`}
+      className={
+        classes.button +
+        " " +
+        `${isActive ? classes.active : dark ? classes.dark : ""}` +
+        " " +
+        `${onClick == null ? classes.disabled : ""}`
+      }
     >
       {displayText}
     </button>
