@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const PinAnimation = ({ children, className }) => {
+const PinAnimation = ({ children, className, id }) => {
   useEffect(() => {
     let pinGroups = gsap.utils.toArray(".pin-group");
     let pinGroupContent = gsap.utils.toArray(".pin-group > *");
@@ -41,7 +41,11 @@ const PinAnimation = ({ children, className }) => {
     };
   }, []);
 
-  return <div className={`pin-group ${className}`}>{children}</div>;
+  return (
+    <div className={`pin-group ${className}`} id={id}>
+      {children}
+    </div>
+  );
 };
 
 export default PinAnimation;

@@ -1,4 +1,5 @@
 import BreadCrumbs from "../../../components/BreadCrumbs";
+import PinAnimation from "../../../components/PinAnimation";
 import { ARTICLES } from "../../../data/articles";
 import { formattedDateDayShortMonthFullYear } from "../../../util/formatting";
 import ArticleCategory from "../components/ArticleCategory";
@@ -31,49 +32,68 @@ export default function ArticleDetailsPage({ id }) {
   return (
     <>
       <BreadCrumbs />
-      <ArticleCategory category={article.category} />
-      <h1 className={classes.header}>{article.title}</h1>
-      <div className={classes["additional-elements"]}>
-        <p>
-          <span>Reading time </span>
-          {article.readingTime} min.
-        </p>
-        <p>
-          <span>Author </span>
-          {article.author}
-        </p>
-        <p>
-          <span>Last updated </span>
-          {formattedDateDayShortMonthFullYear(article.date)}
-        </p>
-      </div>
-      <img src={article.imageUrl} className={classes.article} />
+      <PinAnimation>
+        <ArticleCategory category={article.category} />
+      </PinAnimation>
+      <PinAnimation>
+        <h1 className={classes.header}>{article.title}</h1>
+      </PinAnimation>
+      <PinAnimation>
+        <div className={classes["additional-elements"]}>
+          <p>
+            <span>Reading time </span>
+            {article.readingTime} min.
+          </p>
+          <p>
+            <span>Author </span>
+            {article.author}
+          </p>
+          <p>
+            <span>Last updated </span>
+            {formattedDateDayShortMonthFullYear(article.date)}
+          </p>
+        </div>
+      </PinAnimation>
+      <PinAnimation>
+        <img src={article.imageUrl} className={classes.article} />
+      </PinAnimation>
+
       <div className={classes["content-container"]}>
         <div className={classes["article-content"]}>
-          <h2>Table of contents</h2>
-          <div className={classes["table-of-contents"]}>
-            {articleRefs.map((content) => {
-              return (
-                <div
-                  className={classes["table-of-contents-item"]}
-                  key={content.id}
-                >
-                  <p>{content.number}</p>
-                  <a onClick={() => scrollToElement(content.id)}>
-                    {content.title}
-                  </a>
-                </div>
-              );
-            })}
-          </div>
+          <PinAnimation>
+            <h2>Table of contents</h2>
+          </PinAnimation>
+          <PinAnimation>
+            <div className={classes["table-of-contents"]}>
+              {articleRefs.map((content) => {
+                return (
+                  <div
+                    className={classes["table-of-contents-item"]}
+                    key={content.id}
+                  >
+                    <p>{content.number}</p>
+                    <a onClick={() => scrollToElement(content.id)}>
+                      {content.title}
+                    </a>
+                  </div>
+                );
+              })}
+            </div>
+          </PinAnimation>
           <div className={classes["article-text"]}>
-            <p>{article.shortDescription}</p>
+            <PinAnimation>
+              <p>{article.shortDescription}</p>
+            </PinAnimation>
             {articleRefs.map((content) => {
               return (
                 <>
-                  <h1 id={content.id}>{content.title}</h1>
+                  <PinAnimation id={content.id}>
+                    <h1>{content.title}</h1>
+                  </PinAnimation>
                   {content.description.map((text, index) => (
-                    <p key={content.id + index}>{text}</p>
+                    <PinAnimation key={content.id + index}>
+                      <p>{text}</p>
+                    </PinAnimation>
                   ))}
                 </>
               );
