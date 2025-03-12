@@ -23,15 +23,27 @@
     text-align: center;
 }
 
-.stack {
-    position: relative;
-}
 
 @media (max-width: 1019px){
-    .code {
+    .personal-data {
+        position: relative;
+    }
+
+    .code-horizontal {
         position: absolute;
-        transform: rotate(90deg);
-        bottom: 10%;  
+        top: 0;
+        left: 20px;
+        right: 20px;
+        transform: translateY(-50%); /* Perfect vertical centering */
+    }
+
+    .code-horizontal img {
+        width: 100%;
+        height: 100px;
+    }
+
+    .code-vertical {
+        display: none;
     }
 }
 
@@ -65,10 +77,14 @@
         white-space: nowrap; /* Prevents text wrapping */
     }
 
-    .code {
+    .code-vertical {
         position: absolute;
         top: 50%;         /* Align top edge at the center */
         right: 95px;      /* Keep your original right spacing */
         transform: translateY(-50%); /* Perfect vertical centering */
+    }
+
+    .code-horizontal {
+        display: none;
     }
 }
