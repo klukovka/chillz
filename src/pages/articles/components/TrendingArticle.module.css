@@ -1,0 +1,36 @@
+.article {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.article p {
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: (20 / 16);
+    letter-spacing: -0.05em;
+    margin: 0;
+}
+
+.article span {
+    font-weight: 500;
+}
+
+.article img {
+    height: 200px;
+    width: 100%;
+    border-radius: 32px;
+    object-fit: cover;
+}
+
+.additional-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}

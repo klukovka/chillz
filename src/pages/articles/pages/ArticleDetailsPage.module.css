@@ -118,6 +118,12 @@ gap: 4rem;
     margin: 0;
 }
 
+.trending {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
 @media (min-width: 850px) {
 .content-container {
 gap: 2rem;
@@ -129,7 +135,7 @@ flex-direction: row;
 }
 
 .trending {
-    width: 340px;
+    width: 350px;
 }
 
 

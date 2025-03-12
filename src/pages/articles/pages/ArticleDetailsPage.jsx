@@ -3,6 +3,7 @@ import PinAnimation from "../../../components/PinAnimation";
 import { ARTICLES } from "../../../data/articles";
 import { formattedDateDayShortMonthFullYear } from "../../../util/formatting";
 import ArticleCategory from "../components/ArticleCategory";
+import TrendingArticlesSection from "../components/TrendingArticlesSection";
 import classes from "./ArticleDetailsPage.module.css";
 
 function scrollToElement(id) {
@@ -101,7 +102,10 @@ export default function ArticleDetailsPage({ id }) {
           </div>
         </div>
         <div className={classes["trending"]}>
-          <h2>Trending</h2>
+          <PinAnimation>
+            <h2>Trending</h2>
+          </PinAnimation>
+          <TrendingArticlesSection selectedArticle={article} />
         </div>
       </div>
     </>
