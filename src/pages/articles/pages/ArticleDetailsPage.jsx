@@ -3,6 +3,7 @@ import PinAnimation from "../../../components/PinAnimation";
 import { ARTICLES } from "../../../data/articles";
 import { formattedDateDayShortMonthFullYear } from "../../../util/formatting";
 import ArticleCategory from "../components/ArticleCategory";
+import SubscribeSection from "../components/SubscribeSection";
 import TrendingArticlesSection from "../components/TrendingArticlesSection";
 import classes from "./ArticleDetailsPage.module.css";
 
@@ -106,6 +107,9 @@ export default function ArticleDetailsPage({ id }) {
             <h2>Trending</h2>
           </PinAnimation>
           <TrendingArticlesSection selectedArticle={article} />
+          <PinAnimation>
+            <SubscribeSection />
+          </PinAnimation>
         </div>
       </div>
     </>

@@ -1,8 +1,8 @@
-export default function RoundedArrow({ className }) {
+export default function RoundedArrow({ className, width = 67, height = 64 }) {
   return (
     <svg
-      width="67"
-      height="64"
+      width={width}
+      height={height}
       viewBox="0 0 67 64"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
