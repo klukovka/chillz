@@ -48,7 +48,7 @@ const router = createBrowserRouter([
         element: <ArticlesPageRootLayout />,
         children: [
           {
-            index: true,
+            path: "",
             element: <ArticlesPage />,
           },
           {
