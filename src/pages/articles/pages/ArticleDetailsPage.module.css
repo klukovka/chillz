@@ -1,8 +1,8 @@
 
 .header {
-    font-size: 3.25rem;
+    font-size: 2.5rem;
     font-weight: 600;
-    line-height: calc(70 / 50);
+    line-height: 1;
     margin: 1.5rem 0;
     letter-spacing: -0.02em;
 }
@@ -28,9 +28,9 @@
 }
 
 img.article {
-    height: 500px;
+    height: 200px;
     width: 100%;
-    border-radius: 60px;
+    border-radius: 32px;
     object-fit: cover;
     margin: 2rem 0;
 }
@@ -99,7 +99,6 @@ gap: 4rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    padding-left: 4rem;
 }
 
 .article-text h1 {
@@ -123,6 +122,29 @@ gap: 4rem;
     flex-direction: column;
     gap: 1.25rem;
 }
+
+@media (min-width: 400px) {
+    .header {
+        font-size: 3.25rem;
+        line-height: calc(70 / 50);
+    }
+
+    img.article {
+        height: 300px;
+    }
+
+    .article-text {
+        padding-left: 4rem;
+    }
+}
+
+@media (min-width: 700px) {
+    img.article {
+        height: 500px;
+        border-radius: 60px;
+    }
+}
+
 
 @media (min-width: 850px) {
 .content-container {

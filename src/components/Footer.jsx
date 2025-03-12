@@ -13,10 +13,12 @@ export default function Footer() {
         <img src={logo} alt="Chillz logo" className={classes["logo-image"]} />
         <div className={classes["social-media"]}>
           <span>FOLLOW FOR MORE</span>
-          <img src={instagram} alt="Instagram" />
-          <img src={facebook} alt="Facebook" />
-          <img src={telegram} alt="Telegram" />
-          <img src={youtube} alt="Youtube" />
+          <div>
+            <img src={instagram} alt="Instagram" />
+            <img src={facebook} alt="Facebook" />
+            <img src={telegram} alt="Telegram" />
+            <img src={youtube} alt="Youtube" />
+          </div>
         </div>
         <p>
           copyright © {new Date().getFullYear()} chiillz. all rights reserved

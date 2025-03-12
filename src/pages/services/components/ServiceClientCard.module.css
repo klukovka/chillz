@@ -10,10 +10,10 @@
 
 .service-client-card-title {
     color: black;
-    font-size: 4.375rem;
+    line-height: calc(52 / 70);
+    font-size: 3.75rem;
     margin: 0;
     padding: 0;
-    line-height: calc(52 / 70);
 }
 
 .service-client-card-description {
@@ -50,8 +50,17 @@
     background-color: #EF4B8D;
 }
 
+@media (min-width: 400px) {
+    .service-client-card-title {
+        line-height: calc(52 / 70);
+        font-size: 4.375rem;
+    }
+  }
+  
+
 @media (min-width: 850px) {
     .service-client-card {
         min-height: 600px;
     }
 }
+

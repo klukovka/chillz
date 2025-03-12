@@ -89,7 +89,7 @@ export default function ArticleDetailsPage({ id }) {
             {articleRefs.map((content) => {
               return (
                 <>
-                  <PinAnimation id={content.id}>
+                  <PinAnimation id={content.id} key={`text_${content.id}`}>
                     <h1>{content.title}</h1>
                   </PinAnimation>
                   {content.description.map((text, index) => (
