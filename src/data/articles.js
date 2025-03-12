@@ -30,29 +30,36 @@ export const ARTICLES = [
     trending: true,
     content: [
       {
-        title: "Embracing AI for Content Creation",
-        description:
+        title: "Embracing AI for Content Creation 1",
+        description: [
           "Artificial intelligence tools can help you create more content in less time, allowing you to focus on strategy and audience engagement rather than production details.",
+          "Artificial intelligence tools can help you create more content in less time, allowing you to focus on strategy and audience engagement rather than production details.",
+          "Artificial intelligence tools can help youcreate more content in less time, allowing you to focus on strategy and audience engagement rather than production details.",
+        ],
       },
       {
-        title: "Embracing AI for Content Creation",
-        description:
+        title: "Embracing AI for Content Creation 2",
+        description: [
           "Artificial intelligence tools can help you create more content in less time, allowing you to focus on strategy and audience engagement rather than production details.",
+          "Artificial intelligence tools can help you create more content in less time, allowing you to focus on strategy and audience engagement rather than production details.",
+          "Artificial intelligence tools can help youcreate more content in less time, allowing you to focus on strategy and audience engagement rather than production details.",
+        ],
       },
       {
-        title: "Embracing AI for Content Creation",
-        description:
+        title: "Embracing AI for Content Creation 3",
+        description: [
           "Artificial intelligence tools can help you create more content in less time, allowing you to focus on strategy and audience engagement rather than production details.",
+          "Artificial intelligence tools can help you create more content in less time, allowing you to focus on strategy and audience engagement rather than production details.",
+          "Artificial intelligence tools can help youcreate more content in less time, allowing you to focus on strategy and audience engagement rather than production details.",
+        ],
       },
       {
-        title: "Embracing AI for Content Creation",
-        description:
+        title: "Embracing AI for Content Creation 4",
+        description: [
           "Artificial intelligence tools can help you create more content in less time, allowing you to focus on strategy and audience engagement rather than production details.",
-      },
-      {
-        title: "Embracing AI for Content Creation",
-        description:
           "Artificial intelligence tools can help you create more content in less time, allowing you to focus on strategy and audience engagement rather than production details.",
+          "Artificial intelligence tools can help youcreate more content in less time, allowing you to focus on strategy and audience engagement rather than production details.",
+        ],
       },
     ],
   },
@@ -71,8 +78,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Personalization at Scale",
-        description:
+        description: [
           "Modern email platforms allow for incredible personalization that goes beyond just using the recipient's name. Learn how to segment your audience effectively.",
+        ],
       },
     ],
   },
@@ -91,8 +99,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Emotional Triggers and Sharing Behavior",
-        description:
+        description: [
           "Content that evokes high-arousal emotions like awe, anger, or anxiety is more likely to be shared. Learn how to ethically trigger these responses.",
+        ],
       },
     ],
   },
@@ -111,8 +120,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Creating Spaces for Authentic Connection",
-        description:
+        description: [
           "Whether it's a Discord server, forum, or social media group, dedicated spaces where your audience can interact with each other are crucial for community development.",
+        ],
       },
     ],
   },
@@ -131,8 +141,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Understanding Natural Language Queries",
-        description:
+        description: [
           "Voice searches tend to be conversational and question-based. Your content should address these types of queries directly.",
+        ],
       },
     ],
   },
@@ -151,8 +162,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Creating Memorable Hooks",
-        description:
+        description: [
           "You have approximately 3 seconds to capture attention. Learn techniques for creating openings that stop the scroll.",
+        ],
       },
     ],
   },
@@ -171,8 +183,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Creating Effective UGC Campaigns",
-        description:
+        description: [
           "The best user-generated content campaigns make participation easy, fun, and rewarding for your audience members.",
+        ],
       },
     ],
   },
@@ -191,8 +204,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Cohort Analysis for Content Strategy",
-        description:
+        description: [
           "By analyzing how different audience segments interact with your content over time, you can make more informed decisions about future content creation.",
+        ],
       },
     ],
   },
@@ -211,8 +225,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Beyond Alt Text",
-        description:
+        description: [
           "While proper image descriptions are important, true accessibility requires considering content structure, color contrast, keyboard navigation, and more.",
+        ],
       },
     ],
   },
@@ -231,8 +246,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Tiered Content Models",
-        description:
+        description: [
           "Creating multiple subscription levels with different benefits allows readers to engage at their preferred price point while maximizing your revenue potential.",
+        ],
       },
     ],
   },
@@ -251,8 +267,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Authenticity vs. Consistency",
-        description:
+        description: [
           "The tension between showing your true self and maintaining a consistent brand presence is one every creator must navigate carefully.",
+        ],
       },
     ],
   },
@@ -271,8 +288,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Creating Immersive Audio Experiences",
-        description:
+        description: [
           "Beyond basic narration, techniques like sound design and creative formatting can make your audio content more engaging and memorable.",
+        ],
       },
     ],
   },
@@ -291,8 +309,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Transparent Data Practices",
-        description:
+        description: [
           "Being upfront about what data you collect and how you use it not only keeps you compliant but builds trust with your audience.",
+        ],
       },
     ],
   },
@@ -311,8 +330,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Cultural Sensitivity in Content Design",
-        description:
+        description: [
           "From color choices to idiomatic expressions, learn how to create content that avoids cultural pitfalls and connects with diverse audiences.",
+        ],
       },
     ],
   },
@@ -331,8 +351,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Platform-Specific Optimizations",
-        description:
+        description: [
           "Each platform has its own algorithm preferences, audience expectations, and format requirements. Learn how to adapt your core content accordingly.",
+        ],
       },
     ],
   },
@@ -351,8 +372,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Psychological Triggers in Headlines",
-        description:
+        description: [
           "Certain words and phrases tap into fundamental human desires and fears. Used responsibly, they can significantly increase your content's performance.",
+        ],
       },
     ],
   },
@@ -371,8 +393,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Finding the Right Partners",
-        description:
+        description: [
           "The best collaborations bring complementary strengths together, allowing both parties to provide greater value to their respective audiences.",
+        ],
       },
     ],
   },
@@ -391,8 +414,9 @@ export const ARTICLES = [
     content: [
       {
         title: "The Power of Visual Metaphors",
-        description:
+        description: [
           "Abstract concepts become more accessible when represented through familiar visual frameworks. Learn how to create effective metaphorical imagery.",
+        ],
       },
     ],
   },
@@ -411,8 +435,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Attribution Modeling for Content Marketing",
-        description:
+        description: [
           "Understanding how content contributes to conversions across complex customer journeys requires more sophisticated approaches than last-click attribution.",
+        ],
       },
     ],
   },
@@ -431,8 +456,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Designing Effective Interactive Experiences",
-        description:
+        description: [
           "The best interactive content provides immediate value while collecting useful data that can inform your future content strategy.",
+        ],
       },
     ],
   },
@@ -451,8 +477,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Beyond Search and Social",
-        description:
+        description: [
           "New discovery mechanisms like recommendation engines, content aggregators, and AI assistants are becoming increasingly important channels.",
+        ],
       },
     ],
   },
@@ -471,8 +498,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Identifying Evergreen Topics",
-        description:
+        description: [
           "The best evergreen content addresses fundamental questions and problems that remain relevant regardless of current trends or news cycles.",
+        ],
       },
     ],
   },
@@ -491,8 +519,9 @@ export const ARTICLES = [
     content: [
       {
         title: "The Hook-Problem-Solution Framework",
-        description:
+        description: [
           "Opening with an attention-grabbing hook, establishing a relatable problem, and delivering a clear solution is a proven structure for informational videos.",
+        ],
       },
     ],
   },
@@ -511,8 +540,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Awareness Stage Content Strategies",
-        description:
+        description: [
           "At this stage, focus on educational content that addresses pain points without explicitly promoting your product or service.",
+        ],
       },
     ],
   },
@@ -531,8 +561,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Content Atomization",
-        description:
+        description: [
           "Breaking down comprehensive pieces into smaller, platform-specific components allows you to maintain a consistent presence with less production effort.",
+        ],
       },
     ],
   },
@@ -551,8 +582,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Semantic SEO Techniques",
-        description:
+        description: [
           "Modern search engines look beyond keywords to understand topic relevance and comprehensiveness. Learn how to create content that demonstrates expertise.",
+        ],
       },
     ],
   },
@@ -571,8 +603,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Balancing Consistency and Quality",
-        description:
+        description: [
           "While regular publishing builds audience habits, maintaining high standards is equally important. Find the production cadence that works for your resources.",
+        ],
       },
     ],
   },
@@ -591,8 +624,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Beyond Translation",
-        description:
+        description: [
           "True localization considers cultural references, humor, images, and even content structure to resonate with local audiences.",
+        ],
       },
     ],
   },
@@ -611,8 +645,9 @@ export const ARTICLES = [
     content: [
       {
         title: "The Hero's Journey for Brand Narratives",
-        description:
+        description: [
           "Adapting this classic story structure can help create compelling origin stories, case studies, and customer testimonials.",
+        ],
       },
     ],
   },
@@ -631,8 +666,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Choosing the Right Chart Types",
-        description:
+        description: [
           "Different data relationships call for specific visualization formats. Learn when to use pie charts, bar graphs, scatter plots, and more.",
+        ],
       },
     ],
   },
@@ -651,8 +687,9 @@ export const ARTICLES = [
     content: [
       {
         title: "The Power of Insider Language",
-        description:
+        description: [
           "Using industry-specific terminology demonstrates credibility while creating a sense of community among your specialist audience.",
+        ],
       },
     ],
   },
@@ -671,8 +708,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Specialist vs. Generalist Models",
-        description:
+        description: [
           "Deciding whether to hire for specific content roles or flexible multi-skilled team members depends on your production needs and growth stage.",
+        ],
       },
     ],
   },
@@ -691,8 +729,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Adding Value Through Context",
-        description:
+        description: [
           "The best curation adds unique perspective or organizes information in ways that create new value for your audience.",
+        ],
       },
     ],
   },
@@ -711,8 +750,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Problem-Solving Resources",
-        description:
+        description: [
           "The most effective lead magnets provide immediate solutions to specific problems your target audience faces regularly.",
+        ],
       },
     ],
   },
@@ -731,8 +771,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Heat Mapping for Content Optimization",
-        description:
+        description: [
           "Understanding exactly how users interact with your content visually can reveal opportunities for improving layout and call-to-action placement.",
+        ],
       },
     ],
   },
@@ -751,8 +792,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Social Proof in Digital Content",
-        description:
+        description: [
           "Testimonials, usage statistics, and expert endorsements tap into our natural tendency to look to others when making decisions.",
+        ],
       },
     ],
   },
@@ -771,8 +813,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Quality Captioning",
-        description:
+        description: [
           "Well-formatted, accurate captions benefit not only deaf and hard-of-hearing viewers but also those watching in noisy environments or learning your language.",
+        ],
       },
     ],
   },
@@ -791,8 +834,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Creating Shareable Moments",
-        description:
+        description: [
           "Designing content specifically for screenshot sharing can significantly increase organic distribution on platforms like Instagram.",
+        ],
       },
     ],
   },
@@ -811,8 +855,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Original Research as Authority Content",
-        description:
+        description: [
           "Conducting and publishing unique studies or surveys establishes your brand as a primary source rather than just a commentator.",
+        ],
       },
     ],
   },
@@ -831,8 +876,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Industry Directories and Resource Lists",
-        description:
+        description: [
           "Many professional organizations maintain content libraries that can drive highly qualified traffic to your specialized content.",
+        ],
       },
     ],
   },
@@ -851,8 +897,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Sentence and Paragraph Structure",
-        description:
+        description: [
           "Varying sentence length creates rhythm while keeping paragraphs short improves comprehension, especially on mobile devices.",
+        ],
       },
     ],
   },
@@ -871,8 +918,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Document Posts vs. Article Publishing",
-        description:
+        description: [
           "Understanding the algorithmic differences between LinkedIn's native post formats can significantly impact your content's reach and engagement.",
+        ],
       },
     ],
   },
@@ -891,8 +939,9 @@ export const ARTICLES = [
     content: [
       {
         title: "Evergreen Foundation, Seasonal Layers",
-        description:
+        description: [
           "Build your content strategy around year-round topics, then layer in seasonal themes to maintain consistency while capturing tim",
+        ],
       },
     ],
   },

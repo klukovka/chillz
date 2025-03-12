@@ -1,0 +1,136 @@
+
+.header {
+    font-size: 3.25rem;
+    font-weight: 600;
+    line-height: calc(70 / 50);
+    margin: 1.5rem 0;
+    letter-spacing: -0.02em;
+}
+
+
+.additional-elements {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.additional-elements p {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    margin: 0;
+    color: black;
+}
+
+.additional-elements p span {
+    font-weight: 700;
+}
+
+img.article {
+    height: 500px;
+    width: 100%;
+    border-radius: 60px;
+    object-fit: cover;
+    margin: 2rem 0;
+}
+
+.content-container {
+display: flex;
+flex-direction: column;
+gap: 4rem;
+}
+
+.content-container h2 {
+    font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: calc(20 / 16);
+    letter-spacing: -0.05em;
+}
+
+.article-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.table-of-contents {
+    font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-style: italic;
+    color: black;
+    font-weight: 800;
+    font-size: 1.25rem;
+    letter-spacing: -0.05em;
+}
+
+.table-of-contents-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    color: black;
+    margin: 0;
+}
+
+.table-of-contents-item p {
+    color: black;
+    font-weight: 800;
+    margin: 0;
+    font-size: 1.25rem;
+    width: 2rem;
+    border-right: solid black 2px;
+    margin-right: 1rem;
+    padding-right: 1rem;
+}
+
+.table-of-contents-item a {
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.table-of-contents-item a:hover {
+    color: #555;
+    
+  }
+
+.article-text {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-left: 4rem;
+}
+
+.article-text h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1;
+    color: black;
+    margin: 0;
+}
+
+.article-text p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    color: black;
+    margin: 0;
+}
+
+@media (min-width: 850px) {
+.content-container {
+gap: 2rem;
+flex-direction: row;
+}
+
+.article-content {
+    flex: 1;
+}
+
+.trending {
+    width: 340px;
+}
+
+
+}
