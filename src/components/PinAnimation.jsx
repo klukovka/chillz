@@ -27,7 +27,7 @@ const PinAnimation = ({ children, className, id }) => {
     pinGroupContent.forEach((e) => {
       ScrollTrigger.create({
         trigger: e,
-        start: "center 100%",
+        start: "top 100%",
         end: "bottom 0%",
         onEnter: () => gsap.to(e, enterConfig),
         onEnterBack: () => gsap.to(e, enterConfig),
