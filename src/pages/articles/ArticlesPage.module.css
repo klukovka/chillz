@@ -1,7 +1,9 @@
 .articles-page {
     display: flex;
     flex-direction: column;
+    /* align-items: center; */
     gap: 32px;
+    align-items: center;
 }
 
 svg.arrow rect {
@@ -27,7 +29,6 @@ svg.arrow path {
 }
 
 .dive-into-button {
-    align-self: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -49,6 +50,7 @@ svg.arrow path {
 .dive-into-button:active {
     background-color: #9B4DFF;
 }
+
 
 
 @media (min-width: 850px) {

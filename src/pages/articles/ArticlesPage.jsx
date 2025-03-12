@@ -18,7 +18,7 @@ export default function ArticlesPage() {
   }
 
   if (page) {
-    return <CategoryArticlesPage page={page} />;
+    return <CategoryArticlesPage urlPage={page} />;
   }
 
   return <AllArticlesPage />;

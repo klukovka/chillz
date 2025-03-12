@@ -12,6 +12,7 @@ import classes from "./BreadCrumbs.module.css";
 import PinAnimation from "./PinAnimation";
 import WidthDimensionsContainer from "./WidthDimensionsContainer";
 
+//TODO: Fix navigation
 export default function BreadCrumbs() {
   const location = useLocation();
   const [searchParams] = useSearchParams();
