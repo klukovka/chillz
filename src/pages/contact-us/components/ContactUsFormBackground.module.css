@@ -1,42 +1,74 @@
 .form-background {
     display: flex;
+    flex-direction: column;
 }
 
 .background {
     background-color: #FFD766;
-    flex: 1;
+    padding: 32px 32px 72px 32px;
     border-top-left-radius: 56px;
-    border-bottom-left-radius: 56px;
-    margin: 0;
-    padding: 40px 72px 52px 52px;
+    border-top-right-radius: 56px;
 }
 
 .personal-data {
     background-color: #242424;
-    width: 100px;
-    padding: 32px 0px 32px 40px;
-    display: flex;
-    align-items: center;
+    padding: 72px 32px 32px 32px;
 }
 
 .personal-data p {
+    margin: 0;
     font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;
     font-size: 1rem;
     font-weight: 600;
-    transform: rotate(180deg); /* Rotates text upside down */
-    writing-mode: vertical-rl; /* Rotates text vertically */
-    text-orientation: mixed; /* Ensures upright text */
-    white-space: nowrap; /* Prevents text wrapping */
+    text-align: center;
 }
 
 .stack {
     position: relative;
-    display: inline-block;
 }
 
-.code {
-    position: absolute;
-    top: 50%;         /* Align top edge at the center */
-    right: 95px;      /* Keep your original right spacing */
-    transform: translateY(-50%); /* Perfect vertical centering */
+@media (max-width: 1019px){
+    .code {
+        position: absolute;
+        transform: rotate(90deg);
+        bottom: 10%;  
+    }
+}
+
+@media (min-width: 1020px) {
+    .form-background {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .background {
+        flex: 1;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 56px;
+        border-bottom-left-radius: 56px;
+        margin: 0;
+        padding: 40px 72px 52px 52px;
+    }
+    
+    .personal-data {
+        width: 100px;
+        padding: 32px 0px 32px 40px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .personal-data p {
+        margin: 12px;
+        transform: rotate(180deg); /* Rotates text upside down */
+        writing-mode: vertical-rl; /* Rotates text vertically */
+        text-orientation: mixed; /* Ensures upright text */
+        white-space: nowrap; /* Prevents text wrapping */
+    }
+
+    .code {
+        position: absolute;
+        top: 50%;         /* Align top edge at the center */
+        right: 95px;      /* Keep your original right spacing */
+        transform: translateY(-50%); /* Perfect vertical centering */
+    }
 }

@@ -40,9 +40,9 @@
 .control-items {
     color: black;
     margin: 10px 8px 1.25rem 8px;
-    display: grid;
+    display: flex;
     gap: 32px;
-    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap;
 }
 
 .control-items.error {
@@ -72,3 +72,9 @@
     background-color: #7DC8F7;
   }
 
+@media (min-width: 500px) {
+    .control-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    }
+  }
