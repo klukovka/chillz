@@ -24,6 +24,11 @@
 }
 
 
+.stack {
+    position: relative;
+}
+
+
 @media (max-width: 1019px){
     .personal-data {
         position: relative;
