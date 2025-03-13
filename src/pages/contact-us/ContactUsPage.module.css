@@ -1,8 +1,16 @@
 .tabs {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: end;
-    gap: 72px;
+    flex-wrap: wrap;
+    gap: 0rem;
     padding: 0;
     margin: 32px 16px 0px 0px;
 }
+
+@media (min-width: 450px) {
+    .tabs {
+        gap: 72px;
+        flex-direction: row;
+    }
+  }
