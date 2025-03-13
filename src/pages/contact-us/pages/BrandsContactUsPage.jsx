@@ -5,7 +5,9 @@ import ContactUsDivider from "../components/ContactUsDivider";
 import ContactUsCheckboxSet from "../components/ContactUseCheckboxSet";
 import ContactUsFormBackground from "../components/ContactUsFormBackground";
 import ContactUsInput from "../components/ContactUsInput";
+import ContactUsSubmitButton from "../components/ContactUsSubmitButton";
 import ContactUsSubmitMovingButton from "../components/ContactUsSubmitMovingButton";
+import classes from "../ContactUsPage.module.css";
 
 const requestConfig = {
   method: "POST",
@@ -167,11 +169,20 @@ export default function BrandsContactUsPage() {
             placeholder="please contact as soon as possible!"
           />
         </ContactUsDivider>
-        <ContactUsSubmitMovingButton
-          isLoading={isLoading}
-          moved={submitted && !error}
-          error={error}
-        />
+        <div id={classes["submit-tablet-button"]}>
+          <ContactUsSubmitMovingButton
+            isLoading={isLoading}
+            moved={submitted && !error}
+            error={error}
+          />
+        </div>
+        <div id={classes["submit-mobile-button"]}>
+          <ContactUsSubmitButton
+            isLoading={isLoading}
+            submitted={submitted && !error}
+            error={error}
+          />
+        </div>
       </form>
     </ContactUsFormBackground>
   );

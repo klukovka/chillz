@@ -20,7 +20,10 @@ export default function ContactUsSubmitMovingButton({
           ? error
           : "🌊Your message just washed up on shore, and Crayby is already scuttling to process it! We’ll be in touch soon⚡"}
       </p>
-      <button className={classes.slider + ` ${moved ? classes.moved : ""}`}>
+      <button
+        className={classes.slider + ` ${moved ? classes.moved : ""}`}
+        type="submit"
+      >
         submit
       </button>
     </div>
