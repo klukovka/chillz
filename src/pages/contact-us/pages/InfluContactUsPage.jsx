@@ -1,11 +1,25 @@
+import useHttp from "../../../hooks/useHttp";
 import { useInput } from "../../../hooks/useInput";
 import { isEmail, isNotEmpty, isNotEmptyList } from "../../../util/validation";
 import ContactUsDivider from "../components/ContactUsDivider";
 import ContactUsCheckboxSet from "../components/ContactUseCheckboxSet";
 import ContactUsFormBackground from "../components/ContactUsFormBackground";
 import ContactUsInput from "../components/ContactUsInput";
+import ContactUsSubmitMovingButton from "../components/ContactUsSubmitMovingButton";
+
+const requestConfig = {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+};
 
 export default function InfluContactUsPage() {
+  const { error, isLoading, submitted, sendRequest } = useHttp(
+    //TODO: Use another request
+    "https://www.random.org/quota/?format=plain",
+    requestConfig
+  );
   const nameField = useInput("", isNotEmpty);
   const emailField = useInput(
     "",
@@ -16,23 +30,38 @@ export default function InfluContactUsPage() {
   const projectBudgetField = useInput("", isNotEmpty);
   const commentField = useInput("");
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
 
+    // Trigger validation and collect results
+    const isNameValid = nameField.onSubmit();
+    const isEmailValid = emailField.onSubmit();
+    const isInstalinkValid = instalinkField.onSubmit();
+    const isServicesValid = servicesField.onSubmit();
+    const isBudgetValid = projectBudgetField.onSubmit();
+
+    const isFormValid =
+      isNameValid &&
+      isEmailValid &&
+      isInstalinkValid &&
+      isServicesValid &&
+      isBudgetValid;
+
+    if (!isFormValid) {
+      console.log("Form has validation errors. Submission stopped.");
+      return;
+    }
+
+    // Proceed with form submission if no errors
     const fd = new FormData(event.target);
     const services = fd.getAll("services");
 
     const data = Object.fromEntries(fd.entries());
     data.services = services;
 
-    nameField.onSubmit();
-    emailField.onSubmit();
-    instalinkField.onSubmit();
-    servicesField.onSubmit();
-    projectBudgetField.onSubmit();
-    commentField.onSubmit();
-
     console.log(data);
+
+    await sendRequest(JSON.stringify(data));
   }
 
   return (
@@ -138,9 +167,11 @@ export default function InfluContactUsPage() {
             placeholder="please contact as soon as possible!"
           />
         </ContactUsDivider>
-        <button type="submit" className="button">
-          Sign up
-        </button>
+        <ContactUsSubmitMovingButton
+          isLoading={isLoading}
+          moved={submitted && !error}
+          error={error}
+        />
       </form>
     </ContactUsFormBackground>
   );

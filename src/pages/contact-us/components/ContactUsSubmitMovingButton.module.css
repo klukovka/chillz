@@ -1,0 +1,63 @@
+
+/* Track for the button to slide on */
+.track {
+  display: flex;
+  width: 100%;
+  height: 64px;
+  background-color: #242424;
+  border-radius: 80px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  align-items: center;
+  justify-content: start;
+}
+
+/* The sliding button */
+.slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background-color: #6ec1e4;
+  color: #000;
+  border: none;
+  border-radius: 80px;
+  cursor: pointer;
+  transition: left 0.5s ease;
+  font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.slider.moved {
+  left: 50%; 
+}
+
+.message {
+  color: white;
+  padding: 0.5rem 2rem;
+  font-size: 0.75rem;
+  width: 45%;
+  font-weight: 600;
+  text-align: center;
+  opacity: 0;
+  letter-spacing: -0.01em;
+  transition: opacity 0.5s ease;
+  margin: 0;
+}
+
+.message.visible {
+  opacity: 1;
+}
+
+.message.error {
+  color: #ff9984;
+}
+
+.track.error {
+  justify-content: end;
+}
