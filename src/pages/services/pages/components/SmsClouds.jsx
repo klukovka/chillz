@@ -4,8 +4,6 @@ import PinAnimation from "../../../../components/PinAnimation";
 import classes from "./SmsClouds.module.css";
 
 export default function SmsClouds() {
-  //TODO: Add shadows
-
   return (
     <PinAnimation>
       <div className={classes["sms-container"]}>
