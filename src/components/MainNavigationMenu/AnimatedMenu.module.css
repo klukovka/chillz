@@ -1,0 +1,18 @@
+.menu {
+    position: fixed;
+    top: 88px;
+    left: 0;
+    width: 100%;
+    background-image: url('../../assets/bg_nav_bar.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    z-index: 20;
+    overflow: hidden;
+}
+
+@media (min-width: 880px) {
+    .menu {
+        display: none;
+    }
+}
