@@ -22,7 +22,7 @@ export default function PortfolioPage() {
           </p>
         </PinAnimation>
         <Carousel>
-          {[...Array(77)].map((_, index) => (
+          {[...Array(25)].map((_, index) => (
             <div key={index}>
               <div>
                 {" "}
