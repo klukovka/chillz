@@ -201,7 +201,7 @@ const Carousel = ({ children, slidesToShow = 5 }) => {
                   className={styles.slideContent}
                   style={{
                     height: `${height}px`,
-                    margin: `${margin}px 1.5rem 0 0.25em`,
+                    margin: `${margin}px 0.5rem`,
                   }}
                 >
                   {child}
