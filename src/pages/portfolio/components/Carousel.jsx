@@ -173,7 +173,7 @@ const Carousel = ({ children, slidesToShow = 5 }) => {
               for (let i = 0; i < heights.length; i++) {
                 if (index === rightMiddle + i || index === leftMiddle - i) {
                   height = heights[i];
-                  margin = (step * (heights.length - i)) / 2;
+                  margin = (step * (heights.length - i - 1)) / 2;
                 }
               }
             } else if (!isScrolling) {
@@ -188,7 +188,7 @@ const Carousel = ({ children, slidesToShow = 5 }) => {
               for (let i = 0; i < heights.length; i++) {
                 if (index === middle + i || index === middle - i) {
                   height = heights[i];
-                  margin = (step * (heights.length - i)) / 2;
+                  margin = (step * (heights.length - i - 1)) / 2;
                 }
               }
             }
