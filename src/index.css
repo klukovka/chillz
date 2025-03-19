@@ -66,6 +66,8 @@ h1 {
   letter-spacing: -0.01em;
 }
 
+
+
 @media (min-width: 400px) {
   h1 {
       font-size: 4.2rem;

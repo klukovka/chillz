@@ -1,0 +1,102 @@
+.sliderContainer {
+    width: 100%;
+    margin: auto;
+  }
+  
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+.slideContent {
+    flex: 1;
+    height: 300px;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin: 0 1.5rem 0 0.25em;
+  }
+
+.dots-list {
+    display: flex;
+    justify-content: center;
+    margin: 0 6px;
+    transition: all 0.3s ease;
+    align-items: center;
+}
+
+.dots-list li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 16px;
+    width: 16px;
+}
+
+.customDot {
+    border: 2px solid;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.customDot.pink {
+    border-color: #EF4B8D;
+}
+
+.full-size {
+    width: 12px;
+    height: 12px;
+}
+
+.middle-size {
+    width: 8px;
+    height: 8px;
+}
+
+.small-size {
+    width: 4px;
+    height: 4px; 
+}
+  
+.activeDot.pink {
+    background-color: #EF4B8D;
+}
+
+.customDot.blue {
+    border-color: #7DC8F7;
+}
+  
+.activeDot.blue {
+    background-color: #7DC8F7;
+}
+
+.customDot.purple {
+    border-color: #9B4DFF;
+}
+  
+.activeDot.purple {
+    background-color: #9B4DFF;
+}
+  
+@media (min-width: 850px) {
+    .dots-list li {
+        height: 20px;
+        width: 20px;
+    }
+
+    .full-size {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .middle-size {
+        width: 12px;
+        height: 12px;
+    }
+    
+    .small-size {
+        width: 8px;
+        height: 8px; 
+    }
+}
