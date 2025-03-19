@@ -50,13 +50,15 @@ const Carousel = ({ children, slidesToShow = 5 }) => {
     swipe: true,
     dotsClass: `slick-dots ${styles["dots-list"]}`,
 
-    beforeChange: (_, newIndex) => {
+    beforeChange: (oldIndex, newIndex) => {
       setActivePageIndex(Math.ceil(newIndex / currentSlidesToShow));
-      setIsScrolling(true);
-      if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
-      scrollTimeoutRef.current = setTimeout(() => {
-        setIsScrolling(false);
-      }, 500);
+      if (oldIndex !== newIndex) {
+        setIsScrolling(true);
+        if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
+        scrollTimeoutRef.current = setTimeout(() => {
+          setIsScrolling(false);
+        }, 500);
+      }
     },
     afterChange: () => {
       setIsScrolling(false);
@@ -147,16 +149,18 @@ const Carousel = ({ children, slidesToShow = 5 }) => {
       <PinAnimation>
         <Slider ref={sliderRef} {...settings}>
           {array.map((child, index) => {
-            const maxHeight = 330;
+            const maxHeight = 332;
+            const step = 32;
 
             const heights = Array.from(
               { length: Math.ceil(currentSlidesToShow / 2) },
-              (_, index) => Math.max(maxHeight - 30 * index, 100)
+              (_, index) => Math.max(maxHeight - step * index, 100)
             ).reverse();
 
             let height = maxHeight;
+            let margin = 0;
 
-            if (currentSlidesToShow % 2 === 0) {
+            if (currentSlidesToShow % 2 === 0 && !isScrolling) {
               const shift = Math.floor(currentSlidesToShow / 2);
               let rightMiddle =
                 Math.ceil(activePageIndex * currentSlidesToShow) + shift;
@@ -169,9 +173,10 @@ const Carousel = ({ children, slidesToShow = 5 }) => {
               for (let i = 0; i < heights.length; i++) {
                 if (index === rightMiddle + i || index === leftMiddle - i) {
                   height = heights[i];
+                  margin = (step * (heights.length - i)) / 2;
                 }
               }
-            } else {
+            } else if (!isScrolling) {
               const shift = Math.floor(currentSlidesToShow / 2);
               let middle =
                 Math.ceil(activePageIndex * currentSlidesToShow) + shift;
@@ -183,16 +188,20 @@ const Carousel = ({ children, slidesToShow = 5 }) => {
               for (let i = 0; i < heights.length; i++) {
                 if (index === middle + i || index === middle - i) {
                   height = heights[i];
+                  margin = (step * (heights.length - i)) / 2;
                 }
               }
             }
+
+            console.log(margin + " " + height);
 
             return (
               <div key={index} className={styles.slide}>
                 <div
                   className={styles.slideContent}
                   style={{
-                    height: isScrolling ? `${maxHeight}px` : `${height}px`,
+                    height: `${height}px`,
+                    margin: `${margin}px 1.5rem 0 0.25em`,
                   }}
                 >
                   {child}

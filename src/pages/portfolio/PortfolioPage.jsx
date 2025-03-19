@@ -21,8 +21,8 @@ export default function PortfolioPage() {
             seamless execution, we craft solutions that drive real results
           </p>
         </PinAnimation>
-        <Carousel>
-          {[...Array(25)].map((_, index) => (
+        <Carousel slidesToShow={5}>
+          {[...Array(29)].map((_, index) => (
             <div key={index}>
               <div>
                 {" "}

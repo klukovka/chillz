@@ -12,8 +12,7 @@
 .slideContent {
     flex: 1;
     background-color: #ddd;
-    border-radius: 10px;
-    margin: 0 1.5rem 0 0.25em;
+    border-radius: 12px;
     transition: all 0.3s ease;
   }
 
