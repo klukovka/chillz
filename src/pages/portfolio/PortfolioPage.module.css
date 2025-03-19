@@ -1,0 +1,49 @@
+.portfolio-page {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+}
+
+.portfolio-page p {
+    color: black;
+    text-align: center;
+    font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    letter-spacing: -0.05em;
+    max-width: 500px;
+}
+
+svg.arrow rect {
+    fill: #EF4B8D
+}
+
+svg.arrow path {
+    fill: white;   
+}
+
+.footer {
+    color: black;
+    font-size: 3.25rem;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    padding: 0 2rem;
+    margin: 0;
+    line-height: 0.9;
+}
+
+.footer span {
+    color: #EF4B8D;
+}
+
+
+@media (min-width: 850px) {
+    .footer {
+        font-size: 4.375rem;
+        letter-spacing: -3px;
+    }
+}
