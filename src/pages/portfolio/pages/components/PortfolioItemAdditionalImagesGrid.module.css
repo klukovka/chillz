@@ -6,8 +6,12 @@
 
 .image {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 56px;
     object-fit: cover;
-    height: 500px;
 }
 
+@media (min-width: 850px) {
+    .image {
+        height: 500px;
+    }
+}

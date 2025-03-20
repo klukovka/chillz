@@ -1,8 +1,8 @@
 .text-content {
     display: flex;
-    flex-direction: row;
-    gap: 64px;
-    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    align-items: start;
 }
 
 .text-content > * {
@@ -12,4 +12,12 @@
 .text-content h2 {
     margin: 0;
     padding: 0;
+}
+
+@media (min-width: 850px) {
+    .text-content {
+        flex-direction: row;
+        gap: 64px;
+        align-items: center;
+    }
 }
