@@ -23,6 +23,12 @@
     border-radius: 12px; /* Matches the container’s border-radius */
 }
 
+.clickable:hover {
+    height: 346px !important;
+    margin: 0 0.5rem !important;
+    cursor: pointer;
+}
+
 .dots-list {
     display: flex;
     justify-content: center;

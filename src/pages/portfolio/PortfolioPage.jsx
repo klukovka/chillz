@@ -22,7 +22,7 @@ export default function PortfolioPage() {
             seamless execution, we craft solutions that drive real results
           </p>
         </PinAnimation>
-        <Carousel slidesToShow={5}>
+        <Carousel slidesToShow={5} clickable>
           {portfolio.map((item) => (
             <img key={`portfolio_${item.id}`} src={item.imgUrl} />
           ))}

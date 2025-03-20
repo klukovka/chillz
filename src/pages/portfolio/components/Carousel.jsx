@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import PinAnimation from "../../../components/PinAnimation";
 import styles from "./Carousel.module.css"; // CSS Modules
 
-const Carousel = ({ children, slidesToShow = 5 }) => {
+const Carousel = ({ children, slidesToShow = 5, clickable }) => {
   const array = React.Children.toArray(children);
   const sliderRef = useRef(null);
   const [activePageIndex, setActivePageIndex] = useState(0);
@@ -195,15 +195,17 @@ const Carousel = ({ children, slidesToShow = 5 }) => {
               }
             }
 
-            console.log(margin + " " + height);
-
             return (
               <div key={index} className={styles.slide}>
                 <div
-                  className={styles.slideContent}
+                  className={
+                    styles.slideContent +
+                    " " +
+                    `${clickable ? styles.clickable : ""}`
+                  }
                   style={{
                     height: `${height}px`,
-                    margin: `${margin}px 0.5rem`,
+                    margin: `${margin + 12}px 0.5rem`,
                   }}
                 >
                   {child}
