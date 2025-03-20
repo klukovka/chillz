@@ -1,0 +1,18 @@
+.images-content {
+    display: flex;
+    flex-direction: row;
+    gap: 64px;
+    align-items: center;
+}
+
+.images-content > * {
+    flex: 1;
+}
+
+.images-content.reversed {
+    flex-direction: row-reverse;
+}
+
+.carousel {
+    width: 50%;
+}

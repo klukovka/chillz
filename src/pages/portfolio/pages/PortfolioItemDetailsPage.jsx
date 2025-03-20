@@ -3,6 +3,7 @@ import PinAnimation from "../../../components/PinAnimation";
 import WidthDimensionsContainer from "../../../components/WidthDimensionsContainer";
 import { portfolio } from "../../../data/portfolio";
 import classes from "./PortfolioItemDetailsPage.module.css";
+import PortfolioItemImagesContent from "./PortfolioItemImagesContent";
 import PortfolioItemTextContent from "./PortfolioItemTextContent";
 
 export default function PortfolioItemDetailsPage() {
@@ -23,6 +24,17 @@ export default function PortfolioItemDetailsPage() {
             key={`text_content_${index}`}
             title={content.title}
             description={content.description}
+          />
+        ))}
+        <PinAnimation>
+          <h2>{item.imageContent.title}</h2>
+        </PinAnimation>
+        {item.imageContent.content.map((content, index) => (
+          <PortfolioItemImagesContent
+            key={`images_content_${index}`}
+            description={content.description}
+            images={content.imageUrls}
+            reversed={index % 2 == 1}
           />
         ))}
       </div>

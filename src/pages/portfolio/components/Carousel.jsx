@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import PinAnimation from "../../../components/PinAnimation";
 import styles from "./Carousel.module.css"; // CSS Modules
 
 const Carousel = ({ children, slidesToShow = 5, clickable }) => {
@@ -148,73 +147,71 @@ const Carousel = ({ children, slidesToShow = 5, clickable }) => {
 
   return (
     <div className={styles.sliderContainer}>
-      <PinAnimation>
-        <Slider ref={sliderRef} {...settings}>
-          {array.map((child, index) => {
-            const maxHeight = 332;
-            const step = 32;
+      <Slider ref={sliderRef} {...settings}>
+        {array.map((child, index) => {
+          const maxHeight = 332;
+          const step = 32;
 
-            const heights = Array.from(
-              { length: Math.ceil(currentSlidesToShow / 2) },
-              (_, index) => Math.max(maxHeight - step * index, 100)
-            ).reverse();
+          const heights = Array.from(
+            { length: Math.ceil(currentSlidesToShow / 2) },
+            (_, index) => Math.max(maxHeight - step * index, 100)
+          ).reverse();
 
-            let height = maxHeight;
-            let margin = 0;
+          let height = maxHeight;
+          let margin = 0;
 
-            if (currentSlidesToShow % 2 === 0 && !isScrolling) {
-              const shift = Math.floor(currentSlidesToShow / 2);
-              let rightMiddle =
-                Math.ceil(activePageIndex * currentSlidesToShow) + shift;
-              if (rightMiddle + shift >= array.length) {
-                rightMiddle = array.length - shift;
-              }
-
-              const leftMiddle = rightMiddle - 1;
-
-              for (let i = 0; i < heights.length; i++) {
-                if (index === rightMiddle + i || index === leftMiddle - i) {
-                  height = heights[i];
-                  margin = (step * (heights.length - i - 1)) / 2;
-                }
-              }
-            } else if (!isScrolling) {
-              const shift = Math.floor(currentSlidesToShow / 2);
-              let middle =
-                Math.ceil(activePageIndex * currentSlidesToShow) + shift;
-
-              if (middle + shift >= array.length) {
-                middle = array.length - shift - 1;
-              }
-
-              for (let i = 0; i < heights.length; i++) {
-                if (index === middle + i || index === middle - i) {
-                  height = heights[i];
-                  margin = (step * (heights.length - i - 1)) / 2;
-                }
-              }
+          if (currentSlidesToShow % 2 === 0 && !isScrolling) {
+            const shift = Math.floor(currentSlidesToShow / 2);
+            let rightMiddle =
+              Math.ceil(activePageIndex * currentSlidesToShow) + shift;
+            if (rightMiddle + shift >= array.length) {
+              rightMiddle = array.length - shift;
             }
 
-            return (
-              <div key={index} className={styles.slide}>
-                <div
-                  className={
-                    styles.slideContent +
-                    " " +
-                    `${clickable ? styles.clickable : ""}`
-                  }
-                  style={{
-                    height: `${height}px`,
-                    margin: `${margin + 12}px 0.5rem`,
-                  }}
-                >
-                  {child}
-                </div>
+            const leftMiddle = rightMiddle - 1;
+
+            for (let i = 0; i < heights.length; i++) {
+              if (index === rightMiddle + i || index === leftMiddle - i) {
+                height = heights[i];
+                margin = (step * (heights.length - i - 1)) / 2;
+              }
+            }
+          } else if (!isScrolling) {
+            const shift = Math.floor(currentSlidesToShow / 2);
+            let middle =
+              Math.ceil(activePageIndex * currentSlidesToShow) + shift;
+
+            if (middle + shift >= array.length) {
+              middle = array.length - shift - 1;
+            }
+
+            for (let i = 0; i < heights.length; i++) {
+              if (index === middle + i || index === middle - i) {
+                height = heights[i];
+                margin = (step * (heights.length - i - 1)) / 2;
+              }
+            }
+          }
+
+          return (
+            <div key={index} className={styles.slide}>
+              <div
+                className={
+                  styles.slideContent +
+                  " " +
+                  `${clickable ? styles.clickable : ""}`
+                }
+                style={{
+                  height: `${height}px`,
+                  margin: `${margin + 12}px 0.5rem`,
+                }}
+              >
+                {child}
               </div>
-            );
-          })}
-        </Slider>
-      </PinAnimation>
+            </div>
+          );
+        })}
+      </Slider>
     </div>
   );
 };
