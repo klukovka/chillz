@@ -40,7 +40,7 @@ const Carousel = ({ children, slidesToShow = 5 }) => {
 
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: currentSlidesToShow,
     slidesToScroll: currentSlidesToShow,
@@ -79,6 +79,8 @@ const Carousel = ({ children, slidesToShow = 5 }) => {
         } else {
           children = children.slice(activePageIndex - 2, activePageIndex + 3);
         }
+      } else if (length < 1) {
+        children = [];
       }
 
       return <ul className={styles["dots-list"]}>{children}</ul>;

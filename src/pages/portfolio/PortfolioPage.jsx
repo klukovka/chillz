@@ -1,6 +1,7 @@
 import PinAnimation from "../../components/PinAnimation";
 import RoundedArrow from "../../components/RoundedArrow";
 import WidthDimensionsContainer from "../../components/WidthDimensionsContainer";
+import { portfolio } from "../../data/portfolio";
 import Carousel from "./components/Carousel";
 import classes from "./PortfolioPage.module.css";
 
@@ -22,13 +23,8 @@ export default function PortfolioPage() {
           </p>
         </PinAnimation>
         <Carousel slidesToShow={5}>
-          {[...Array(29)].map((_, index) => (
-            <img
-              key={index}
-              src={
-                "https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg"
-              }
-            />
+          {portfolio.map((item) => (
+            <img key={`portfolio_${item.id}`} src={item.imgUrl} />
           ))}
         </Carousel>
         <PinAnimation>
