@@ -1,6 +1,6 @@
 import { useMediaQuery } from "@mui/material";
-import PinAnimation from "../../../components/PinAnimation";
-import Carousel from "../components/Carousel";
+import PinAnimation from "../../../../components/PinAnimation";
+import Carousel from "../../components/Carousel";
 import classes from "./PortfolioItemImagesContent.module.css";
 
 export default function PortfolioItemImagesContent({

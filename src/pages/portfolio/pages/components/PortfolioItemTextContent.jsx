@@ -1,5 +1,5 @@
 import { useMediaQuery } from "@mui/material";
-import PinAnimation from "../../../components/PinAnimation";
+import PinAnimation from "../../../../components/PinAnimation";
 import classes from "./PortfolioItemTextContent.module.css";
 
 export default function PortfolioItemTextContent({ title, description }) {

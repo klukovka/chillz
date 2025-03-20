@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./PortfolioItemAdditionalImagesGrid.module.css";
 
 const PortfolioItemAdditionalImagesGrid = ({ images = [] }) => {
