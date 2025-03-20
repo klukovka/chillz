@@ -18,6 +18,10 @@
     max-width: 500px;
 }
 
+.carousel {
+    width: 100%;
+}
+
 svg.arrow rect {
     fill: #EF4B8D
 }

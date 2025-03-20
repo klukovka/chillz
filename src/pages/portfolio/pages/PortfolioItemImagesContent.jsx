@@ -13,13 +13,11 @@ export default function PortfolioItemImagesContent({
   const className =
     classes["images-content"] + " " + (reversed ? classes["reversed"] : "");
   const carousel = (
-    <div className={classes["carousel"]}>
-      <Carousel slidesToShow={1}>
-        {images.map((image, index) => (
-          <img src={image} key={`${image}_${index}`} />
-        ))}
-      </Carousel>
-    </div>
+    <Carousel slidesToShow={1}>
+      {images.map((image, index) => (
+        <img src={image} key={`${image}_${index}`} />
+      ))}
+    </Carousel>
   );
 
   const paragraph = <p>{description}</p>;
@@ -29,7 +27,7 @@ export default function PortfolioItemImagesContent({
       <PinAnimation>
         <div className={className}>
           {paragraph}
-          {carousel}
+          <div className={classes["carousel"]}>{carousel}</div>
         </div>
       </PinAnimation>
     );
@@ -38,7 +36,7 @@ export default function PortfolioItemImagesContent({
   return (
     <div className={className}>
       <PinAnimation>{paragraph}</PinAnimation>
-      <PinAnimation> {carousel}</PinAnimation>
+      <PinAnimation className={classes["carousel"]}> {carousel}</PinAnimation>
     </div>
   );
 }

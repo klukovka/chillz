@@ -5,10 +5,6 @@
     align-items: center;
 }
 
-.images-content > * {
-    flex: 1;
-}
-
 .images-content.reversed {
     flex-direction: row-reverse;
 }

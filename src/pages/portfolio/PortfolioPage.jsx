@@ -23,13 +23,15 @@ export default function PortfolioPage() {
             seamless execution, we craft solutions that drive real results
           </p>
         </PinAnimation>
-        <Carousel slidesToShow={5} clickable>
-          {portfolio.map((item) => (
-            <NavLink key={`portfolio_${item.id}`} to={`${item.id}`}>
-              <img src={item.imgUrl} />
-            </NavLink>
-          ))}
-        </Carousel>
+        <PinAnimation className={classes["carousel"]}>
+          <Carousel slidesToShow={5} clickable>
+            {portfolio.map((item) => (
+              <NavLink key={`portfolio_${item.id}`} to={`${item.id}`}>
+                <img src={item.imgUrl} />
+              </NavLink>
+            ))}
+          </Carousel>
+        </PinAnimation>
         <PinAnimation>
           <h3 className={classes["footer"]}>
             🦀<span>Drop us a line</span>, and we'll hook you uo with a{" "}
