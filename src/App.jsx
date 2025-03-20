@@ -8,6 +8,8 @@ import BrandsContactUsPage from "./pages/contact-us/pages/BrandsContactUsPage";
 import InfluContactUsPage from "./pages/contact-us/pages/InfluContactUsPage";
 import FaqPage from "./pages/faq/FaqPage";
 import PortfolioPage from "./pages/portfolio/PortfolioPage";
+import PortfolioPageRootLayout from "./pages/portfolio/PortfolioPageLayout";
+import PortfolioItemDetailsPage from "./pages/portfolio/pages/PortfolioItemDetailsPage";
 import ServicesPage from "./pages/services/ServicesPage";
 import ServicesPageRootLayout from "./pages/services/ServicesPageRootLayout";
 import BrandsServicesPage from "./pages/services/pages/BrandsServicesPage";
@@ -41,7 +43,17 @@ const router = createBrowserRouter([
       },
       {
         path: "portfolio",
-        element: <PortfolioPage />,
+        element: <PortfolioPageRootLayout />,
+        children: [
+          {
+            index: true,
+            element: <PortfolioPage />,
+          },
+          {
+            path: ":id",
+            element: <PortfolioItemDetailsPage />,
+          },
+        ],
       },
       {
         path: "articles",

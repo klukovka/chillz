@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import PinAnimation from "../../components/PinAnimation";
 import RoundedArrow from "../../components/RoundedArrow";
 import WidthDimensionsContainer from "../../components/WidthDimensionsContainer";
@@ -24,7 +25,9 @@ export default function PortfolioPage() {
         </PinAnimation>
         <Carousel slidesToShow={5} clickable>
           {portfolio.map((item) => (
-            <img key={`portfolio_${item.id}`} src={item.imgUrl} />
+            <NavLink key={`portfolio_${item.id}`} to={`${item.id}`}>
+              <img src={item.imgUrl} />
+            </NavLink>
           ))}
         </Carousel>
         <PinAnimation>
