@@ -1,0 +1,22 @@
+.portfolio-page {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.portfolio-page h1 {
+    color: black;
+    font-weight: 600;
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+    line-height: (70 / 50);
+    letter-spacing: 0.02em;
+}
+
+img.main-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 56px;
+}
