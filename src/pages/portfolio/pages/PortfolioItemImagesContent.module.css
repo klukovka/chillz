@@ -1,14 +1,15 @@
 .images-content {
     display: flex;
     flex-direction: row;
-    gap: 64px;
     align-items: center;
+    justify-content: space-between;
+}
+
+.images-content > * {
+    width: 48%;
 }
 
 .images-content.reversed {
     flex-direction: row-reverse;
 }
 
-.carousel {
-    width: 50%;
-}

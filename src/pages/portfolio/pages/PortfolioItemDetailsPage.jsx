@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import PinAnimation from "../../../components/PinAnimation";
 import WidthDimensionsContainer from "../../../components/WidthDimensionsContainer";
 import { portfolio } from "../../../data/portfolio";
+import PortfolioItemAdditionalImagesGrid from "./PortfolioItemAdditionalImagesGrid";
 import classes from "./PortfolioItemDetailsPage.module.css";
 import PortfolioItemImagesContent from "./PortfolioItemImagesContent";
 import PortfolioItemTextContent from "./PortfolioItemTextContent";
@@ -37,6 +38,7 @@ export default function PortfolioItemDetailsPage() {
             reversed={index % 2 == 1}
           />
         ))}
+        <PortfolioItemAdditionalImagesGrid images={item.additionalImages} />
       </div>
     </WidthDimensionsContainer>
   );

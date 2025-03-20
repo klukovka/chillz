@@ -27,7 +27,7 @@ export default function PortfolioItemImagesContent({
       <PinAnimation>
         <div className={className}>
           {paragraph}
-          <div className={classes["carousel"]}>{carousel}</div>
+          {carousel}
         </div>
       </PinAnimation>
     );
@@ -36,7 +36,7 @@ export default function PortfolioItemImagesContent({
   return (
     <div className={className}>
       <PinAnimation>{paragraph}</PinAnimation>
-      <PinAnimation className={classes["carousel"]}> {carousel}</PinAnimation>
+      <PinAnimation> {carousel}</PinAnimation>
     </div>
   );
 }
