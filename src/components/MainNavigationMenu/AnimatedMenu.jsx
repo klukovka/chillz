@@ -32,11 +32,11 @@ export default function AnimatedMenu({ id }) {
       <div className={classes.burgerWrapper} onClick={toggleMenu}>
         <img
           src={burgerOpened}
-          className={`${classes.burger} ${isOpen ? classes.hidden : ""}`}
+          className={`${classes.burger} ${isOpen ? "" : classes.hidden}`}
         />
         <img
           src={burgerClosed}
-          className={`${classes.burger} ${isOpen ? "" : classes.hidden}`}
+          className={`${classes.burger}  ${isOpen ? classes.hidden : ""}`}
         />
       </div>
 
