@@ -14,83 +14,88 @@ import ServicesPage from "./pages/services/ServicesPage";
 import ServicesPageRootLayout from "./pages/services/ServicesPageRootLayout";
 import BrandsServicesPage from "./pages/services/pages/BrandsServicesPage";
 import InfluencersServicesPage from "./pages/services/pages/InfluencersServicesPage";
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "",
+      element: <RootLayout />,
+      children: [
+        {
+          index: true,
+          element: <AboutPage />,
+        },
+        {
+          path: "services",
+          element: <ServicesPageRootLayout />,
+          children: [
+            {
+              index: true,
+              element: <ServicesPage />,
+            },
+            {
+              path: "brands",
+              element: <BrandsServicesPage />,
+            },
+            {
+              path: "influencers",
+              element: <InfluencersServicesPage />,
+            },
+          ],
+        },
+        {
+          path: "portfolio",
+          element: <PortfolioPageRootLayout />,
+          children: [
+            {
+              index: true,
+              element: <PortfolioPage />,
+            },
+            {
+              path: ":id",
+              element: <PortfolioItemDetailsPage />,
+            },
+          ],
+        },
+        {
+          path: "articles",
+          element: <ArticlesPageRootLayout />,
+          children: [
+            {
+              path: "",
+              element: <ArticlesPage />,
+            },
+            {
+              path: ":category",
+              element: <ArticlesPage />,
+            },
+          ],
+        },
+        {
+          path: "faq",
+          element: <FaqPage />,
+        },
+        {
+          path: "contact-us",
+          element: <ContactUsPage />,
+          children: [
+            {
+              index: true,
+              path: "brands",
+              element: <BrandsContactUsPage />,
+            },
+            {
+              path: "influencers",
+              element: <InfluContactUsPage />,
+            },
+          ],
+        },
+      ],
+    },
+  ],
   {
-    path: "",
-    element: <RootLayout />,
-    children: [
-      {
-        index: true,
-        element: <AboutPage />,
-      },
-      {
-        path: "services",
-        element: <ServicesPageRootLayout />,
-        children: [
-          {
-            index: true,
-            element: <ServicesPage />,
-          },
-          {
-            path: "brands",
-            element: <BrandsServicesPage />,
-          },
-          {
-            path: "influencers",
-            element: <InfluencersServicesPage />,
-          },
-        ],
-      },
-      {
-        path: "portfolio",
-        element: <PortfolioPageRootLayout />,
-        children: [
-          {
-            index: true,
-            element: <PortfolioPage />,
-          },
-          {
-            path: ":id",
-            element: <PortfolioItemDetailsPage />,
-          },
-        ],
-      },
-      {
-        path: "articles",
-        element: <ArticlesPageRootLayout />,
-        children: [
-          {
-            path: "",
-            element: <ArticlesPage />,
-          },
-          {
-            path: ":category",
-            element: <ArticlesPage />,
-          },
-        ],
-      },
-      {
-        path: "faq",
-        element: <FaqPage />,
-      },
-      {
-        path: "contact-us",
-        element: <ContactUsPage />,
-        children: [
-          {
-            index: true,
-            path: "brands",
-            element: <BrandsContactUsPage />,
-          },
-          {
-            path: "influencers",
-            element: <InfluContactUsPage />,
-          },
-        ],
-      },
-    ],
-  },
-]);
+    basename: import.meta.env.BASE_URL,
+  }
+);
 
 export default function App() {
   return <RouterProvider router={router} />;
