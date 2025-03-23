@@ -22,8 +22,6 @@ export default function WhatDoWeDo() {
     return () => window.removeEventListener("resize", updateDimensions);
   }, [updateDimensions]);
 
-  console.log(height);
-
   const services = [
     {
       width: 260,
@@ -99,7 +97,6 @@ export default function WhatDoWeDo() {
         <div className={classes["what-do-we-do"]} ref={ref}>
           <PhysicsContainer
             className={classes["physics-container"]}
-            // TODO: Update height and fix when animation is started
             height={height - 8}
             elements={services}
           />
