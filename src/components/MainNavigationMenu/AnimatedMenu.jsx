@@ -5,16 +5,27 @@ import MainNavigationBarItems from "./MainNavigationMenuItems";
 
 export default function AnimatedMenu({ id }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [showButtons, setShowButtons] = useState(false);
 
   const menuVariants = {
     open: { height: "500px", opacity: 1 },
     closed: { height: 0, opacity: 0 },
   };
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => {
+    setShowButtons(false);
+    setIsOpen(false);
+  };
+
+  const toggleMenu = () => {
+    if (isOpen) {
+      closeMenu();
+    } else {
+      setIsOpen(true);
+    }
+  };
 
   //TODO: Fix button
-  //TODO: Update animation
   return (
     <div id={id}>
       <button
@@ -40,8 +51,23 @@ export default function AnimatedMenu({ id }) {
             variants={menuVariants}
             transition={{ duration: 0.4 }}
             className={classes.menu}
+            onAnimationComplete={(definition) => {
+              if (definition === "open") {
+                setShowButtons(true);
+              }
+            }}
           >
-            <MainNavigationBarItems />
+            {showButtons && (
+              <motion.div
+                initial="closed"
+                animate="open"
+                exit="closed"
+                variants={menuVariants}
+                transition={{ duration: 0.2 }}
+              >
+                <MainNavigationBarItems onClick={closeMenu} />
+              </motion.div>
+            )}
           </motion.div>
         )}
       </AnimatePresence>
