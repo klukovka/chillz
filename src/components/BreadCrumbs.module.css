@@ -5,6 +5,7 @@
     font-size: 1.25rem;
     font-weight: 500;
     font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    flex-wrap: wrap;
 }
 
 .breadcrumbs > * {

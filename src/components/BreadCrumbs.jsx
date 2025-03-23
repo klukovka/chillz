@@ -8,11 +8,12 @@ import {
   ARTICLE_CATEGORY_SOCIAL_MEDIA,
   ARTICLES,
 } from "../data/articles";
+
+import { portfolio } from "../data/portfolio";
 import classes from "./BreadCrumbs.module.css";
 import PinAnimation from "./PinAnimation";
 import WidthDimensionsContainer from "./WidthDimensionsContainer";
 
-//TODO: Fix navigation
 export default function BreadCrumbs() {
   const location = useLocation();
   const [searchParams] = useSearchParams();
@@ -20,8 +21,6 @@ export default function BreadCrumbs() {
   const pathCrumbs = location.pathname
     .split("/")
     .filter((crumb) => crumb !== "");
-
-  let showBreadCrumbs = true;
 
   const crumbs = [];
 
@@ -32,6 +31,10 @@ export default function BreadCrumbs() {
     if (pathCrumbs[0] === "services") {
       if (crumb === "influencers") displayText = "for influ";
       if (crumb === "brands") displayText = "for brands";
+      crumbs.push(displayText);
+    } else if (pathCrumbs[0] == "portfolio") {
+      const portfolioItem = portfolio.find((item) => item.id == crumb);
+      if (portfolioItem) displayText = portfolioItem.name;
       crumbs.push(displayText);
     } else if (pathCrumbs[0] == "articles") {
       displayText = "articles";
@@ -76,7 +79,7 @@ export default function BreadCrumbs() {
     }
   }
 
-  if (crumbs.length <= 1 || !showBreadCrumbs) return <></>;
+  if (crumbs.length <= 1) return <></>;
 
   let backAmount = crumbs.length;
 
@@ -86,9 +89,17 @@ export default function BreadCrumbs() {
         <div className={classes.breadcrumbs}>
           {crumbs.map((crumb, index) => {
             backAmount -= 1;
+            let to;
+            if (pathCrumbs[0] == "articles" && page) {
+              if (index === 0) to = location.pathname.replaceAll("/all", "");
+              if (index === 1) to = `${location.pathname}?page=${page}`;
+            } else {
+              to = -backAmount;
+            }
+
             return (
               <div className={classes.crumb} key={`${index}${crumb}`}>
-                <Link to={-backAmount}>{crumb}</Link>
+                <Link to={to}>{crumb}</Link>
               </div>
             );
           })}
