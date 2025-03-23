@@ -1,5 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
+import burgerClosed from "../../assets/burger_closed.svg";
+import burgerOpened from "../../assets/burger_opened.svg";
 import classes from "./AnimatedMenu.module.css";
 import MainNavigationBarItems from "./MainNavigationMenuItems";
 
@@ -25,22 +27,18 @@ export default function AnimatedMenu({ id }) {
     }
   };
 
-  //TODO: Fix button
   return (
     <div id={id}>
-      <button
-        onClick={toggleMenu}
-        style={{
-          padding: "8px",
-          borderRadius: "50%",
-          border: "1px solid #ff4d79",
-          color: "#ff4d79",
-          background: "transparent",
-          cursor: "pointer",
-        }}
-      >
-        {isOpen ? "✖" : "☰"}
-      </button>
+      <div className={classes.burgerWrapper} onClick={toggleMenu}>
+        <img
+          src={burgerOpened}
+          className={`${classes.burger} ${isOpen ? classes.hidden : ""}`}
+        />
+        <img
+          src={burgerClosed}
+          className={`${classes.burger} ${isOpen ? "" : classes.hidden}`}
+        />
+      </div>
 
       <AnimatePresence>
         {isOpen && (
