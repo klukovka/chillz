@@ -13,6 +13,8 @@ export default function AnimatedMenu({ id }) {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  //TODO: Fix button
+  //TODO: Update animation
   return (
     <div id={id}>
       <button
