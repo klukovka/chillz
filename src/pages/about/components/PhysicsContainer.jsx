@@ -1,27 +1,19 @@
 import Matter from "matter-js";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-// const element = {
-//   width: 100,
-//   height: 200,
-//   text: "text",
-//   offset: 300,
-//   fallHeight: 300,
-// };
-
 const PhysicsContainer = ({ elements = [], height = 400, className }) => {
   const sceneRef = useRef(null);
   const engineRef = useRef(null);
   const renderRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const [dimensions, setDimensions] = useState({
-    width: Math.min(window.innerWidth, 800),
+    width: Math.min(window.innerWidth - 100, 800),
   });
 
   // Function to update dimensions on resize
   const updateDimensions = useCallback(() => {
     setDimensions({
-      width: Math.min(window.innerWidth, 800),
+      width: Math.min(window.innerWidth - 100, 800),
     });
   }, []);
 
@@ -75,14 +67,15 @@ const PhysicsContainer = ({ elements = [], height = 400, className }) => {
 
     // Create physics-based elements dynamically
     const elementBodies = elements.map((element) => {
+      const itemHeight = (element.height * dimensions.width) / 800;
       return Matter.Bodies.rectangle(
-        element.offset, // Spread items across columns
+        (element.offset * dimensions.width) / 800, // Spread items across columns
         element.fallHeight - height, // Staggered heights
-        element.width, // Width
-        element.height, // Height
+        (element.width * dimensions.width) / 800, // Width
+        itemHeight, // Height
         {
           restitution: 0.2,
-          chamfer: { radius: 30 }, // Rounded corners
+          chamfer: { radius: itemHeight / 2 }, // Rounded corners
           render: {
             fillStyle: "#ffffff", // White background
             strokeStyle: "#9B4DFF", // Purple border
@@ -114,7 +107,9 @@ const PhysicsContainer = ({ elements = [], height = 400, className }) => {
     // Custom rendering function to draw text on objects
     Matter.Events.on(render, "afterRender", function () {
       const ctx = render.context;
-      ctx.font = "700 24px 'Montserrat Alternates'";
+      const fontSize = dimensions.width * 0.03;
+      const font = `700 ${fontSize}px 'Montserrat Alternates'`;
+      ctx.font = font;
       ctx.fillStyle = "#9B4DFF"; // Purple text
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
@@ -122,7 +117,7 @@ const PhysicsContainer = ({ elements = [], height = 400, className }) => {
       elementBodies.forEach((body) => {
         const { x, y } = body.position;
         const lines = body.label.split("\n"); // Split text into lines
-        const lineHeight = 26;
+        const lineHeight = fontSize + 2;
         ctx.save();
         ctx.translate(x, y);
         ctx.rotate(body.angle); // Rotate text with the body

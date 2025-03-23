@@ -3,7 +3,7 @@
     margin-top: 1rem;
     border-radius: 60px;
     background-color: #9B4DFF;
-    padding: 1rem 0 0 4rem;
+    padding: 1.5rem;
     position: relative;
     display: inline-block;
     height: 450px;
@@ -13,8 +13,8 @@
     font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;
     margin: 0;
     margin-bottom: 1rem;
-    margin-right: 10rem;
-    font-size: 1.25rem;
+    margin-right: 0rem;
+    font-size: 1rem;
     line-height: calc(21 / 20);
     font-weight: 500;
     padding: 0;
@@ -32,11 +32,27 @@
 }
 
 .arrow {
-    position: absolute;
-    top: -0.5rem;
-    right: 2.5rem;
+    display: none;
 }
 
 .arrow path {
     fill: white;
+}
+
+@media (min-width: 750px) {
+    .what-do-we-do {
+        padding: 1rem 0 0 4rem;
+    }
+
+    .what-do-we-do p {
+    font-size: 1.25rem;
+    margin-right: 10rem;
+    }
+
+    .arrow {
+        display:block;
+        position: absolute;
+        top: -0.5rem;
+        right: 2.5rem;
+    }
 }
