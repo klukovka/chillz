@@ -1,20 +1,23 @@
+import { useTranslation } from "react-i18next";
 import PinAnimation from "../../../components/PinAnimation";
 import AboutDetailsButton from "./AboutDetailsButton";
 import classes from "./AboutDetailsButtonsSection.module.css";
 
 export default function AboutDetailsButtonsSection() {
+  const { t } = useTranslation();
   return (
     <PinAnimation>
       <div className={classes["buttons-section"]}>
         <AboutDetailsButton primary>
-          <div>See what we’ve clawed up! 🦀</div>
-          <div>
-            <span>Dive into</span> our work and get inspired.
-          </div>
+          {t("about_details_primary_button_first_sentence")}
+          <br />
+          <span>{t("about_details_primary_button_highlight")} </span>{" "}
+          {t("about_details_primary_button_last_sentence")}
         </AboutDetailsButton>
         <AboutDetailsButton>
-          🌊Fresh marketing bites from the content ocean!
-          <span> Grab ‘em</span> before they swim away!
+          {t("about_details_secondary_button_first_sentence")}
+          <span> {t("about_details_secondary_button_highlight")}</span>{" "}
+          {t("about_details_secondary_button_last_sentence")}
         </AboutDetailsButton>
       </div>
     </PinAnimation>
