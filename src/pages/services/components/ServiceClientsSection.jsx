@@ -1,18 +1,19 @@
 import { useMediaQuery } from "@mui/material";
+import { useTranslation } from "react-i18next";
 import PinAnimation from "../../../components/PinAnimation";
 import ServiceClientCard from "./ServiceClientCard";
 import classes from "./ServiceClientsSection.module.css";
 
 export default function ServiceClientsSection() {
+  const { t } = useTranslation();
   const matches = useMediaQuery("(min-width:850px)");
 
   const influ = (
     <ServiceClientCard
       className={classes["influ-background"]}
       client={{
-        title: "influ",
-        description:
-          "Your socials should be a space where you create, not stress. We help you grow your platforms without the overwhelm, so you can focus on becoming the next big thing",
+        title: t("influ").toLowerCase(),
+        description: t("influ_service_description"),
         to: "influencers",
       }}
     />
@@ -21,9 +22,8 @@ export default function ServiceClientsSection() {
     <ServiceClientCard
       className={classes["brands-background"]}
       client={{
-        title: "brands",
-        description:
-          "Your business needs a digital presence that converts, not just exists. We help brands build, optimize, and scale their social media channels to drive real business results",
+        title: t("brands").toLowerCase(),
+        description: t("brands_service_description"),
         to: "brands",
       }}
     />
