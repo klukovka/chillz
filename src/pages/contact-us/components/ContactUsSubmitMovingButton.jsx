@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import classes from "./ContactUsSubmitMovingButton.module.css";
 
 export default function ContactUsSubmitMovingButton({
@@ -5,6 +6,7 @@ export default function ContactUsSubmitMovingButton({
   error,
   moved,
 }) {
+  const { t } = useTranslation();
   return (
     <div className={classes.track + ` ${error ? classes.error : ""}`}>
       <p
@@ -15,16 +17,16 @@ export default function ContactUsSubmitMovingButton({
         }
       >
         {isLoading
-          ? "🌊Washing up your message..."
+          ? t("washing_up_your_message")
           : error
           ? error
-          : "🌊Your message just washed up on shore, and Crayby is already scuttling to process it! We’ll be in touch soon⚡"}
+          : t("message_was_sent")}
       </p>
       <button
         className={classes.slider + ` ${moved ? classes.moved : ""}`}
         type="submit"
       >
-        submit
+        {t("submit").toLowerCase()}
       </button>
     </div>
   );
