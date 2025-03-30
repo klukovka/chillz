@@ -1,56 +1,58 @@
+import { useTranslation } from "react-i18next";
 import ServicesGrid from "../../components/ServicesGrid";
 import classes from "./BrandsServicesSection.module.css";
 
-const services = [
-  {
-    title: "Tailored Growth Strategy",
-    description: "Deep dive into your brand, audience, and competitors",
-    background: classes["tailored-growth-strategy"],
-  },
-  {
-    title: "SEO & UX Optimization",
-    description:
-      "Your online presence, structured for maximum reach & engagement",
-    background: classes["seo-ux-optimization"],
-  },
-  {
-    title: "Creative Strategy",
-    description: "Strong content direction to connect with your audience",
-    background: classes["creative-strategy"],
-  },
-  {
-    title: "Paid Ads Management",
-    description: "Targeted campaigns for lead generation & sales.",
-    background: classes["paid-ads-management"],
-  },
-  {
-    title: "Brand Story & Identity",
-    description: "Cohesive storytelling that defines your brand",
-    background: classes["brand-story-identity"],
-  },
-  {
-    title: "Influencer Marketing",
-    description: "We help you find the perfect creators for your campaigns",
-    background: classes["influencer-marketing"],
-  },
-  {
-    title: "UGC & IGC Content Creation",
-    description: "Authentic content that resonates with your audience",
-    background: classes["ugc-igx-content-creation"],
-  },
-  {
-    title: "Competitive Analysis & Insights",
-    description: "Stay ahead with key market insights and growth strategies",
-    background: classes["competitive-analysis-insights"],
-  },
-  {
-    title: "1:1 Consultations",
-    description:
-      "Expert advice on strategy, growth, and overcoming digital roadblocks",
-    background: classes["one-to-one-consultations"],
-  },
-];
-
 export default function BrandsServicesSection() {
+  const { t } = useTranslation();
+  const services = [
+    {
+      title: t("brands_service_tailored_growth_strategy_title"),
+      description: t("brands_service_tailored_growth_strategy_description"),
+      background: classes["tailored-growth-strategy"],
+    },
+    {
+      title: t("brands_service_seo_ux_optimization_title"),
+      description: t("brands_service_seo_ux_optimization_description"),
+      background: classes["seo-ux-optimization"],
+    },
+    {
+      title: t("brands_service_creative_strategy_title"),
+      description: t("brands_service_creative_strategy_description"),
+      background: classes["creative-strategy"],
+    },
+    {
+      title: t("brands_service_paid_ads_management_title"),
+      description: t("brands_service_paid_ads_management_description"),
+      background: classes["paid-ads-management"],
+    },
+    {
+      title: t("brands_service_brand_story_identity_title"),
+      description: t("brands_service_brand_story_identity_description"),
+      background: classes["brand-story-identity"],
+    },
+    {
+      title: t("brands_service_influencer_marketing_title"),
+      description: t("brands_service_influencer_marketing_description"),
+      background: classes["influencer-marketing"],
+    },
+    {
+      title: t("brands_service_ugc_igx_content_creation_title"),
+      description: t("brands_service_ugc_igx_content_creation_description"),
+      background: classes["ugc-igx-content-creation"],
+    },
+    {
+      title: t("brands_service_competitive_analysis_insights_title"),
+      description: t(
+        "brands_service_competitive_analysis_insights_description"
+      ),
+      background: classes["competitive-analysis-insights"],
+    },
+    {
+      title: t("brands_service_one_to_one_consultations_title"),
+      description: t("brands_service_one_to_one_consultations_description"),
+      background: classes["one-to-one-consultations"],
+    },
+  ];
+
   return <ServicesGrid services={services} />;
 }
