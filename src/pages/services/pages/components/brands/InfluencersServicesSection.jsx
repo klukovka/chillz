@@ -1,57 +1,55 @@
+import { useTranslation } from "react-i18next";
 import ServicesGrid from "../../components/ServicesGrid";
 import classes from "./InfluencersServicesSection.module.css";
 
-const services = [
-  {
-    title: "Strategic Social Growth",
-    description: "Custom development plans to boost engagement and visibility.",
-    background: classes["strategic-social-growth"],
-  },
-  {
-    title: "SEO Optimization",
-    description: "Your content, discoverable and ranking where it should.",
-    background: classes["seo-optimization"],
-  },
-  {
-    title: "Regular Audits",
-    description: "Tailored check-ins to tweak, refine, and keep you on track.",
-    background: classes["regular-audits"],
-  },
-  {
-    title: "Paid Ads Assistance",
-    description: "Ready to scale? We help with targeted ad campaigns.",
-    background: classes["paid-ads-assistance"],
-  },
-  {
-    title: "Platform Issue Resolution",
-    description: "Shadowban? Monetization issues? We help fix it.",
-    background: classes["platform-issue-resolution"],
-  },
-  {
-    title: "Visual Aesthetics",
-    description:
-      "Grid, stories, post design, banner, thumbnails – cohesive, clean, on-brand.",
-    background: classes["visual-aesthetics"],
-  },
-  {
-    title: "Creative Strategy Support",
-    description: "Struggling with content ideas? We got you.",
-    background: classes["creative-strategy-support"],
-  },
-  {
-    title: "Monetization Optimization",
-    description:
-      "We help you maximize revenue streams and give your content a second life.",
-    background: classes["monetization-optimization"],
-  },
-  {
-    title: "1:1 Consultations",
-    description:
-      "Ask anything about your growth, struggles, or worries—we’ve got the answers.",
-    background: classes["one-to-one-consultations"],
-  },
-];
-
 export default function InfluencersServicesSection() {
+  const { t } = useTranslation();
+  const services = [
+    {
+      title: t("influ_service_strategic_social_growth_title"),
+      description: t("influ_service_strategic_social_growth_description"),
+      background: classes["strategic-social-growth"],
+    },
+    {
+      title: t("influ_service_seo_optimization_title"),
+      description: t("influ_service_seo_optimization_description"),
+      background: classes["seo-optimization"],
+    },
+    {
+      title: t("influ_service_regular_audits_title"),
+      description: t("influ_service_regular_audits_description"),
+      background: classes["regular-audits"],
+    },
+    {
+      title: t("influ_service_paid_ads_assistance_title"),
+      description: t("influ_service_paid_ads_assistance_description"),
+      background: classes["paid-ads-assistance"],
+    },
+    {
+      title: t("influ_service_platform_issue_resolution_title"),
+      description: t("influ_service_platform_issue_resolution_description"),
+      background: classes["platform-issue-resolution"],
+    },
+    {
+      title: t("influ_service_visual_aesthetics_title"),
+      description: t("influ_service_visual_aesthetics_description"),
+      background: classes["visual-aesthetics"],
+    },
+    {
+      title: t("influ_service_creative_strategy_support_title"),
+      description: t("influ_service_creative_strategy_support_description"),
+      background: classes["creative-strategy-support"],
+    },
+    {
+      title: t("influ_service_monetization_optimization_title"),
+      description: t("influ_service_monetization_optimization_description"),
+      background: classes["monetization-optimization"],
+    },
+    {
+      title: t("influ_service_one_to_one_consultations_title"),
+      description: t("influ_service_one_to_one_consultations_description"),
+      background: classes["one-to-one-consultations"],
+    },
+  ];
   return <ServicesGrid services={services} />;
 }
