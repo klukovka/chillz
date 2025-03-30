@@ -39,7 +39,7 @@ export default function WorkflowSection() {
   return (
     <>
       <PinAnimation>
-        <h1>our workflow 🌴</h1>
+        <h1>{t("our_workflow")}</h1>
       </PinAnimation>
       {steps.map((item, index) => (
         <PinAnimation key={`workflow_item_${index}`}>
