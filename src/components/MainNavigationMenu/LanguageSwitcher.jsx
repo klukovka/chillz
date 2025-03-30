@@ -17,6 +17,19 @@ export default function LanguageSwitcher({ className }) {
     ([code]) => code !== i18n.resolvedLanguage
   );
 
+  const buttons = availableLanguages.map(([code, name]) => (
+    <button
+      key={`language_${code}`}
+      className={classes["language-button"]}
+      onClick={() => {
+        i18n.changeLanguage(code);
+        setIsOpen(false);
+      }}
+    >
+      {name}
+    </button>
+  ));
+
   return (
     <li
       className={`${className} ${classes.language}`}
@@ -34,23 +47,26 @@ export default function LanguageSwitcher({ className }) {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className={classes["languages-menu"]}
+            className={classes["languages-menu-tablet"]}
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
           >
-            {availableLanguages.map(([code, name]) => (
-              <button
-                key={`language_${code}`}
-                onClick={() => {
-                  i18n.changeLanguage(code);
-                  setIsOpen(false);
-                }}
-              >
-                {name}
-              </button>
-            ))}
+            {buttons}
+          </motion.div>
+        )}
+      </AnimatePresence>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className={classes["languages-menu-mobile"]}
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -10 }}
+            transition={{ duration: 0.2, ease: "easeInOut" }}
+          >
+            {buttons}
           </motion.div>
         )}
       </AnimatePresence>
