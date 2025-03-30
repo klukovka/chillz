@@ -1,7 +1,7 @@
 .control {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 0.25rem;
     margin: 0;
     padding: 0;
     font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;

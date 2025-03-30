@@ -1,7 +1,7 @@
 .text-content {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 1rem;
     align-items: start;
 }
 
@@ -17,7 +17,7 @@
 @media (min-width: 850px) {
     .text-content {
         flex-direction: row;
-        gap: 64px;
+        gap: 4rem;
         align-items: center;
     }
 }

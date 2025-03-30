@@ -30,7 +30,7 @@
 
 @media (min-width: 450px) {
     .tabs {
-        gap: 72px;
+        gap: 4.5rem;
         flex-direction: row;
     }
   }

@@ -45,7 +45,7 @@
 
 .languages-menu-mobile {
     display: flex;
-    gap: 16px;
+    gap: 1rem;
 }
 
 .languages-menu-mobile .language-button {

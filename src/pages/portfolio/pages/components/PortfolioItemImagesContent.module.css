@@ -3,7 +3,7 @@
     flex-direction: column-reverse;
     align-items: start;
     justify-content: start;
-    gap: 32px;
+    gap: 2rem;
 }
 
 .images-content > * {
