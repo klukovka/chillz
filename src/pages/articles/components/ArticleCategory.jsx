@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import {
   ARTICLE_CATEGORY_ANALYTICS,
@@ -10,25 +11,26 @@ import {
 import classes from "./ArticleCategory.module.css";
 
 export default function ArticleCategory({ category, isLink, isActive, dark }) {
-  let displayText = "View All";
+  const { t } = useTranslation();
+  let displayText = t("view_all");
   switch (category) {
     case ARTICLE_CATEGORY_AUDIENCE_GROWTH:
-      displayText = "Audience Growth";
+      displayText = t("audience_growth");
       break;
     case ARTICLE_CATEGORY_CONTENT_CREATION:
-      displayText = "Content Creation";
+      displayText = t("content_creation");
       break;
     case ARTICLE_CATEGORY_SOCIAL_MEDIA:
-      displayText = "Social Media";
+      displayText = t("social_media");
       break;
     case ARTICLE_CATEGORY_SEO:
-      displayText = "SEO";
+      displayText = t("seo");
       break;
     case ARTICLE_CATEGORY_ANALYTICS:
-      displayText = "Analytics";
+      displayText = t("analytics");
       break;
     case ARTICLE_CATEGORY_MONETIZATION:
-      displayText = "Monetization";
+      displayText = t("monetization");
       break;
   }
 
