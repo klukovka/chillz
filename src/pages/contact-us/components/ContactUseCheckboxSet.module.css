@@ -30,7 +30,7 @@
 
 .control legend {
     border-left: solid black;
-    padding: 2px 8px;
+    padding: 0.125rem 0.5rem;
 }
 
 .control.error legend {

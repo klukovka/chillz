@@ -75,7 +75,7 @@ svg.arrow-influencers path {
 
 @media (min-width: 680px) {
     .arrow-container {
-    padding: 0 60px;
+    padding: 0 3.75rem;
     }
 
     .arrow {
@@ -86,7 +86,7 @@ svg.arrow-influencers path {
 
 @media (min-width: 760px) {
     .arrow-container {
-    padding: 0 120px;
+    padding: 0 7.5rem;
     }
 
     .arrow {
