@@ -106,14 +106,10 @@ export default function WhatDoWeDo() {
 
           <div>
             <p>{t("what_do_we_do_description_p1")}</p>
-            <p>
-              <p>{t("what_do_we_do_description_p2")}</p>
-            </p>
+            <p>{t("what_do_we_do_description_p2")}</p>
             <div className={classes["arrow-container"]}>
               <div>
-                <p>
-                  <p>{t("what_do_we_do_description_p3")}</p>
-                </p>
+                <p>{t("what_do_we_do_description_p3")}</p>
                 <CheckServicesButton>
                   {t("check_our_services")}
                 </CheckServicesButton>
