@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Link, useParams } from "react-router-dom";
 import Arrow from "../../../components/Arrow";
 import PinAnimation from "../../../components/PinAnimation";
@@ -8,6 +9,7 @@ import ArticleCategories from "../components/ArticleCategories";
 import ArticlesGrid from "../components/ArticlesGrid";
 
 export default function AllArticlesPage() {
+  const { t } = useTranslation();
   const { category } = useParams();
   let articles = ARTICLES.filter((article) =>
     category != null ? article.category === category : article
@@ -21,8 +23,10 @@ export default function AllArticlesPage() {
     <div className={classes["articles-page"]}>
       <PinAnimation>
         <h1 style={{ textAlign: "center" }}>
-          <span style={{ color: "#7DC8F7" }}>stay ahead </span>of the social
-          tide
+          <span style={{ color: "#7DC8F7" }}>
+            {t("articles_page_hightlight_title")}{" "}
+          </span>
+          {t("articles_page_title")}
         </h1>
       </PinAnimation>
       <PinAnimation>
@@ -33,13 +37,17 @@ export default function AllArticlesPage() {
         to={`/articles${"/" + (category ?? "all")}?page=1`}
         className={classes["dive-into-button"]}
       >
-        Dive into
+        {t("dive_into")}
         <Arrow fill="white" />
       </Link>
       <PinAnimation>
         <h3 className={classes["footer"]}>
-          🌊Want the <span>freshest</span> marketing tips?
-          <span>Subscribe</span> and stay ahead of the tide!<span> </span>
+          {t("articles_page_footer_p1")}{" "}
+          <span> {t("articles_page_footer_hightlight1")}</span>{" "}
+          {t("articles_page_footer_p2")}
+          <span> {t("articles_page_footer_hightlight2")}</span>{" "}
+          {t("articles_page_footer_p3")}
+          <span> </span>
           <RoundedArrow className={classes["arrow"]} />
         </h3>
       </PinAnimation>
