@@ -83,5 +83,8 @@
     "not_spam_and_share_data": "We will not spam or share your personal data.",
     "submit": "Submit",
     "washing_up_your_message": "🌊Washing up your message...",
-    "message_was_sent": "🌊Your message just washed up on shore, and Crayby is already scuttling to process it! We’ll be in touch soon⚡"
+    "message_was_sent": "🌊Your message just washed up on shore, and Crayby is already scuttling to process it! We’ll be in touch soon⚡",
+    "enter_valid_email": "enter valid email",
+    "field_required": "field required",
+    "select_at_least_one_option": "select at least one option"
 }

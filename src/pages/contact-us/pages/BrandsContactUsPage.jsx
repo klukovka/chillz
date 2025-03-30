@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import useHttp from "../../../hooks/useHttp";
 import { useInput } from "../../../hooks/useInput";
 import { isEmail, isNotEmpty, isNotEmptyList } from "../../../util/validation";
@@ -17,19 +18,30 @@ const requestConfig = {
 };
 
 export default function BrandsContactUsPage() {
+  const { t } = useTranslation();
   const { error, isLoading, submitted, sendRequest } = useHttp(
     //TODO: Use another request
     "https://www.random.org/quota/?format=plain",
     requestConfig
   );
-  const nameField = useInput("", isNotEmpty);
+  const nameField = useInput("", (value) =>
+    isNotEmpty(value, t("field_required"))
+  );
   const emailField = useInput(
     "",
-    (value) => isNotEmpty(value) ?? isEmail(value)
+    (value) =>
+      isNotEmpty(value, t("field_required")) ??
+      isEmail(value, t("enter_valid_email"))
   );
-  const companyNameField = useInput("", isNotEmpty);
-  const projectBudgetField = useInput("", isNotEmpty);
-  const servicesField = useInput([], isNotEmptyList);
+  const companyNameField = useInput("", (value) =>
+    isNotEmpty(value, t("field_required"))
+  );
+  const projectBudgetField = useInput("", (value) =>
+    isNotEmpty(value, t("field_required"))
+  );
+  const servicesField = useInput([], (value) =>
+    isNotEmptyList(value, t("select_at_least_one_option"))
+  );
   const commentField = useInput("");
 
   async function handleSubmit(event) {

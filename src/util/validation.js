@@ -1,15 +1,17 @@
-export function isEmail(value) {
-  if (!(value ?? "").includes("@")) {
-    return "enter valid email";
+export function isEmail(value, message) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(value)) {
+    return message || "enter valid email";
   }
 }
 
-export function isNotEmpty(value) {
+export function isNotEmpty(value, message) {
   if ((value ?? "").trim() === "") {
-    return "field required";
+    return message || "field required";
   }
 }
 
-export function isNotEmptyList(value) {
-  if ((value ?? []).length === 0) return "select at least one option";
+export function isNotEmptyList(value, message) {
+  if ((value ?? []).length === 0)
+    return message || "select at least one option";
 }
