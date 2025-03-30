@@ -1,4 +1,8 @@
 {
     "about": "About",
-    "services": "Services"
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "articles": "Articles",
+    "faq": "FAQ",
+    "contact_us": "Contact Us"
 }
