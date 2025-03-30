@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import PinAnimation from "../../components/PinAnimation";
 import WidthDimensionsContainer from "../../components/WidthDimensionsContainer";
 import AboutDetailsButtonsSection from "./components/AboutDetailsButtonsSection";
@@ -9,6 +10,7 @@ import SushiCraby from "./components/SushiCraby";
 import WhatDoWeDo from "./components/WhatDoWeDo";
 
 export default function AboutPage() {
+  const { t } = useTranslation();
   return (
     <>
       <WidthDimensionsContainer>
@@ -18,13 +20,11 @@ export default function AboutPage() {
         <AboutUsSection />
       </WidthDimensionsContainer>
       <AboutPageDivider backgroundColor="#EF4B8D">
-        We listen. We adapt. We treat your business like our own. And we believe
-        authenticity wins—every time
+        {t("about_divider_1")}
       </AboutPageDivider>
       <AboutMissionSection />
       <AboutPageDivider backgroundColor="#7DC8F7">
-        Oh, and you’ll never feel outta place here. If we can vibe with a
-        business-savvy crab, we can def get you too
+        {t("about_divider_2")}
       </AboutPageDivider>
       <WidthDimensionsContainer>
         <SushiCraby />
