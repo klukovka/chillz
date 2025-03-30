@@ -1,16 +1,40 @@
 .workflow-item {
     border-radius: 20px;
     padding: 0.75rem 2rem;
-}
-
-.primary {
-    background-color: #EF4B8D;
-}
-
-.secondary {
+    cursor: pointer;
     border-color: black;
     border-width: 1px;
     border-style: solid;
+}
+
+.workflow-item:hover,
+.workflow-item.active {
+    border-color: transparent;
+}
+
+.workflow-item.deep_dive:hover,
+.workflow-item.deep_dive.active {
+    background-color: #7DC8F7;
+}
+
+.workflow-item.shell_and_tell:hover,
+.workflow-item.shell_and_tell.active {
+    background-color: #EF4B8D;
+}
+
+.workflow-item.lets_get_crackin:hover,
+.workflow-item.lets_get_crackin.active {
+    background-color: #F94C29;
+}
+
+.workflow-item.tide_guide:hover,
+.workflow-item.tide_guide.active {
+    background-color: #9B4DFF;
+}
+
+.workflow-item.crab_check:hover,
+.workflow-item.crab_check.active {
+    background-color: #EF4B8D;
 }
 
 .workflow-item h2 {
@@ -19,43 +43,64 @@
     font-size: 2rem;
     font-weight: 700;
     text-shadow: rgba(0, 0, 0, 0.2) 1px 1px 2.5px;
+    color: black;
 }
 
-.primary h2 {
+.workflow-item.deep_dive h2 {
+    color: #7DC8F7;
+}
+
+.workflow-item.shell_and_tell h2 {
+    color: #EF4B8D;
+}
+
+
+.workflow-item.lets_get_crackin h2 {
+    color: #F94C29;
+}
+
+.workflow-item.tide_guide h2 {
+    color: #9B4DFF;
+}
+
+.workflow-item.crab_check h2 {
+    color: #EF4B8D;
+}
+
+.workflow-item:hover h2,
+.workflow-item.active h2 {
     text-align: end;
     color: white;
 }
 
-.workflow-item h3{
+.workflow-item h3 {
     font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;
     font-size: 1.3rem;
     font-weight: 500;
     margin: 0;
     padding: 0;
+    color: #242424;
 }
 
-.primary h3 {
+.workflow-item:hover h3,
+.active h3 {
     color: white;
 }
 
-.secondary h3 {
-    color: #242424;
-}
 
 .workflow-item p {
     font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;
     font-size: 1rem;
     letter-spacing: -1px;
     font-weight: 500;
+    color: #242424;
 }
 
-.primary p {
+.workflow-item:hover p,
+.active p {
     color: white;
 }
 
-.secondary p {
-    color: #242424;
-}
 
 @media (min-width: 850px) {
     .workflow-item h2 {

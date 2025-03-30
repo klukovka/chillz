@@ -9,31 +9,31 @@ export default function WorkflowSection() {
       title: t("deep_dive_title"),
       subtitle: t("deep_dive_subtitle"),
       description: t("deep_dive_description"),
-      style: { color: "#7DC8F7" },
+      className: "deep_dive",
     },
     {
       title: t("shell_and_tell_title"),
       subtitle: t("shell_and_tell_subtitle"),
       description: t("shell_and_tell_description"),
-      primary: true,
+      className: "shell_and_tell",
     },
     {
       title: t("lets_get_crackin_title"),
       subtitle: t("lets_get_crackin_subtitle"),
       description: t("lets_get_crackin_description"),
-      style: { color: "#F94C29" },
+      className: "lets_get_crackin",
     },
     {
       title: t("tide_guide_title"),
       subtitle: t("tide_guide_subtitle"),
       description: t("tide_guide_description"),
-      style: { color: "#9B4DFF" },
+      className: "tide_guide",
     },
     {
       title: t("crab_check_title"),
       subtitle: t("crab_check_subtitle"),
       description: t("crab_check_description"),
-      style: { color: "#EF4B8D" },
+      className: "crab_check",
     },
   ];
   return (
