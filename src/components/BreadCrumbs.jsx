@@ -28,7 +28,8 @@ export default function BreadCrumbs() {
 
   for (let index = 0; index < pathCrumbs.length; index++) {
     const crumb = pathCrumbs[index];
-    let displayText = crumb;
+
+    let displayText = t(crumb).toLowerCase();
 
     if (pathCrumbs[0] === "services") {
       if (crumb === "influencers") displayText = t("for_influ").toLowerCase();
