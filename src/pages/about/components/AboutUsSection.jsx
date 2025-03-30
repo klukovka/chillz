@@ -1,31 +1,27 @@
+import { useTranslation } from "react-i18next";
 import AboutFlexContainer from "./AboutFlexContainer";
 
 export default function AboutUsSection() {
+  const { t } = useTranslation();
   return (
     <>
       <AboutFlexContainer>
-        <h3>who we are?</h3>
-        <p>
-          We’re chi_illz — a young, indie agency on a mission to make
-          complicated stuff simple and simple stuff unforgettable
-        </p>
+        <h3>{t("who_we_are_title")}</h3>
+        <p>{t("who_we_are_subtitle")}</p>
       </AboutFlexContainer>
       <AboutFlexContainer end>
         <h3>
-          in <span style={{ color: "#9B4DFF" }}>simplicity</span> we believe
+          {t("simplicity_first_title")}{" "}
+          <span style={{ color: "#9B4DFF" }}>
+            {t("simplicity_hightlight_title")}
+          </span>{" "}
+          {t("simplicity_last_title")}
         </h3>
-        <p>
-          Growth should be a thrill, not a grind. We turn strategy into a clear
-          roadmap, marketing into impact, and stress into chill
-        </p>
+        <p>{t("simplicity_subtitle")}</p>
       </AboutFlexContainer>
       <AboutFlexContainer>
-        <h3>there’s always a way</h3>
-        <p>
-          That’s what our mascot, Crayby, taught us. If somebody says, “That’s
-          impossible,” we find a smarter route. No guesswork, just strategy. No
-          nonsense, just results.
-        </p>
+        <h3>{t("way_title")}</h3>
+        <p>{t("way_subtitle")}</p>
       </AboutFlexContainer>
     </>
   );
