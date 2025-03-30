@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import logo from "../assets/craby_white.svg";
 import facebook from "../assets/facebook.svg";
 import instagram from "../assets/instagram.svg";
@@ -7,12 +8,13 @@ import classes from "./Footer.module.css";
 import FooterNavigationBarItem from "./FooterNavigationItem";
 
 export default function Footer() {
+  const { t } = useTranslation();
   return (
     <footer className={classes["main-footer"]}>
       <div>
         <img src={logo} alt="Chillz logo" className={classes["logo-image"]} />
         <div className={classes["social-media"]}>
-          <span>FOLLOW FOR MORE</span>
+          <span>{t("follow_for_more").toUpperCase()}</span>
           <div>
             <img src={instagram} alt="Instagram" />
             <img src={facebook} alt="Facebook" />
@@ -21,29 +23,33 @@ export default function Footer() {
           </div>
         </div>
         <p>
-          copyright © {new Date().getFullYear()} chiillz. all rights reserved
+          {t("copyright").toLowerCase()} © {new Date().getFullYear()}
+          {` chiillz. `} {t("all_rights_reserved").toLowerCase()}
         </p>
         <div className={classes["privacy-policy"]}>
-          <a href="/">privacy policy</a>
-          <a href="/">terms and conditions of use</a>
+          <a href="/">{t("privacy_policy").toLowerCase()}</a>
+          <a href="/">{t("terms_and_conditions")}</a>
         </div>
       </div>
       <div className={classes["navigation"]}>
         <nav>
           <ul className={classes["footer-nav__items"]}>
-            <FooterNavigationBarItem to="">about</FooterNavigationBarItem>
+            <FooterNavigationBarItem to="">
+              {" "}
+              {t("about").toLowerCase()}
+            </FooterNavigationBarItem>
             <FooterNavigationBarItem to="articles">
-              articles
+              {t("articles").toLowerCase()}
             </FooterNavigationBarItem>
             <FooterNavigationBarItem to="services">
-              services
+              {t("services").toLowerCase()}
             </FooterNavigationBarItem>
             <FooterNavigationBarItem to="faq">FAQ</FooterNavigationBarItem>
             <FooterNavigationBarItem to="portfolio">
-              portfolio
+              {t("portfolio").toLowerCase()}
             </FooterNavigationBarItem>
             <FooterNavigationBarItem to="contact-us">
-              contact us
+              {t("contact_us").toLowerCase()}
             </FooterNavigationBarItem>
           </ul>
         </nav>
