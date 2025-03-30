@@ -100,5 +100,10 @@
     "counsalting": "counsalting",
     "visual": "visual",
     "comment_optional": "comment (optional)",
-    "comment_hint": "please contact as soon as possible!"
+    "comment_hint": "please contact as soon as possible!",
+    "contact_us_page_title_p1": "your next",
+    "contact_us_page_title_highlight": "big move",
+    "contact_us_page_title_p2": "starts here!",
+    "influ": "Influ",
+    "brands": "Brands"
 }
