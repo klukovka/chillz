@@ -9,12 +9,14 @@ import {
   ARTICLES,
 } from "../data/articles";
 
+import { useTranslation } from "react-i18next";
 import { portfolio } from "../data/portfolio";
 import classes from "./BreadCrumbs.module.css";
 import PinAnimation from "./PinAnimation";
 import WidthDimensionsContainer from "./WidthDimensionsContainer";
 
 export default function BreadCrumbs() {
+  const { t } = useTranslation();
   const location = useLocation();
   const [searchParams] = useSearchParams();
 
@@ -29,36 +31,36 @@ export default function BreadCrumbs() {
     let displayText = crumb;
 
     if (pathCrumbs[0] === "services") {
-      if (crumb === "influencers") displayText = "for influ";
-      if (crumb === "brands") displayText = "for brands";
+      if (crumb === "influencers") displayText = t("for_influ").toLowerCase();
+      if (crumb === "brands") displayText = t("for_brands").toLowerCase();
       crumbs.push(displayText);
     } else if (pathCrumbs[0] == "portfolio") {
       const portfolioItem = portfolio.find((item) => item.id == crumb);
       if (portfolioItem) displayText = portfolioItem.name;
       crumbs.push(displayText);
     } else if (pathCrumbs[0] == "articles") {
-      displayText = "articles";
+      displayText = t("articles").toLowerCase();
       switch (crumb) {
         case ARTICLE_CATEGORY_AUDIENCE_GROWTH:
-          displayText = "audience growth";
+          displayText = t("audience_growth").toLowerCase();
           break;
         case ARTICLE_CATEGORY_CONTENT_CREATION:
-          displayText = "content creation";
+          displayText = t("content_creation").toLowerCase();
           break;
         case ARTICLE_CATEGORY_SOCIAL_MEDIA:
-          displayText = "social media";
+          displayText = t("social_media").toLowerCase();
           break;
         case ARTICLE_CATEGORY_SEO:
-          displayText = "seo";
+          displayText = t("seo").toLowerCase();
           break;
         case ARTICLE_CATEGORY_ANALYTICS:
-          displayText = "analytics";
+          displayText = t("analytics").toLowerCase();
           break;
         case ARTICLE_CATEGORY_MONETIZATION:
-          displayText = "monetization";
+          displayText = t("monetization").toLowerCase();
           break;
         case "all":
-          displayText = "all";
+          displayText = t("all").toLowerCase();
           break;
       }
 
