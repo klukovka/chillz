@@ -8,13 +8,13 @@ export default function AboutDetailsButtonsSection() {
   return (
     <PinAnimation>
       <div className={classes["buttons-section"]}>
-        <AboutDetailsButton primary>
+        <AboutDetailsButton primary to="portfolio">
           {t("about_details_primary_button_first_sentence")}
           <br />
           <span>{t("about_details_primary_button_highlight")} </span>{" "}
           {t("about_details_primary_button_last_sentence")}
         </AboutDetailsButton>
-        <AboutDetailsButton>
+        <AboutDetailsButton to="articles">
           {t("about_details_secondary_button_first_sentence")}
           <span> {t("about_details_secondary_button_highlight")}</span>{" "}
           {t("about_details_secondary_button_last_sentence")}

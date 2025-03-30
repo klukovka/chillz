@@ -1,4 +1,4 @@
-button.about-details {
+a.about-details {
     border-radius: 56px;
     border: 3px solid;
     cursor:pointer;
@@ -7,13 +7,14 @@ button.about-details {
     text-align: start;
     position: relative;
     display: inline-block;
+    text-decoration: none;
 }
 
-button.about-details span {
+a.about-details span {
     color: #EF4B8D;
 }
 
-button.about-details svg {
+a.about-details svg {
     margin: 0;
     padding: 0;
     position: absolute;
@@ -21,7 +22,7 @@ button.about-details svg {
     bottom: 16px;
 }
 
-button.primary {
+a.primary {
     border-color: black;
     color: black;
     background-color: white;
@@ -31,7 +32,7 @@ button.primary {
 }
 
 
-button.primary .content {
+a.primary .content {
     padding: 32px 56px 32px 32px;
 }
 
@@ -44,30 +45,30 @@ svg.primary path {
     fill: white;   
 }
 
-button.primary:hover,
-button.primary:active {
+a.primary:hover,
+a.primary:active {
     background-color: #EF4B8D;
     border-color: #EF4B8D;
     color: white;
 }
 
-button.primary:hover span,
-button.primary:active span {
+a.primary:hover span,
+a.primary:active span {
     color: black;
 }
 
-button.primary:hover svg.primary rect ,
-button.primary:active svg.primary rect {
+a.primary:hover svg.primary rect ,
+a.primary:active svg.primary rect {
     fill: white;
 }
 
-button.primary:hover svg.primary path ,
-button.primary:active svg.primary path {
+a.primary:hover svg.primary path ,
+a.primary:active svg.primary path {
     fill: #EF4B8D;
 }
 
 
-button.secondary {
+a.secondary {
     border-color: #81CAF7;
     background-color: #81CAF7;
     font-size: 2.5rem;
@@ -75,7 +76,7 @@ button.secondary {
     line-height: 1.25;
 }
 
-button.secondary .content {
+a.secondary .content {
     padding: 32px 56px 32px 32px;
 }
 
@@ -87,55 +88,55 @@ svg.secondary path {
     fill: white;   
 }
 
-button.secondary:hover,
-button.secondary:active {
+a.secondary:hover,
+a.secondary:active {
     background-color: #9B4DFF;
     border-color: #9B4DFF;
     color: white;
 }
 
-button.secondary:hover span,
-button.secondary:active span {
+a.secondary:hover span,
+a.secondary:active span {
     color: #81CAF7;
 }
 
-button.secondary:hover svg.secondary rect ,
-button.secondary:active svg.secondary rect {
+a.secondary:hover svg.secondary rect ,
+a.secondary:active svg.secondary rect {
     fill: white;
 }
 
-button.secondary:hover svg.secondary path ,
-button.secondary:active svg.secondary path {
+a.secondary:hover svg.secondary path ,
+a.secondary:active svg.secondary path {
     fill: #9B4DFF;
 }
 
 
 @media (min-width: 940px) {
-    button.primary {
+    a.primary {
         font-size: 4rem;
         letter-spacing: -3.5px;
     }
 
-    button.secondary {
+    a.secondary {
         font-size: 3.375rem;
         letter-spacing: -3px;
     }
 
-    button.primary .content {
+    a.primary .content {
         padding: 26px 0px 16px 52px;
     }
 
-    button.secondary .content {
+    a.secondary .content {
         padding: 6px 0px 26px 20px;
     }
 }
 
 @media (min-width: 1040px) {
-    button.primary {
+    a.primary {
         font-size: 4.375rem;
     }
 
-    button.secondary {
+    a.secondary {
         font-size: 3.75rem;
     }
 }
