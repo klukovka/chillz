@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import ArrowWithText from "../../../components/ArrowWithText";
 import PinAnimation from "../../../components/PinAnimation";
 import RoundedArrow from "../../../components/RoundedArrow";
@@ -7,12 +8,13 @@ import SmsClounds from "./components/SmsClouds";
 import classes from "./NestedServicesPage.module.css";
 
 export default function BrandsServicesPage() {
+  const { t } = useTranslation();
   return (
     <>
       <WidthDimensionsContainer>
         <div className={classes["nested-services-page"]}>
           <PinAnimation>
-            <h1 style={{ textAlign: "center" }}>for brands</h1>
+            <h1 style={{ textAlign: "center" }}>{t("brands_page_title")}</h1>
           </PinAnimation>
           <BrandsServicesSection />
           <SmsClounds />
@@ -21,10 +23,7 @@ export default function BrandsServicesPage() {
       <WidthDimensionsContainer maxWidth={1200}>
         <PinAnimation>
           <div className={classes["arrow-container"]}>
-            <p>
-              *Yes, you can work with us on a full-service basis or choose
-              individual services based on what you need most, so
-            </p>
+            <p>{t("brands_page_subtitle")}</p>
             <div className={classes["arrow"] + " " + classes["brands"]}>
               <ArrowWithText />
             </div>
@@ -34,9 +33,13 @@ export default function BrandsServicesPage() {
       <WidthDimensionsContainer>
         <PinAnimation>
           <h3 className={classes["footer"] + " " + classes["brands"]}>
-            <span>Let’s </span>make waves and <span> turn your </span> online
-            <span> presence into real impact!</span> Tell us what you need, and
-            we’ll craft <span>the perfect plan </span>
+            <span>{t("brands_page_footer_highlight1")} </span>
+            {t("brands_page_footer_p1")}{" "}
+            <span> {t("brands_page_footer_highlight2")} </span>{" "}
+            {t("brands_page_footer_p2")}
+            <span> {t("brands_page_footer_highlight3")}</span>{" "}
+            {t("brands_page_footer_p3")}{" "}
+            <span>{t("brands_page_footer_highlight4")} </span>
             <RoundedArrow className={classes["arrow-brands"]} />
           </h3>
         </PinAnimation>
