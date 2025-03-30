@@ -1,19 +1,21 @@
+import { useTranslation } from "react-i18next";
 import classes from "./ContactUsSubmitButton.module.css";
 
 export default function ContactUsSubmitButton({ isLoading, error, submitted }) {
+  const { t } = useTranslation();
   return (
     <button
       type="submit"
       className={classes.submit + ` ${error ? classes.error : ""}`}
     >
-      {!(submitted || error) && "Submit"}
+      {!(submitted || error) && t("submit")}
       {(submitted || error) && (
         <p className={classes.message + ` ${error ? classes.error : ""}`}>
           {isLoading
-            ? "🌊Washing up your message..."
+            ? t("washing_up_your_message")
             : error
             ? error
-            : "🌊Your message just washed up on shore, and Crayby is already scuttling to process it! We’ll be in touch soon⚡"}
+            : t("message_was_sent")}
         </p>
       )}
     </button>
