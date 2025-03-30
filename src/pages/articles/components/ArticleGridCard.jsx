@@ -1,9 +1,11 @@
+import { useTranslation } from "react-i18next";
 import { NavLink, useLocation } from "react-router-dom";
 import { formattedDateDayShortMonthFullYear } from "../../../util/formatting";
 import ArticleCategory from "./ArticleCategory";
 import classes from "./ArticleGridCard.module.css";
 
 export default function ArticleGridCard({ article, dark }) {
+  const { t, i18n } = useTranslation();
   const location = useLocation();
   const path =
     location.pathname +
@@ -15,7 +17,10 @@ export default function ArticleGridCard({ article, dark }) {
       to={path}
     >
       <div className={classes.header}>
-        {formattedDateDayShortMonthFullYear(article.date)}
+        {formattedDateDayShortMonthFullYear(
+          article.date,
+          i18n.resolvedLanguage
+        )}
         <ArticleCategory category={article.category} dark={dark} />
       </div>
       <img src={article.imageUrl} />
@@ -23,11 +28,11 @@ export default function ArticleGridCard({ article, dark }) {
       <p>{article.shortDescription}</p>
       <div className={classes.footer}>
         <p>
-          <span>Reading Time: </span>
-          {article.readingTime} min.
+          <span>{t("reading_time")}: </span>
+          {article.readingTime} {t("min")}.
         </p>
         <p>
-          <span>Author: </span>
+          <span>{t("author")}: </span>
           {article.author}
         </p>
       </div>

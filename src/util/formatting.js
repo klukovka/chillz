@@ -1,5 +1,5 @@
-export function formattedDateDayShortMonthFullYear(date) {
-  const formattedDate = new Intl.DateTimeFormat("en-GB", {
+export function formattedDateDayShortMonthFullYear(date, languageCode) {
+  const formattedDate = new Intl.DateTimeFormat(languageCode, {
     day: "numeric",
     month: "short",
     year: "numeric",
