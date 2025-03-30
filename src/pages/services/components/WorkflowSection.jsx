@@ -18,9 +18,9 @@ export default function WorkflowSection() {
       primary: true,
     },
     {
-      title: t("lets_get_crakin_title"),
-      subtitle: t("lets_get_crakin_subtitle"),
-      description: t("lets_get_crakin_description"),
+      title: t("lets_get_crackin_title"),
+      subtitle: t("lets_get_crackin_subtitle"),
+      description: t("lets_get_crackin_description"),
       style: { color: "#F94C29" },
     },
     {
