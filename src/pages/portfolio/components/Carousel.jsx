@@ -203,7 +203,7 @@ const Carousel = ({ children, slidesToShow = 5, clickable }) => {
                 }
                 style={{
                   height: `${height}px`,
-                  margin: `${margin + 12}px 0.5rem`,
+                  margin: `${(margin + 12) / 16}rem 0.5rem`,
                 }}
               >
                 {child}

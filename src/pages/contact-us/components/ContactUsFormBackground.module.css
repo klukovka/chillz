@@ -75,7 +75,7 @@
     }
     
     .personal-data p {
-        margin: 12px;
+        margin: 0.75rem;
         transform: rotate(180deg); /* Rotates text upside down */
         writing-mode: vertical-rl; /* Rotates text vertically */
         text-orientation: mixed; /* Ensures upright text */

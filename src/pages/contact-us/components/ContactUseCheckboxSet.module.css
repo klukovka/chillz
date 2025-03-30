@@ -25,7 +25,7 @@
     margin: 0;
     padding: 0;
     color: #F94C29;
-    margin-left: 8px;
+    margin-left: 0.5rem;
 }
 
 .control legend {
@@ -39,7 +39,7 @@
 
 .control-items {
     color: black;
-    margin: 10px 8px 1.25rem 8px;
+    margin: 0.625rem 0.5rem 1.25rem 0.5rem;
     display: flex;
     gap: 32px;
     flex-wrap: wrap;
@@ -47,7 +47,7 @@
 
 .control-items.error {
     color: #F94C29;
-    margin: 10px 8px 0rem 8px;
+    margin: 0.625rem 0.5rem 0rem 0.5rem;
 }
 
 .control-item {

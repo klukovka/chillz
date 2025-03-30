@@ -1,5 +1,5 @@
 .breadcrumbs {
-    margin: 12px 0;
+    margin: 0.75rem 0;
     display: flex;
     color: rgba(0, 0, 0, 0.6);
     font-size: 1.25rem;
@@ -9,12 +9,12 @@
 }
 
 .breadcrumbs > * {
-    margin-right: 4px;
+    margin-right: 0.25rem;
 }
 
 .breadcrumbs .crumb:after {
     content: '/';
-    margin-left: 4px;
+    margin-left: 0.25rem;
 }
 
 .breadcrumbs .crumb:last-child:after {
