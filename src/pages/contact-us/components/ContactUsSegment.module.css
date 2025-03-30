@@ -4,7 +4,7 @@
     font-size: 3.5rem;
     font-weight: 600;
     cursor:pointer;
-    font-family: "ClashDisplay";
+    font-family: "ClashDisplay", system-ui, Avenir, Helvetica, Arial, sans-serif;
     text-decoration: none;
     color: black;
     margin: 0;

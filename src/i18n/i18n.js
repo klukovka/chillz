@@ -6,7 +6,8 @@ i18n
   .use(initReactI18next)
   .init({
     debug: true,
-    lng: navigator.language.substring(0, 2) || "en",
+    // lng: navigator.language.substring(0, 2) || "en",
+    lng: "uk",
     fallbackLng: "en",
     backend: {
       loadPath: "/chillz/locales/{{lng}}/translation.json",
