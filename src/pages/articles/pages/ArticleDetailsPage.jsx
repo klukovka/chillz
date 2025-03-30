@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import BreadCrumbs from "../../../components/BreadCrumbs";
 import PinAnimation from "../../../components/PinAnimation";
 import { ARTICLES } from "../../../data/articles";
@@ -23,6 +24,7 @@ function scrollToElement(id) {
 }
 
 export default function ArticleDetailsPage({ id }) {
+  const { t, i18n } = useTranslation();
   const article = ARTICLES.find((article) => article.id == id);
 
   const articleRefs = article.content.map((content, index) => {
@@ -43,16 +45,19 @@ export default function ArticleDetailsPage({ id }) {
       <PinAnimation>
         <div className={classes["additional-elements"]}>
           <p>
-            <span>Reading time </span>
-            {article.readingTime} min.
+            <span>{t("reading_time")} </span>
+            {article.readingTime} {t("min")}.
           </p>
           <p>
-            <span>Author </span>
+            <span>{t("author")} </span>
             {article.author}
           </p>
           <p>
-            <span>Last updated </span>
-            {formattedDateDayShortMonthFullYear(article.date)}
+            <span>{t("last_updated")} </span>
+            {formattedDateDayShortMonthFullYear(
+              article.date,
+              i18n.resolvedLanguage
+            )}
           </p>
         </div>
       </PinAnimation>
@@ -63,7 +68,7 @@ export default function ArticleDetailsPage({ id }) {
       <div className={classes["content-container"]}>
         <div className={classes["article-content"]}>
           <PinAnimation>
-            <h2>Table of contents</h2>
+            <h2>{t("table_of_contents")}</h2>
           </PinAnimation>
           <PinAnimation>
             <div className={classes["table-of-contents"]}>
@@ -104,7 +109,7 @@ export default function ArticleDetailsPage({ id }) {
         </div>
         <div className={classes["trending"]}>
           <PinAnimation>
-            <h2>Trending</h2>
+            <h2>{t("trending")}</h2>
           </PinAnimation>
           <TrendingArticlesSection selectedArticle={article} />
           <PinAnimation>
