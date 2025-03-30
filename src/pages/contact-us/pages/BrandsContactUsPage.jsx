@@ -89,13 +89,13 @@ export default function BrandsContactUsPage() {
           fontWeight: "600",
         }}
       >
-        Tell us what's on your mind, and we'll make it happen
+        {t("contact_us_form_title")}
       </p>
 
       <form onSubmit={handleSubmit}>
         <ContactUsDivider bold>
           <ContactUsInput
-            label="your name"
+            label={t("your_name")}
             id="name"
             name="name"
             value={nameField.value}
@@ -104,7 +104,7 @@ export default function BrandsContactUsPage() {
             placeholder="Crayby The Red Crab"
           />
           <ContactUsInput
-            label="email"
+            label={t("email")}
             id="email"
             name="email"
             type="email"
@@ -116,7 +116,7 @@ export default function BrandsContactUsPage() {
         </ContactUsDivider>
         <ContactUsDivider>
           <ContactUsInput
-            label="company name"
+            label={t("company_name")}
             id="company_name"
             name="company_name"
             value={companyNameField.value}
@@ -127,7 +127,7 @@ export default function BrandsContactUsPage() {
         </ContactUsDivider>
         <ContactUsDivider>
           <ContactUsInput
-            label="project budget"
+            label={t("project_budget")}
             id="project_budget"
             name="project_budget"
             value={projectBudgetField.value}
@@ -139,7 +139,7 @@ export default function BrandsContactUsPage() {
         <ContactUsDivider>
           <ContactUsCheckboxSet
             name={"services"}
-            label="choose a service"
+            label={t("choose_service")}
             value={servicesField.value}
             error={servicesField.errorText}
             onChange={(value) =>
@@ -149,36 +149,36 @@ export default function BrandsContactUsPage() {
               {
                 id: "sm_strategy",
                 value: "sm_strategy",
-                label: "SM strategy",
+                label: t("sm_strategy"),
               },
               {
                 id: "promo",
                 value: "promo",
-                label: "promo",
+                label: t("promo"),
               },
               {
                 id: "influencer_marketing",
                 value: "influencer_marketing",
-                label: "influencer marketing",
+                label: t("influencer_marketing"),
               },
               {
                 id: "brand_identity",
                 value: "brand_identity",
-                label: "brand identity",
+                label: t("brand_identity"),
               },
             ]}
           />
         </ContactUsDivider>
         <ContactUsDivider>
           <ContactUsInput
-            label="comment (optional)"
+            label={t("comment_optional")}
             id="comment"
             name="comment"
             textarea
             value={commentField.value}
             error={commentField.errorText}
             onChange={commentField.handleChange}
-            placeholder="please contact as soon as possible!"
+            placeholder={t("comment_hint")}
           />
         </ContactUsDivider>
         <div id={classes["submit-tablet-button"]}>

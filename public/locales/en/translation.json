@@ -86,5 +86,19 @@
     "message_was_sent": "🌊Your message just washed up on shore, and Crayby is already scuttling to process it! We’ll be in touch soon⚡",
     "enter_valid_email": "enter valid email",
     "field_required": "field required",
-    "select_at_least_one_option": "select at least one option"
+    "select_at_least_one_option": "select at least one option",
+    "contact_us_form_title": "Tell us what's on your mind, and we'll make it happen",
+    "your_name": "your name",
+    "email": "email",
+    "company_name": "company name",
+    "your_channel_link": "your channel link",
+    "project_budget": "project budget",
+    "choose_service": "choose a service",
+    "sm_strategy": "SM strategy",
+    "promo": "promo",
+    "influencer_marketing": "influencer marketing",
+    "counsalting": "counsalting",
+    "visual": "visual",
+    "comment_optional": "comment (optional)",
+    "comment_hint": "please contact as soon as possible!"
 }
