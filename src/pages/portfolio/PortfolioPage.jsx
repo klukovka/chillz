@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import PinAnimation from "../../components/PinAnimation";
 import RoundedArrow from "../../components/RoundedArrow";
@@ -7,21 +8,24 @@ import Carousel from "./components/Carousel";
 import classes from "./PortfolioPage.module.css";
 
 export default function PortfolioPage() {
+  const { t } = useTranslation();
   return (
     <WidthDimensionsContainer>
       <div className={classes["portfolio-page"]}>
         <PinAnimation>
-          <h1 style={{ textAlign: "center" }}>creative</h1>
           <h1 style={{ textAlign: "center" }}>
-            cr<span style={{ color: "#E84E31" }}>hub</span>
+            {t("portfolio_page_title_p1")}
+          </h1>
+          <h1 style={{ textAlign: "center" }}>
+            {t("portfolio_page_title_p2")}
+            <span style={{ color: "#E84E31" }}>
+              {t("portfolio_page_title_hightlight")}
+            </span>
           </h1>
         </PinAnimation>
 
         <PinAnimation>
-          <p>
-            Take a peek into our creative world. From bold strategies to
-            seamless execution, we craft solutions that drive real results
-          </p>
+          <p>{t("portfolio_page_subtitle")}</p>
         </PinAnimation>
         <PinAnimation className={classes["carousel"]}>
           <Carousel slidesToShow={5} clickable>
@@ -34,8 +38,9 @@ export default function PortfolioPage() {
         </PinAnimation>
         <PinAnimation>
           <h3 className={classes["footer"]}>
-            🦀<span>Drop us a line</span>, and we'll hook you uo with a{" "}
-            <span>crab-solutely brilliant plan! </span>
+            <span>{t("portfolio_page_footer_hightlight1")}</span>
+            {t("portfolio_page_footer")}{" "}
+            <span>{t("portfolio_page_footer_hightlight2")} </span>
             <RoundedArrow className={classes["arrow"]} />
           </h3>
         </PinAnimation>
