@@ -63,5 +63,10 @@
     "view_all": "View All",
     "reading_time": "Reading Time",
     "min": "min",
-    "author": "Author"
+    "author": "Author",
+    "subscribe_stay_ahead_first_hightlight": "Subscribe",
+    "subscribe_stay_ahead_first_label": "and",
+    "subscribe_stay_ahead_second_hightlight": "stay ahead",
+    "subscribe_stay_ahead_second_label": "of the tide!",
+    "your_email": "Your e-mail"
 }
