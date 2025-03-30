@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import ArrowWithText from "../../../components/ArrowWithText";
 import PinAnimation from "../../../components/PinAnimation";
 import RoundedArrow from "../../../components/RoundedArrow";
@@ -7,12 +8,15 @@ import SmsClouds from "./components/SmsClouds";
 import classes from "./NestedServicesPage.module.css";
 
 export default function InfluencersServicesPage() {
+  const { t } = useTranslation();
   return (
     <>
       <WidthDimensionsContainer>
         <div className={classes["nested-services-page"]}>
           <PinAnimation>
-            <h1 style={{ textAlign: "center" }}>for influencers</h1>
+            <h1 style={{ textAlign: "center" }}>
+              {t("influencers_page_title")}
+            </h1>
           </PinAnimation>
           <InfluencersServicesSection />
           <SmsClouds />
@@ -21,10 +25,7 @@ export default function InfluencersServicesPage() {
       <WidthDimensionsContainer maxWidth={1200}>
         <PinAnimation>
           <div className={classes["arrow-container"]}>
-            <p>
-              *Yes, you can work with us on a full-service basis or choose
-              individual services based on what you need most, so
-            </p>
+            <p>{t("influencers_page_subtitle")}</p>
             <div className={classes["arrow"] + " " + classes["influencers"]}>
               <ArrowWithText />
             </div>
@@ -34,9 +35,11 @@ export default function InfluencersServicesPage() {
       <WidthDimensionsContainer>
         <PinAnimation>
           <h3 className={classes["footer"] + " " + classes["influencers"]}>
-            <span>Let’s</span> optimize, strategize,{" "}
-            <span>grow & glow together!</span> Tell us what you need, and we’ll
-            craft the <span>perfect plan </span>
+            <span>{t("influencers_page_footer_highlight1")}</span>{" "}
+            {t("influencers_page_footer_p1")}{" "}
+            <span>{t("influencers_page_footer_highlight2")}</span>{" "}
+            {t("influencers_page_footer_p2")}{" "}
+            <span>{t("influencers_page_footer_highlight3")} </span>
             <RoundedArrow className={classes["arrow-influencers"]} />
           </h3>
         </PinAnimation>
