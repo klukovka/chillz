@@ -35,7 +35,7 @@ export default function MainNavigationBarItems({ id, onClick }) {
       >
         {t("contact_us").toLowerCase()}
       </MainNavigationBarItem>
-      <LanguageSwitcher />
+      <LanguageSwitcher className={classes["main-nav__item"]} />
     </ul>
   );
 }

@@ -60,9 +60,7 @@
     color: white;
 }
 
-.main-nav__item.language {
-    padding: 36px 20px 12px 20px;
-}
+
 
 @media (max-width: 879px) {
     #tablet-navigation {
@@ -112,4 +110,6 @@
     #contact-us-link {
         display: none;
     }
+
+
 }
