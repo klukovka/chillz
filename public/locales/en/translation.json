@@ -42,5 +42,20 @@
     "real_impact_highlight": "real",
     "real_impact_title": "impact",
     "zero_stress_highlight": "zero",
-    "zero_stress_title": "stress"
+    "zero_stress_title": "stress",
+    "brand_identity": "brand identity",
+    "graphic_design": "graphic design",
+    "visual_content": "visual\ncontent",
+    "smm_strategy": "smm\nstrategy",
+    "influ_marketing": "influ\nmarketing",
+    "seo_sem": "SEO/SEM",
+    "social_media_optimization": "social media\noptimization",
+    "targeting": "targeting",
+    "creative_strategy": "creative strategy",
+    "what_do_we_do_title": "what do we do?",
+    "what_do_we_do_description_p1": "We craft strategies that click, stick, and actually make an impact. Whether you’re buildin’ a brand, growin’ an audience, or just tryna get your message out there—we got you.",
+    "what_do_we_do_description_p2": "From brand identity to content optimization, engagement, and beyond—you name it, we handle it, so you can focus on what you love.",
+    "what_do_we_do_description_p3": "Ready to turn up the volume on your brand?",
+    "check_our_services": "Check our services",
+    "then": "THEN"
 }
