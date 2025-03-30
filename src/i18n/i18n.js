@@ -12,7 +12,10 @@ i18n
   .use(initReactI18next)
   .init({
     debug: true,
-    lng: navigator.language.substring(0, 2) || "en",
+    lng:
+      localStorage.getItem("selectedLanguage") ||
+      navigator.language.substring(0, 2) ||
+      "en",
     fallbackLng: "en",
     supportedLngs: Object.keys(supportedLngs),
     backend: {

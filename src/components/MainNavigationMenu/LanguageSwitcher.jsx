@@ -23,6 +23,7 @@ export default function LanguageSwitcher({ className }) {
       className={classes["language-button"]}
       onClick={() => {
         i18n.changeLanguage(code);
+        localStorage.setItem("selectedLanguage", code);
         setIsOpen(false);
       }}
     >
