@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import ArrowWithText from "../../../components/ArrowWithText";
+import PageBottomLink from "../../../components/PageBottomLink";
 import PinAnimation from "../../../components/PinAnimation";
-import RoundedArrow from "../../../components/RoundedArrow";
 import WidthDimensionsContainer from "../../../components/WidthDimensionsContainer";
 import InfluencersServicesSection from "./components/brands/InfluencersServicesSection";
 import SmsClouds from "./components/SmsClouds";
@@ -34,14 +34,13 @@ export default function InfluencersServicesPage() {
       </WidthDimensionsContainer>
       <WidthDimensionsContainer>
         <PinAnimation>
-          <h3 className={classes["footer"] + " " + classes["influencers"]}>
+          <PageBottomLink pink to="/contact-us/influencers">
             <span>{t("influencers_page_footer_highlight1")}</span>{" "}
             {t("influencers_page_footer_p1")}{" "}
             <span>{t("influencers_page_footer_highlight2")}</span>{" "}
             {t("influencers_page_footer_p2")}{" "}
             <span>{t("influencers_page_footer_highlight3")} </span>
-            <RoundedArrow className={classes["arrow-influencers"]} />
-          </h3>
+          </PageBottomLink>
         </PinAnimation>
       </WidthDimensionsContainer>
     </>

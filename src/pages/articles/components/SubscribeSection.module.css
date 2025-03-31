@@ -22,6 +22,11 @@
     font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
+svg.arrow {
+    height: 29px;
+    width: 30px;
+}
+
 svg.arrow rect {
     fill: #9B4DFF
 }

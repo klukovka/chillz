@@ -21,34 +21,3 @@
 .carousel {
     width: 100%;
 }
-
-svg.arrow rect {
-    fill: #EF4B8D
-}
-
-svg.arrow path {
-    fill: white;   
-}
-
-.footer {
-    color: black;
-    font-size: 3.25rem;
-    font-weight: 600;
-    letter-spacing: -1.5px;
-    padding: 0;
-    margin: 0;
-    margin-top: 1.5rem;
-    line-height: 0.9;
-}
-
-.footer span {
-    color: #EF4B8D;
-}
-
-
-@media (min-width: 850px) {
-    .footer {
-        font-size: 4.375rem;
-        letter-spacing: -3px;
-    }
-}

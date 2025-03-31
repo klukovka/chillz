@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
+import PageBottomLink from "../../components/PageBottomLink";
 import PinAnimation from "../../components/PinAnimation";
-import RoundedArrow from "../../components/RoundedArrow";
 import WidthDimensionsContainer from "../../components/WidthDimensionsContainer";
 import ServiceClientsSection from "./components/ServiceClientsSection";
 import WorkflowSection from "./components/WorkflowSection";
@@ -23,13 +23,12 @@ export default function ServicesPage() {
         <ServiceClientsSection />
         <WorkflowSection />
         <PinAnimation>
-          <h3 className={classes["footer"]}>
+          <PageBottomLink to="/portfolio" purple>
             {t("services_page_footer_p1")}{" "}
             <span>{t("services_page_footer_highlight")}</span>{" "}
             {t("services_page_footer_p2")}
             <span> </span>
-            <RoundedArrow className={classes["arrow"]} />
-          </h3>
+          </PageBottomLink>
         </PinAnimation>
       </div>
     </WidthDimensionsContainer>

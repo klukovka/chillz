@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import ArrowWithText from "../../../components/ArrowWithText";
+import PageBottomLink from "../../../components/PageBottomLink";
 import PinAnimation from "../../../components/PinAnimation";
-import RoundedArrow from "../../../components/RoundedArrow";
 import WidthDimensionsContainer from "../../../components/WidthDimensionsContainer";
 import BrandsServicesSection from "./components/brands/BrandsServicesSection";
 import SmsClounds from "./components/SmsClouds";
@@ -32,7 +32,7 @@ export default function BrandsServicesPage() {
       </WidthDimensionsContainer>
       <WidthDimensionsContainer>
         <PinAnimation>
-          <h3 className={classes["footer"] + " " + classes["brands"]}>
+          <PageBottomLink blue to="/contact-us/brands">
             <span>{t("brands_page_footer_highlight1")} </span>
             {t("brands_page_footer_p1")}{" "}
             <span> {t("brands_page_footer_highlight2")} </span>{" "}
@@ -40,8 +40,7 @@ export default function BrandsServicesPage() {
             <span> {t("brands_page_footer_highlight3")}</span>{" "}
             {t("brands_page_footer_p3")}{" "}
             <span>{t("brands_page_footer_highlight4")} </span>
-            <RoundedArrow className={classes["arrow-brands"]} />
-          </h3>
+          </PageBottomLink>
         </PinAnimation>
       </WidthDimensionsContainer>
     </>

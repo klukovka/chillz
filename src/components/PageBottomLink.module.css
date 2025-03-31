@@ -1,0 +1,56 @@
+.pink svg.arrow rect {
+    fill: #EF4B8D
+}
+
+.purple svg.arrow rect {
+    fill: #9B4DFF
+}
+
+.blue svg.arrow rect {
+    fill: #7DC8F7
+}
+
+svg.arrow {
+    height: 40px;
+    width: 42px;
+}
+
+svg.arrow path {
+    fill: white;   
+}
+
+.footer {
+    color: black;
+    font-size: 3.25rem;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    padding: 0;
+    margin: 0;
+    line-height: 0.9;
+    text-decoration: none;
+}
+
+.footer.pink span {
+    color: #EF4B8D;
+}
+
+.footer.purple span {
+    color: #9B4DFF;
+}
+
+.footer.blue span {
+    color: #7DC8F7;
+}
+
+@media (min-width: 850px) {
+    .footer {
+        font-size: 4.375rem;
+        letter-spacing: -3px;
+    }
+
+    svg.arrow {
+        height: 64px;
+        width: 67px;
+    }
+    
+}

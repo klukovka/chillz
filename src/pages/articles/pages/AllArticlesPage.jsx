@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { Link, useParams } from "react-router-dom";
 import Arrow from "../../../components/Arrow";
+import PageBottomLink from "../../../components/PageBottomLink";
 import PinAnimation from "../../../components/PinAnimation";
-import RoundedArrow from "../../../components/RoundedArrow";
 import { ARTICLES } from "../../../data/articles";
 import classes from "../ArticlesPage.module.css";
 import ArticleCategories from "../components/ArticleCategories";
@@ -41,15 +41,15 @@ export default function AllArticlesPage() {
         <Arrow fill="white" />
       </Link>
       <PinAnimation>
-        <h3 className={classes["footer"]}>
+        {/* TODO: Add navigation */}
+        <PageBottomLink purple>
           {t("articles_page_footer_p1")}{" "}
           <span> {t("articles_page_footer_hightlight1")}</span>{" "}
           {t("articles_page_footer_p2")}
           <span> {t("articles_page_footer_hightlight2")}</span>{" "}
           {t("articles_page_footer_p3")}
           <span> </span>
-          <RoundedArrow className={classes["arrow"]} />
-        </h3>
+        </PageBottomLink>
       </PinAnimation>
     </div>
   );

@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
+import PageBottomLink from "../../components/PageBottomLink";
 import PinAnimation from "../../components/PinAnimation";
-import RoundedArrow from "../../components/RoundedArrow";
 import WidthDimensionsContainer from "../../components/WidthDimensionsContainer";
 import { portfolio } from "../../data/portfolio";
 import Carousel from "./components/Carousel";
@@ -37,12 +37,12 @@ export default function PortfolioPage() {
           </Carousel>
         </PinAnimation>
         <PinAnimation>
-          <h3 className={classes["footer"]}>
+          {/* TODO: Add navigation */}
+          <PageBottomLink pink>
             <span>{t("portfolio_page_footer_hightlight1")}</span>
             {t("portfolio_page_footer")}{" "}
             <span>{t("portfolio_page_footer_hightlight2")} </span>
-            <RoundedArrow className={classes["arrow"]} />
-          </h3>
+          </PageBottomLink>
         </PinAnimation>
       </div>
     </WidthDimensionsContainer>

@@ -19,7 +19,7 @@ export default function SubscribeSection() {
       <p>{t("your_email")}:</p>
       <div className={classes.control}>
         <input placeholder="crayby@chiillz.com" type="email" />
-        <RoundedArrow className={classes["arrow"]} height={29} width={30} />
+        <RoundedArrow className={classes["arrow"]} />
       </div>
     </div>
   );
