@@ -9,7 +9,7 @@ export default function CategoryArticlesPage({ urlPage }) {
   const page = parseInt(urlPage, 10);
   const params = useParams();
   const category = params.category;
-  const size = 4;
+  const size = 10;
   let articles = ARTICLES.filter((article) =>
     category != "all" ? article.category === category : article
   );

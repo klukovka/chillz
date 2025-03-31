@@ -2,9 +2,8 @@
     border-radius: 20px;
     padding: 0.75rem 2rem;
     cursor: pointer;
-    border-color: black;
-    border-width: 1px;
-    border-style: solid;
+    border: 1px solid black;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, text-align 0.3s ease;
 }
 
 .workflow-item:hover,
@@ -44,6 +43,9 @@
     font-weight: 700;
     text-shadow: rgba(0, 0, 0, 0.2) 1px 1px 2.5px;
     color: black;
+    transition: color 0.3s ease, width 0.5s ease;
+    white-space: nowrap;
+    width: 0%;
 }
 
 .workflow-item.deep_dive h2 {
@@ -53,7 +55,6 @@
 .workflow-item.shell_and_tell h2 {
     color: #EF4B8D;
 }
-
 
 .workflow-item.lets_get_crackin h2 {
     color: #F94C29;
@@ -71,10 +72,16 @@
 .workflow-item.active h2 {
     text-align: end;
     color: white;
+    width: 100%;
+}
+
+.workflow-item h3,
+.workflow-item p {
+    font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    transition: color 0.3s ease;
 }
 
 .workflow-item h3 {
-    font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;
     font-size: 1.3rem;
     font-weight: 500;
     margin: 0;
@@ -83,13 +90,11 @@
 }
 
 .workflow-item:hover h3,
-.active h3 {
+.workflow-item.active h3 {
     color: white;
 }
 
-
 .workflow-item p {
-    font-family: 'Montserrat Alternates', system-ui, Avenir, Helvetica, Arial, sans-serif;
     font-size: 1rem;
     letter-spacing: -1px;
     font-weight: 500;
@@ -97,16 +102,15 @@
 }
 
 .workflow-item:hover p,
-.active p {
+.workflow-item.active p {
     color: white;
 }
-
 
 @media (min-width: 850px) {
     .workflow-item h2 {
         font-size: 2.5rem;
     }
-    .workflow-item h3{
+    .workflow-item h3 {
         font-size: 1.7rem;
     }
     .workflow-item p {
