@@ -13,7 +13,6 @@ import { useTranslation } from "react-i18next";
 import { portfolio } from "../data/portfolio";
 import classes from "./BreadCrumbs.module.css";
 import PinAnimation from "./PinAnimation";
-import WidthDimensionsContainer from "./WidthDimensionsContainer";
 
 export default function BreadCrumbs() {
   const { t } = useTranslation();
@@ -87,27 +86,25 @@ export default function BreadCrumbs() {
   let backAmount = crumbs.length;
 
   return (
-    <WidthDimensionsContainer>
-      <PinAnimation>
-        <div className={classes.breadcrumbs}>
-          {crumbs.map((crumb, index) => {
-            backAmount -= 1;
-            let to;
-            if (pathCrumbs[0] == "articles" && page) {
-              if (index === 0) to = location.pathname.replaceAll("/all", "");
-              if (index === 1) to = `${location.pathname}?page=${page}`;
-            } else {
-              to = -backAmount;
-            }
+    <PinAnimation>
+      <div className={classes.breadcrumbs}>
+        {crumbs.map((crumb, index) => {
+          backAmount -= 1;
+          let to;
+          if (pathCrumbs[0] == "articles" && page) {
+            if (index === 0) to = location.pathname.replaceAll("/all", "");
+            if (index === 1) to = `${location.pathname}?page=${page}`;
+          } else {
+            to = -backAmount;
+          }
 
-            return (
-              <div className={classes.crumb} key={`${index}${crumb}`}>
-                <Link to={to}>{crumb}</Link>
-              </div>
-            );
-          })}
-        </div>
-      </PinAnimation>
-    </WidthDimensionsContainer>
+          return (
+            <div className={classes.crumb} key={`${index}${crumb}`}>
+              <Link to={to}>{crumb}</Link>
+            </div>
+          );
+        })}
+      </div>
+    </PinAnimation>
   );
 }
