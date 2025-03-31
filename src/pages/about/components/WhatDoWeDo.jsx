@@ -12,11 +12,11 @@ export default function WhatDoWeDo() {
   const ref = useRef(null);
 
   const updateDimensions = useCallback(() => {
-    setHeight(ref.current.clientHeight ?? 8);
+    setHeight(ref.current?.clientHeight ?? 8);
   });
 
   useEffect(() => {
-    updateDimensions(ref.current.clientHeight);
+    updateDimensions(ref.current?.clientHeight ?? 8);
   });
 
   useEffect(() => {

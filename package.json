@@ -17,7 +17,6 @@
     "@emotion/styled": "^11.14.0",
     "@mui/material": "^6.4.5",
     "framer-motion": "^12.5.0",
-    "gsap": "^3.12.7",
     "i18next": "^24.2.3",
     "i18next-http-backend": "^3.0.2",
     "matter-js": "^0.20.0",

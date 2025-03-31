@@ -1,0 +1,24 @@
+.box {
+    padding: 0;
+    margin: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+  
+  /* Start below and move up when appearing */
+  .hidden {
+    opacity: 0;
+    transform: translateY(50px);  /* Move from bottom */
+  }
+  
+  /* Move up and appear */
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Keep moving up when hiding */
+  .box:not(.visible) {
+    opacity: 0;
+    transform: translateY(-50px);  /* Keep moving up */
+  }
+  

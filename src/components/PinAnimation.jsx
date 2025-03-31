@@ -1,48 +1,38 @@
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
-
-gsap.registerPlugin(ScrollTrigger);
+import { useEffect, useRef, useState } from "react";
+import styles from "./PinAnimation.module.css";
 
 const PinAnimation = ({ children, className, id }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+
   useEffect(() => {
-    let pinGroups = gsap.utils.toArray(".pin-group");
-    let pinGroupContent = gsap.utils.toArray(".pin-group > *");
+    const handleScroll = () => {
+      if (ref.current) {
+        const { top, bottom } = ref.current.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
 
-    pinGroups.forEach((pingroup) => {
-      ScrollTrigger.create({
-        trigger: pingroup,
-        start: "center center",
-        end: "+=" + window.innerHeight / 2,
-      });
-    });
-
-    gsap.set(pinGroupContent, {
-      opacity: 0,
-      y: 100,
-    });
-
-    const enterConfig = { y: 0, opacity: 1, duration: 0.4 };
-
-    pinGroupContent.forEach((e) => {
-      ScrollTrigger.create({
-        trigger: e,
-        start: "top 95%",
-        end: "bottom 5%",
-        onEnter: () => gsap.to(e, enterConfig),
-        onEnterBack: () => gsap.to(e, enterConfig),
-        onLeave: () => gsap.to(e, { y: -100, opacity: 0, duration: 0.4 }),
-        onLeaveBack: () => gsap.to(e, { y: 100, opacity: 0, duration: 0.4 }),
-      });
-    });
-
-    return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill());
+        if (top < windowHeight && bottom > 0) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      }
     };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Initial check
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <div className={`pin-group ${className}`} id={id}>
+    <div
+      id={id}
+      ref={ref}
+      className={`${styles.box} ${
+        isVisible ? styles.visible : styles.hidden
+      } ${className}`}
+    >
       {children}
     </div>
   );
