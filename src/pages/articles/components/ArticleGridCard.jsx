@@ -4,7 +4,7 @@ import { formattedDateDayShortMonthFullYear } from "../../../util/formatting";
 import ArticleCategory from "./ArticleCategory";
 import classes from "./ArticleGridCard.module.css";
 
-export default function ArticleGridCard({ article, dark }) {
+export default function ArticleGridCard({ article }) {
   const { t, i18n } = useTranslation();
   const location = useLocation();
   const path =
@@ -12,16 +12,16 @@ export default function ArticleGridCard({ article, dark }) {
     (location.search.length == 0 ? `?` : `${location.search}&`) +
     `id=${article.id}`;
   return (
-    <NavLink
-      className={classes.article + " " + `${dark ? classes.dark : ""}`}
-      to={path}
-    >
+    <NavLink className={classes.article + " "} to={path}>
       <div className={classes.header}>
         {formattedDateDayShortMonthFullYear(
           article.date,
           i18n.resolvedLanguage
         )}
-        <ArticleCategory category={article.category} dark={dark} />
+        <ArticleCategory
+          category={article.category}
+          className={classes["article-category"]}
+        />
       </div>
       <img src={article.imageUrl} />
       <h2>{article.title}</h2>

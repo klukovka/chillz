@@ -2,15 +2,15 @@ import PinAnimation from "../../../components/PinAnimation";
 import ArticleGridCard from "./ArticleGridCard";
 import classes from "./ArticlesGrid.module.css";
 
-export default function ArticlesGrid({ articles }) {
+export default function ArticlesGrid({ articles, category }) {
   return (
     <div className={classes.grid}>
-      {articles.map((article, index) => (
+      {articles.map((article) => (
         <PinAnimation
-          key={article.id}
-          className={classes.card + " " + `${index == 1 ? classes.dark : ""}`}
+          key={`${category}_${article.id}`}
+          className={classes.card}
         >
-          <ArticleGridCard article={article} dark={index == 1} />
+          <ArticleGridCard article={article} />
         </PinAnimation>
       ))}
     </div>

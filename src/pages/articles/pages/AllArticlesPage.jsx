@@ -32,7 +32,7 @@ export default function AllArticlesPage() {
       <PinAnimation>
         <ArticleCategories selectedCategory={category} />
       </PinAnimation>
-      <ArticlesGrid articles={articles} />
+      <ArticlesGrid articles={articles} category={category} />
       <Link
         to={`/articles${"/" + (category ?? "all")}?page=1`}
         className={classes["dive-into-button"]}

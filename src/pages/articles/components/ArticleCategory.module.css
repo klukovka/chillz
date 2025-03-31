@@ -14,8 +14,8 @@
 }
 
 .button:hover,
-.button:active,
 .button:focus,
+.button:active,
 .button.active {
     background-color: #EF4B8D;
     border-color: #EF4B8D;
@@ -26,11 +26,5 @@
     background-color: white;
     border: solid black 1px;
     color: black;
-}
-
-.button.dark {
-    background-color: #9B4DFF;
-    border: solid #9B4DFF 1px;
-    color: white;
 }
 

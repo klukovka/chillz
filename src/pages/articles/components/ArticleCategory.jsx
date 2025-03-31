@@ -10,7 +10,12 @@ import {
 } from "../../../data/articles";
 import classes from "./ArticleCategory.module.css";
 
-export default function ArticleCategory({ category, isLink, isActive, dark }) {
+export default function ArticleCategory({
+  category,
+  isLink,
+  isActive,
+  className,
+}) {
   const { t } = useTranslation();
   let displayText = t("view_all");
   switch (category) {
@@ -34,23 +39,25 @@ export default function ArticleCategory({ category, isLink, isActive, dark }) {
       break;
   }
 
-  const className =
-    classes.button +
-    " " +
-    `${isActive ? classes.active : dark ? classes.dark : ""}` +
-    " " +
-    `${isLink ? "" : classes.disabled}`;
+  const definedClassName =
+    className != null
+      ? className
+      : classes.button +
+        " " +
+        `${isActive ? classes.active : ""}` +
+        " " +
+        `${isLink ? "" : classes.disabled}`;
 
   if (isLink) {
     return (
       <Link
         to={`/articles${category != null ? "/" + category : ""}`}
-        className={className}
+        className={definedClassName}
       >
         {displayText}
       </Link>
     );
   }
 
-  return <button className={className}>{displayText}</button>;
+  return <button className={definedClassName}>{displayText}</button>;
 }
