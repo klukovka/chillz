@@ -20,13 +20,16 @@ export default function PortfolioItemDetailsPage() {
         <PinAnimation>
           <img src={item.imgUrl} className={classes["main-image"]} />
         </PinAnimation>
-        {item.textContent.map((content, index) => (
-          <PortfolioItemTextContent
-            key={`text_content_${index}`}
-            title={content.title}
-            description={content.description}
-          />
-        ))}
+        <div className={classes["portfolio-page-content"]}>
+          {item.textContent.map((content, index) => (
+            <PortfolioItemTextContent
+              key={`text_content_${index}`}
+              title={content.title}
+              description={content.description}
+            />
+          ))}
+        </div>
+
         <PinAnimation>
           <h2>{item.imageContent.title}</h2>
         </PinAnimation>
@@ -38,6 +41,7 @@ export default function PortfolioItemDetailsPage() {
             reversed={index % 2 == 1}
           />
         ))}
+
         <PortfolioItemAdditionalImagesGrid images={item.additionalImages} />
       </div>
     </WidthDimensionsContainer>

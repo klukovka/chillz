@@ -37,6 +37,12 @@ img.main-image {
     border-radius: 56px;
 }
 
+.portfolio-page-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
 @media (max-width: 849px) {
     .portfolio-page h2 {
         margin: 0;
