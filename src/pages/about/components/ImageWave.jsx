@@ -1,24 +1,49 @@
 import { useMediaQuery } from "@mui/material";
+import { useEffect } from "react";
 import classes from "./ImageWave.module.css";
-
 export default function ImageWave({ src, alt }) {
   const matches = useMediaQuery("(min-width:850px)");
   const waveText = "smart moves bold ideas & chi_illz";
+  const elementsCount = 5;
 
-  const animatedElements = [];
+  useEffect(() => {
+    // Create an array of text elements with their own animation
+    const animateText = (i) => {
+      const path = document.getElementById(`${i}-wave-text`);
+      let offset = 100;
 
-  for (let i = 0; i < 5; i++) {
-    animatedElements.push(
-      <textPath href="#wavePath" key={`${i}-wave-text`} startOffset="100%">
+      const animate = () => {
+        offset -= 0.25; // Adjust the speed here (slower animation)
+        path.setAttribute("startOffset", `${offset}%`);
+
+        // Reset offset to 100 when it reaches -100 for endless loop
+        if (offset <= -100) offset = 100;
+
+        requestAnimationFrame(animate); // Keep the animation running
+      };
+
+      animate();
+    };
+
+    // Start animations for each text element with a 4s delay between each
+    for (let i = 0; i < elementsCount; i++) {
+      setTimeout(() => {
+        animateText(i);
+      }, i * 2700); // Delay starts for each animation (4s per element)
+    }
+  }, []); // Empty dependency array ensures this runs only once
+
+  // Render the text elements
+  const textElements = [];
+  for (let i = 0; i < elementsCount; i++) {
+    textElements.push(
+      <textPath
+        href="#wavePath"
+        key={`${i}-wave-text`}
+        id={`${i}-wave-text`}
+        startOffset="100%"
+      >
         <tspan dy="6">{waveText}</tspan>
-        <animate
-          attributeName="startOffset"
-          from="100%"
-          to="-100%"
-          dur="20s"
-          begin={`${i * 4}s`}
-          repeatCount="indefinite"
-        />
       </textPath>
     );
   }
@@ -41,7 +66,7 @@ export default function ImageWave({ src, alt }) {
           />
 
           <text fill="white" fontSize="32" fontWeight="bold">
-            {animatedElements}
+            {textElements}
           </text>
         </svg>
       </div>
