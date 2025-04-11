@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./pages/RootLayout";
 import AboutPage from "./pages/about/AboutPage";
@@ -14,7 +15,7 @@ import ServicesPage from "./pages/services/ServicesPage";
 import ServicesPageRootLayout from "./pages/services/ServicesPageRootLayout";
 import BrandsServicesPage from "./pages/services/pages/BrandsServicesPage";
 import InfluencersServicesPage from "./pages/services/pages/InfluencersServicesPage";
-
+import { applyZoomBasedOnScreenWidth } from "./util/applyZoomBasedOnScreenWidth.js";
 const router = createBrowserRouter(
   [
     {
@@ -99,5 +100,14 @@ const router = createBrowserRouter(
 );
 
 export default function App() {
+  useEffect(() => {
+    applyZoomBasedOnScreenWidth(); // Викликаємо при монтуванні компонента
+    window.addEventListener("resize", applyZoomBasedOnScreenWidth); // Додаємо обробник на resize
+
+    // Очищення при демонтажі компонента
+    return () => {
+      window.removeEventListener("resize", applyZoomBasedOnScreenWidth);
+    };
+  }, []);
   return <RouterProvider router={router} />;
 }
