@@ -64,6 +64,19 @@ h1 {
   letter-spacing: -0.01em;
 }
 
+input,
+textarea {
+    border-radius: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    min-width: 0;
+}
+
+input:focus,
+textarea:focus {
+    border-radius: 0;
+}
+
 
 
 @media (min-width: 400px) {
