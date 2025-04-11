@@ -1,22 +1,27 @@
+import { useMediaQuery } from "@mui/material";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import Lottie from "react-lottie";
+import animationData from "../../../assets/services_lottie.json";
 import ArrowWithText from "../../../components/ArrowWithText";
 import PinAnimation from "../../../components/PinAnimation";
 import CheckServicesButton from "./CheckServicesButton";
-import PhysicsContainer from "./PhysicsContainer";
 import classes from "./WhatDoWeDo.module.css";
 
 export default function WhatDoWeDo() {
   const { t } = useTranslation();
-  const [height, setHeight] = useState(8);
+  const [height, setHeight] = useState(20);
   const ref = useRef(null);
+  const [isCompleted, setIsCompleted] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
+  const matches = useMediaQuery("(min-width:700px)");
 
   const updateDimensions = useCallback(() => {
-    setHeight(ref.current?.clientHeight ?? 8);
+    setHeight(ref.current?.clientHeight ?? 20);
   });
 
   useEffect(() => {
-    updateDimensions(ref.current?.clientHeight ?? 8);
+    updateDimensions();
   });
 
   useEffect(() => {
@@ -24,84 +29,47 @@ export default function WhatDoWeDo() {
     return () => window.removeEventListener("resize", updateDimensions);
   }, [updateDimensions]);
 
-  //TODO: Check size which depends on localizations
-  const services = [
-    {
-      width: 260,
-      height: 64,
-      text: t("brand_identity"),
-      offset: 650,
-      fallHeight: 400,
+  const defaultOptions = {
+    loop: false,
+    autoplay: true,
+    //TODO: Use different animations for different localization
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMaxYMax meet",
     },
-    {
-      width: 232,
-      height: 64,
-      text: t("graphic_design"),
-      offset: 500,
-      fallHeight: 350,
-    },
-    {
-      width: 186,
-      height: 64,
-      text: t("visual_content"),
-      offset: 350,
-      fallHeight: 380,
-    },
-    {
-      width: 218,
-      height: 64,
-      text: t("smm_strategy"),
-      offset: 150,
-      fallHeight: 150,
-    },
-    {
-      width: 182,
-      height: 64,
-      text: t("influ_marketing"),
-      offset: 285,
-      fallHeight: 280,
-    },
-    {
-      width: 132,
-      height: 64,
-      text: t("seo_sem"),
-      offset: 350,
-      fallHeight: 250,
-    },
-    {
-      width: 220,
-      height: 64,
-      text: t("social_media_optimization"),
-      offset: 500,
-      fallHeight: 180,
-    },
-    {
-      width: 190,
-      height: 64,
-      text: t("targeting"),
-      offset: 600,
-      fallHeight: 200,
-    },
-    {
-      width: 280,
-      height: 64,
-      text: t("creative_strategy"),
-      offset: 600,
-      fallHeight: 150,
-    },
-  ];
+  };
+
+  const bottom = matches ? 1.25 : 0;
 
   return (
     <div style={{ marginTop: "4rem" }}>
       <PinAnimation>
         <h1>{t("what_do_we_do_title")}</h1>
       </PinAnimation>
-      <PinAnimation>
+      <PinAnimation
+        onVisibilityChanged={(value) => {
+          setIsPaused(!value);
+        }}
+      >
         <div className={classes["what-do-we-do"]} ref={ref}>
-          <PhysicsContainer
-            className={classes["physics-container"]}
-            height={height - 8}
-            elements={services}
+          <Lottie
+            options={defaultOptions}
+            isPaused={isCompleted || isPaused}
+            speed={1.5}
+            style={{
+              position: "absolute",
+              right: "0.25rem",
+              bottom: `-${bottom}rem`,
+              width: "calc(100% - 1.25rem)",
+              maxWidth: "900px",
+              height: `calc(${height}px + ${bottom}rem)`,
+            }}
+            eventListeners={[
+              {
+                eventName: "complete",
+                callback: () => setIsCompleted(true),
+              },
+            ]}
           />
 
           <div>

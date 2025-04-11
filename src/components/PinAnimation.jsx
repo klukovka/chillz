@@ -1,9 +1,17 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import styles from "./PinAnimation.module.css";
 
-const PinAnimation = ({ children, className, id }) => {
+const PinAnimation = ({ children, className, id, onVisibilityChanged }) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
+
+  const handleIsVisibleChanged = useCallback(
+    (value) => {
+      setIsVisible(value);
+      if (onVisibilityChanged) onVisibilityChanged(value);
+    },
+    [onVisibilityChanged]
+  );
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,9 +20,9 @@ const PinAnimation = ({ children, className, id }) => {
         const windowHeight = window.innerHeight;
 
         if (top < windowHeight && bottom > 0) {
-          setIsVisible(true);
+          handleIsVisibleChanged(true);
         } else {
-          setIsVisible(false);
+          handleIsVisibleChanged(false);
         }
       }
     };
@@ -23,7 +31,7 @@ const PinAnimation = ({ children, className, id }) => {
     handleScroll(); // Initial check
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [handleIsVisibleChanged]);
 
   return (
     <div

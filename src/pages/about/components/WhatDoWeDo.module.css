@@ -1,9 +1,10 @@
 
 .what-do-we-do {
     margin-top: 1rem;
-    border-radius: 60px;
+    border-radius: 32px;
     background-color: #9B4DFF;
     padding: 1.5rem;
+    padding-bottom: 3rem;
     position: relative;
     display: inline-block;
     height: 450px;
@@ -22,8 +23,9 @@
 
 .physics-container {
     position: absolute;
-    bottom: 0.5rem;   
-    right: 0.75rem;
+    bottom: -1.5rem;   
+    right: 0.25rem;
+    background-color: blue;
 }
 
 .arrow-container {
@@ -41,7 +43,8 @@
 
 @media (min-width: 750px) {
     .what-do-we-do {
-        padding: 1rem 0 0 4rem;
+        padding: 1rem 0 0 1.25rem;
+        border-radius: 60px;
     }
 
     .what-do-we-do p {
@@ -54,5 +57,11 @@
         position: absolute;
         top: -0.5rem;
         right: 2.5rem;
+    }
+}
+
+@media (min-width: 970px) {
+    .what-do-we-do {
+        padding: 1rem 0 0 4rem;
     }
 }
