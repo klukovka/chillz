@@ -1,3 +1,4 @@
+import { useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import logo from "../../assets/craby.svg";
@@ -6,6 +7,8 @@ import classes from "./MainNavigationBar.module.css";
 import MainNavigationBarItems from "./MainNavigationMenuItems";
 
 export default function MainNavigationBar() {
+  const matches = useMediaQuery("(min-width:1000px)");
+
   const [isOpen, setIsOpen] = useState(false);
   const [showButtons, setShowButtons] = useState(false);
 
@@ -25,7 +28,7 @@ export default function MainNavigationBar() {
   return (
     <motion.div
       className={classes["wrapper"]}
-      animate={{ backgroundColor: isOpen ? "#7DC8F7" : "#ffffff" }}
+      animate={{ backgroundColor: isOpen && !matches ? "#7DC8F7" : "#ffffff" }}
       transition={{ duration: 0.05 }}
     >
       <header className={classes["main-header"]}>
