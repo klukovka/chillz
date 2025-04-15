@@ -64,25 +64,33 @@ export default function Footer() {
 
   if (matches) {
     return (
-      <footer className={classes["main-footer"]}>
-        <div>
-          <img src={logo} alt="Chillz logo" className={classes["logo-image"]} />
-          {socialMedia}
-          {privacyPolicy}
-        </div>
-        {navigation}
-      </footer>
+      <div className={classes["wrapper"]}>
+        <footer className={classes["main-footer"]}>
+          <div>
+            <img
+              src={logo}
+              alt="Chillz logo"
+              className={classes["logo-image"]}
+            />
+            {socialMedia}
+            {privacyPolicy}
+          </div>
+          {navigation}
+        </footer>
+      </div>
     );
   }
 
   return (
-    <footer className={classes["main-footer"]}>
-      <div>
-        <img src={logo} alt="Chillz logo" className={classes["logo-image"]} />
-        {navigation}
-        {socialMedia}
-        {privacyPolicy}
-      </div>
-    </footer>
+    <div className={classes["wrapper"]}>
+      <footer className={classes["main-footer"]}>
+        <div>
+          <img src={logo} alt="Chillz logo" className={classes["logo-image"]} />
+          {navigation}
+          {socialMedia}
+          {privacyPolicy}
+        </div>
+      </footer>
+    </div>
   );
 }
