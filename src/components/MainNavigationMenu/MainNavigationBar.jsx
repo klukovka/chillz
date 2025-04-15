@@ -5,16 +5,18 @@ import MainNavigationBarItems from "./MainNavigationMenuItems";
 
 export default function MainNavigationBar() {
   return (
-    <header className={classes["main-header"]}>
-      <img
-        src={logo}
-        alt="Chillz Logo"
-        className={classes["main-header__brand"]}
-      />
-      <nav>
-        <MainNavigationBarItems id={classes["tablet-navigation"]} />
-        <AnimatedMenu id={classes["mobile-navigation"]} />
-      </nav>
-    </header>
+    <div className={classes["wrapper"]}>
+      <header className={classes["main-header"]}>
+        <img
+          src={logo}
+          alt="Chillz Logo"
+          className={classes["main-header__brand"]}
+        />
+        <nav>
+          <MainNavigationBarItems id={classes["tablet-navigation"]} />
+          <AnimatedMenu id={classes["mobile-navigation"]} />
+        </nav>
+      </header>
+    </div>
   );
 }

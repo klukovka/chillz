@@ -1,11 +1,18 @@
-.main-header {
+.wrapper {
     background: white;
-    padding: 1.5rem 1rem;
     width: calc(100% - 2rem);
     position: fixed;
     left: 0;
     top: 0;
     z-index: 10;
+    padding: 1.5rem 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.main-header {
+    width: 100%;
+    max-width: 1064px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -62,7 +69,7 @@
 
 
 
-@media (max-width: 879px) {
+@media (max-width: 999px) {
     #tablet-navigation {
         display: none;
     }
@@ -73,7 +80,7 @@
 }
 
 
-@media (min-width: 880px) {
+@media (min-width: 1000px) {
     .main-nav__items{
         padding: 0;
         list-style: none;

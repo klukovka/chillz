@@ -32,7 +32,7 @@
     opacity: 0;
 }
 
-@media (min-width: 880px) {
+@media (min-width: 1000px) {
     .menu {
         display: none;
     }
