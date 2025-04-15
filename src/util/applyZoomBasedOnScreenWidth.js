@@ -11,4 +11,10 @@ export function applyZoomBasedOnScreenWidth() {
   }
 
   document.body.style.zoom = zoom;
+  const elements = document.getElementsByClassName("site");
+  for (let i = 0; i < elements.length; i++) {
+    const el = elements[i];
+    el.style.minHeight = `${100 / zoom}vh`;
+    el.style.minHeight = `${100 / zoom}dvh`;
+  }
 }

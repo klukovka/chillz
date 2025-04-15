@@ -37,7 +37,6 @@ body {
   padding: 0;
 }
 
-
 :root {
   font-family: "ClashDisplay", system-ui, Avenir, Helvetica, Arial, sans-serif;
   background-color: white;
@@ -45,6 +44,12 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.site {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: minmax(0, 1fr);
 }
 
 main {

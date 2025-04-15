@@ -6,10 +6,13 @@ export default function RootLayout() {
   return (
     <>
       <MainNavigationBar />
-      <main>
-        <Outlet />
-      </main>
-      <Footer />
+
+      <div className="site">
+        <main>
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }

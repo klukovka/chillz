@@ -101,10 +101,10 @@ const router = createBrowserRouter(
 
 export default function App() {
   useEffect(() => {
-    applyZoomBasedOnScreenWidth(); // Викликаємо при монтуванні компонента
-    window.addEventListener("resize", applyZoomBasedOnScreenWidth); // Додаємо обробник на resize
+    applyZoomBasedOnScreenWidth();
 
-    // Очищення при демонтажі компонента
+    window.addEventListener("resize", applyZoomBasedOnScreenWidth);
+
     return () => {
       window.removeEventListener("resize", applyZoomBasedOnScreenWidth);
     };
