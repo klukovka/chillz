@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import PinAnimation from "../../../components/PinAnimation";
+import FitText from "../../../components/FitText";
 import WorkflowItem from "./WorkflowItem";
 
 export default function WorkflowSection() {
@@ -39,7 +40,14 @@ export default function WorkflowSection() {
   return (
     <>
       <PinAnimation>
-        <h1>{t("our_workflow")}</h1>
+        <FitText
+          text={t("our_workflow")}
+          maxFontSize={6}
+          style={{
+            fontWeight: 600,
+            letterSpacing: "-0.01em",
+          }}
+        />
       </PinAnimation>
       {steps.map((item, index) => (
         <PinAnimation key={`workflow_item_${index}`}>
