@@ -4,8 +4,6 @@ export function applyZoomBasedOnScreenWidth() {
 
   if (width >= 2560) {
     zoom = 0.9;
-  } else if (width >= 1920) {
-    zoom = 0.85;
   } else if (width >= 1440) {
     zoom = 0.85;
   }
