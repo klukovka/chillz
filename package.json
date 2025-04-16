@@ -2,7 +2,7 @@
   "name": "chillz-site",
   "homepage": "https://klukovka.github.io/chillz/",
   "private": true,
-  "version": "0.14.0",
+  "version": "0.15.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
