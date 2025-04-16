@@ -1,6 +1,6 @@
 .menu {
     position: fixed;
-    top: 104px;
+    top: 0;
     left: 0;
     width: 100%;
     background-image: url('../../assets/bg_nav_bar.svg');
@@ -17,6 +17,8 @@
     width: 40px;
     height: 40px;
     cursor: pointer;
+    z-index: 22;
+
 }
 
 .burger {

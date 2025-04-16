@@ -1,5 +1,4 @@
 import { useMediaQuery } from "@mui/material";
-import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Lottie from "react-lottie";
 import animationData from "../../assets/craby_lottie.json";
@@ -56,11 +55,7 @@ export default function MainNavigationBar() {
   };
 
   return (
-    <motion.div
-      className={classes["wrapper"]}
-      animate={{ backgroundColor: isOpen && !matches ? "#7DC8F7" : "#ffffff" }}
-      transition={{ duration: 0.05 }}
-    >
+    <div className={classes["wrapper"]}>
       <header className={classes["main-header"]}>
         <div className={classes["main-header__brand"]}>
           <Lottie
@@ -87,6 +82,6 @@ export default function MainNavigationBar() {
           />
         </nav>
       </header>
-    </motion.div>
+    </div>
   );
 }

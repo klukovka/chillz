@@ -13,7 +13,7 @@ export default function AnimatedMenu({
   onAnimationComplete,
 }) {
   const menuVariants = {
-    open: { height: "500px", opacity: 1 },
+    open: { height: "604px", opacity: 1 },
     closed: { height: 0, opacity: 0 },
   };
 
