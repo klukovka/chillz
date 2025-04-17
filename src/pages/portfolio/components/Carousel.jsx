@@ -4,7 +4,12 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import styles from "./Carousel.module.css"; // CSS Modules
 
-const Carousel = ({ children, slidesToShow = 5, clickable }) => {
+const Carousel = ({
+  children,
+  slidesToShow = 5,
+  clickable,
+  onScrollChanged,
+}) => {
   const array = React.Children.toArray(children);
   const sliderRef = useRef(null);
   const [activePageIndex, setActivePageIndex] = useState(0);
@@ -37,6 +42,11 @@ const Carousel = ({ children, slidesToShow = 5, clickable }) => {
     };
   }, []);
 
+  function handleScroll(value) {
+    setIsScrolling(value);
+    if (onScrollChanged) onScrollChanged(value);
+  }
+
   const settings = {
     dots: true,
     infinite: false,
@@ -52,15 +62,15 @@ const Carousel = ({ children, slidesToShow = 5, clickable }) => {
     beforeChange: (oldIndex, newIndex) => {
       setActivePageIndex(Math.ceil(newIndex / currentSlidesToShow));
       if (oldIndex !== newIndex) {
-        setIsScrolling(true);
+        handleScroll(true);
         if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
         scrollTimeoutRef.current = setTimeout(() => {
-          setIsScrolling(false);
+          handleScroll(false);
         }, 500);
       }
     },
     afterChange: () => {
-      setIsScrolling(false);
+      handleScroll(false);
     },
 
     appendDots: (dots) => {

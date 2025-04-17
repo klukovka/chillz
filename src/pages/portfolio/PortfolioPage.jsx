@@ -1,10 +1,8 @@
 import { useTranslation } from "react-i18next";
-import { NavLink } from "react-router-dom";
 import PageBottomLink from "../../components/PageBottomLink";
 import PinAnimation from "../../components/PinAnimation";
 import WidthDimensionsContainer from "../../components/WidthDimensionsContainer";
-import { portfolio } from "../../data/portfolio";
-import Carousel from "./components/Carousel";
+import PortfolioCarousel from "./components/PortfolioCarousel";
 import classes from "./PortfolioPage.module.css";
 
 export default function PortfolioPage() {
@@ -28,13 +26,7 @@ export default function PortfolioPage() {
           <p>{t("portfolio_page_subtitle")}</p>
         </PinAnimation>
         <PinAnimation className={classes["carousel"]}>
-          <Carousel slidesToShow={5} clickable>
-            {portfolio.map((item) => (
-              <NavLink key={`portfolio_${item.id}`} to={`${item.id}`}>
-                <img src={item.imgUrl} />
-              </NavLink>
-            ))}
-          </Carousel>
+          <PortfolioCarousel />
         </PinAnimation>
         <PinAnimation>
           {/* TODO: Add navigation */}
